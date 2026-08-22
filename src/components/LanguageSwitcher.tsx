@@ -25,7 +25,7 @@ export function LanguageSwitcher() {
             className={`px-1.5 py-0.5 transition-colors ${
               active
                 ? "text-rust"
-                : "text-ink-soft hover:text-ink"
+                : "text-ink-soft hover:text-ivory"
             }`}
             aria-current={active ? "true" : undefined}
           >

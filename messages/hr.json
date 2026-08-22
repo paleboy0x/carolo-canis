@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Carolo Canis — školovanje pasa, Karlovac",
-    "description": "Individualno školovanje pasa, oprema i hrana te kinološki savjeti. Carolo Canis d.o.o., Karlovac. Vlasnik Marinko Alić, sudski vještak za kinologiju."
+    "title": "Carolo Canis d.o.o.",
+    "description": "Carolo Canis d.o.o. mala je i usko profilirana tvrtka koja djeluje na području kinologije u segmentu školovanja pasa, trgovine opremom i hranom za pse, te savjetima u kinologiji."
   },
   "nav": {
     "services": "Usluge",
@@ -13,86 +13,56 @@
     "close": "Zatvori"
   },
   "hero": {
-    "eyebrow": "Školovani pas · Karlovac · Zagreb · Rijeka",
-    "titleLead": "Pas i vlasnik.",
-    "titleEm": "Jedan na jedan.",
-    "lede": "Radimo na terenu, ne u grupi. Više od dvadeset godina individualnog školovanja, opreme i kinoloških savjeta.",
-    "cta": "Dogovorite termin",
-    "statValue": "20+",
-    "statLabel": "godina na terenu s vlasnikom i psom"
+    "title": "Carolo Canis",
+    "lede": "„Carolo Canis“ d.o.o. mala je i usko profilirana tvrtka koja djeluje na području kinologije u segmentu školovanja pasa, trgovine opremom i hranom za pse, te savjetima u kinologiji proizašli iz ovlasti vlasnika kao sudskog vještaka za kinologiju i kinološkog suca za rad školovanih pasa.",
+    "cta": "Kontakt"
   },
   "services": {
-    "eyebrow": "01",
-    "title": "Tri stvari koje radimo.",
+    "title": "Usluge",
     "items": {
       "training": {
         "title": "Školovanje pasa",
-        "body": "Tečajevi s vlasnicima, isključivo individualno. Niti su svi psi isti, niti su svi zahtjevi vlasnika identični — zato smo grupni rad odavno odbacili."
+        "body": "Koncept rada zasniva se kroz tečajeve sa vlasnicima pasa. Sa svima se radi individualno, pošto smo odavno odbacili koncept grupnog rada s tečajcima (jer niti su svi psi isti, niti su svi zahtjevi vlasnika identični)."
       },
       "shop": {
-        "title": "Oprema i hrana",
-        "body": "Trgovina opremom i hranom za pse. Savjet pri odabiru dolazi iz prakse, ne s police."
+        "title": "Trgovina opremom i hranom za pse",
+        "body": "Tvrtka djeluje i u segmentu trgovine opremom i hranom za pse."
       },
       "advice": {
-        "title": "Savjeti i vještačenja",
-        "body": "Kinološki savjeti iz ovlasti vlasnika: sudski vještak za kinologiju i kinološki sudac za rad školovanih pasa."
+        "title": "Savjeti u kinologiji",
+        "body": "Savjeti u kinologiji proizašli iz ovlasti vlasnika kao sudskog vještaka za kinologiju i kinološkog suca za rad školovanih pasa."
       }
     }
   },
   "about": {
-    "eyebrow": "02",
     "title": "O nama",
-    "p1": "Mnogi u svijet kinologije krenu nepripremljeni, znatiželjni i iskrenog srca, no razni ih problemi ponekad sustignu već na prvim koracima, a s vremenom neki postanu i preveliki. Tradicija duga 20-tak godina dozvoljava nam slobodu da vam ponudimo pomoć da sve postane lakše, brže i bolje.",
-    "p2": "Kroz ove stranice možete nas upoznati, riješiti osnovne probleme sa svojim psom, pa i uživati u kinologiji ako vam ona postane više od razonode.",
-    "p3": "Carolo Canis d.o.o. mala je i usko profilirana tvrtka na području kinologije: školovanje pasa, trgovina opremom i hranom, te savjeti proizašli iz ovlasti vlasnika.",
-    "ownerLabel": "Vlasnik",
+    "p1": "Mnogi u svijet kinologije krenu nepripremljeni, znatiželjni i iskrenog srca, no nažalost kao i u mnogo čemu razni ih problemi ponekad sustignu već na prvim koracima, a s vremenom neki postanu i preveliki. Tradicija duga 20-tak godina dozvoljava nam slobodu da Vam ponudimo, kao tvrtka, pomoć da sve postane lakše, brže i bolje.",
+    "p2": "Kroz ove stranice imate mogućnost upoznati nas, naše partnere i dobiti odgovore na neka Vaša pitanja, riješit osnovne probleme sa vlastitim psom, pa i uživati u kinologiji ako Vam ona postane više od razonode.",
+    "p3": "„Carolo Canis“ d.o.o. mala je i usko profilirana tvrtka koja djeluje na području kinologije u segmentu školovanja pasa, trgovine opremom i hranom za pse, te savjetima u kinologiji proizašli iz ovlasti vlasnika kao sudskog vještaka za kinologiju i kinološkog suca za rad školovanih pasa.",
+    "ownerLabel": "Vlasnik tvrtke „Carolo Canis“ d.o.o.",
     "ownerName": "Marinko Alić",
     "credentials": [
-      "Sudski vještak za kinologiju",
-      "Kinološki sudac za rad školovanih pasa",
-      "Instruktor za školovanje pasa",
-      "Markirant"
+      "sudski vještak za kinologiju",
+      "kinološki sudac za rad školovanih pasa",
+      "instruktor za školovanje pasa",
+      "markirant"
     ]
   },
   "method": {
-    "eyebrow": "03",
     "title": "Način rada",
-    "intro": "Koncept se zasniva na tečajevima s vlasnicima pasa. Sa svima se radi individualno.",
-    "points": {
-      "individual": {
-        "title": "Samo individualno",
-        "body": "Grupni rad s tečajcima odavno ne radimo. Svaki pas i svaki vlasnik ima svoje zahtjeve."
-      },
-      "open": {
-        "title": "Otvoreni termin",
-        "body": "Jednom tjedno, u dogovorenom terminu. Niste vezani za preciznu minutu — dolazite kad vama odgovara. Poštuje se red tko je došao prije, ili unaprijed zakazana obaveza."
-      },
-      "exam": {
-        "title": "Ispit školovanosti",
-        "body": "Po završetku tečaja predlažemo polaganje ispita — kao potvrdu uloženog i pokazatelj okolini da imate školovanog, dobro odgojenog psa. Pomažemo na više razina školovanosti."
-      },
-      "pay": {
-        "title": "Plaćanje po napretku",
-        "body": "Obročno, prema razini postignutog. Ništa unaprijed. Propušteni termini zbog bolesti psa ili vaše nemogućnosti dolaska ne naplaćuju se. Cijene su predmet dogovora, u izravnom kontaktu."
-      }
-    }
+    "p1": "Koncept rada zasniva se kroz tečajeve sa vlasnicima pasa. Sa svima se radi individualno, pošto smo odavno odbacili koncept grupnog rada s tečajcima (jer niti su svi psi isti, niti su svi zahtjevi vlasnika identični).",
+    "p2": "Tečajevi se odvijaju jednom tjedno u dogovorenom terminu, na principu „otvorenog“ termina, što znači da niste vezani za precizno vrijeme već unutar dogovorenog termina možete doći kad Vama odgovara, pri čemu se jedino poštuje red „tko je došao prije – radi prije“ ili neka prije zakazana obaveza u radu. Po završenim tečajevima sugeriramo svakako polaganje ispita školovanosti psa, kao pokazatelj uspješnosti u školovanju Vašeg ljubimca (pri čemu smo Vam spremni pomoći u mnogim razinama školovanosti). Ispiti su, također, pokazatelj Vašoj okolini da posjedujete školovanog i dobro odgojenog psa, kao i potvrda uloženog u Vašeg ljubimca.",
+    "p3": "Način plaćanja tečaja je obročni, a poštuje se redoslijed razine postignutog u određenoj fazi školovanja psa, pri čemu niste u obavezi ništa platiti unaprijed, kao što ne plaćate ni propuštene termine zbog nekih „viših“ razloga (bolesti psa, Vaše nemogućnosti dolaska i sl.). Cijene tečaja su predmet dogovora s osnova zahtjeva vlasnika psa i njegovih potreba i o njima ćete biti informirani u direktnom kontaktu."
   },
   "locations": {
-    "eyebrow": "04",
     "title": "Lokacije treninga",
-    "intro": "Treninge vodimo u Karlovcu, Zagrebu i Rijeci. Točne točke na karti dodajemo čim ih potvrdimo.",
     "headquarters": "Sjedište",
-    "coming": "Uskoro",
-    "tba": "Grad",
-    "tbaHint": "Adresa i termin slijede.",
     "mapsPending": "Točka na karti slijedi",
     "openMap": "Otvori na karti"
   },
   "contact": {
-    "eyebrow": "05",
     "title": "Kontakt",
-    "intro": "Za tečaj, opremu ili savjet — javite se izravno.",
-    "phoneLabel": "Telefon",
+    "phoneLabel": "GSM",
     "emailLabel": "E-mail",
     "addressLabel": "Adresa",
     "phone": "+385 95 2244 355",
@@ -102,7 +72,6 @@
     "city": "HR-47000 Karlovac, Hrvatska"
   },
   "footer": {
-    "legal": "Carolo Canis d.o.o.",
-    "rights": "Školovanje pasa · oprema · kinološki savjeti"
+    "legal": "Carolo Canis d.o.o."
   }
 }

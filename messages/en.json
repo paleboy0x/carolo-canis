@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Carolo Canis — dog training, Karlovac",
-    "description": "Individual dog training, equipment and food, and cynology advice. Carolo Canis Ltd., Karlovac. Owner Marinko Alić, court expert in cynology."
+    "title": "Carolo Canis Ltd.",
+    "description": "Carolo Canis Ltd. is a small, tightly focused company working in cynology: dog training, equipment and food, and cynology advice."
   },
   "nav": {
     "services": "Services",
@@ -13,86 +13,56 @@
     "close": "Close"
   },
   "hero": {
-    "eyebrow": "The trained dog · Karlovac · Zagreb · Rijeka",
-    "titleLead": "Dog and owner.",
-    "titleEm": "One pair at a time.",
-    "lede": "We work in the field, not in a group. More than twenty years of individual training, equipment, and cynology advice.",
-    "cta": "Arrange a session",
-    "statValue": "20+",
-    "statLabel": "years in the field with owner and dog"
+    "title": "Carolo Canis",
+    "lede": "Carolo Canis Ltd. is a small, tightly focused company working in cynology in the areas of dog training, trade in dog equipment and food, and cynology advice arising from the owner’s authority as a court expert in cynology and a working-dog judge.",
+    "cta": "Contact"
   },
   "services": {
-    "eyebrow": "01",
-    "title": "Three things we do.",
+    "title": "Services",
     "items": {
       "training": {
         "title": "Dog training",
-        "body": "Courses with owners, strictly one-to-one. No two dogs are the same, and neither are their owners’ aims — so we dropped group classes long ago."
+        "body": "The work is based on courses with dog owners. Everyone is trained individually, as we long ago dropped group classes (because no two dogs are the same, and neither are their owners’ demands)."
       },
       "shop": {
-        "title": "Equipment and food",
-        "body": "A shop for dog equipment and food. Advice on what to buy comes from the field, not from a catalogue."
+        "title": "Dog equipment and food",
+        "body": "The company also works in the trade of dog equipment and food."
       },
       "advice": {
-        "title": "Advice and expert work",
-        "body": "Cynology advice grounded in the owner’s credentials: court expert in cynology, and a working-dog judge."
+        "title": "Cynology advice",
+        "body": "Cynology advice arising from the owner’s authority as a court expert in cynology and a working-dog judge."
       }
     }
   },
   "about": {
-    "eyebrow": "02",
-    "title": "About us",
-    "p1": "Many enter the world of cynology unprepared, curious and sincere — and problems can catch them on the first steps, some of them growing too large with time. Twenty years of practice give us the freedom to make the path easier, faster and better.",
-    "p2": "These pages are a place to meet us, settle basic issues with your own dog, and — if cynology becomes more than a pastime — to enjoy it.",
-    "p3": "Carolo Canis Ltd. is a small, tightly profiled company in cynology: dog training, equipment and food, and advice that follows from the owner’s professional authority.",
-    "ownerLabel": "Owner",
+    "title": "About",
+    "p1": "Many enter the world of cynology unprepared, curious and sincere — yet, as in so much else, problems sometimes catch them on the first steps, and with time some become too large. A tradition of some twenty years gives us the freedom to offer you, as a company, help so that everything becomes easier, faster and better.",
+    "p2": "Through these pages you can get to know us and our partners, get answers to some of your questions, resolve basic problems with your own dog, and even enjoy cynology if it becomes more than a pastime.",
+    "p3": "Carolo Canis Ltd. is a small, tightly focused company working in cynology in the areas of dog training, trade in dog equipment and food, and cynology advice arising from the owner’s authority as a court expert in cynology and a working-dog judge.",
+    "ownerLabel": "Owner of Carolo Canis Ltd.",
     "ownerName": "Marinko Alić",
     "credentials": [
-      "Court expert in cynology",
-      "Working-dog judge",
-      "Dog training instructor",
-      "Decoy / helper"
+      "court expert in cynology",
+      "working-dog judge",
+      "dog training instructor",
+      "decoy / helper"
     ]
   },
   "method": {
-    "eyebrow": "03",
     "title": "How we work",
-    "intro": "The work is built around courses with dog owners. Everyone is trained individually.",
-    "points": {
-      "individual": {
-        "title": "Individual only",
-        "body": "We no longer run group courses. Every dog and every owner brings a different set of demands."
-      },
-      "open": {
-        "title": "Open time slot",
-        "body": "Once a week, in an agreed window. You are not tied to a precise minute — arrive when it suits you. First come, first trained, unless a session was booked ahead."
-      },
-      "exam": {
-        "title": "Training exam",
-        "body": "After the course we recommend a proficiency exam — proof of the work invested, and a sign to others that you keep a trained, well-mannered dog. We can help at several levels."
-      },
-      "pay": {
-        "title": "Pay as you progress",
-        "body": "In instalments, according to the level reached. Nothing in advance. Missed sessions for the dog’s illness or your own inability to attend are not charged. Prices are agreed in direct contact, according to the owner’s aims."
-      }
-    }
+    "p1": "The work is based on courses with dog owners. Everyone is trained individually, as we long ago dropped group classes (because no two dogs are the same, and neither are their owners’ demands).",
+    "p2": "Courses take place once a week in an agreed slot, on an “open” time principle: you are not bound to a precise minute, but may arrive when it suits you within the agreed window, observing only the order of who came first — or a previously booked obligation. After the courses we recommend taking a training exam, as a measure of success in training your dog (and we are ready to help at many levels). Exams are also a sign to those around you that you have a trained, well-mannered dog, and confirmation of what you have invested in your companion.",
+    "p3": "Course payment is in instalments, following the level reached in a given phase of training. You are not obliged to pay anything in advance, and you are not charged for missed sessions due to “higher” reasons (the dog’s illness, your inability to attend, and the like). Course prices are a matter of agreement based on the owner’s aims and needs, and you will be informed about them in direct contact."
   },
   "locations": {
-    "eyebrow": "04",
     "title": "Training locations",
-    "intro": "We train in Karlovac, Zagreb and Rijeka. Map pins will be added once the exact spots are set.",
     "headquarters": "Headquarters",
-    "coming": "Coming soon",
-    "tba": "City",
-    "tbaHint": "Address and hours to follow.",
     "mapsPending": "Map pin to follow",
     "openMap": "Open in maps"
   },
   "contact": {
-    "eyebrow": "05",
     "title": "Contact",
-    "intro": "For a course, equipment or advice — write or call directly.",
-    "phoneLabel": "Phone",
+    "phoneLabel": "Mobile",
     "emailLabel": "Email",
     "addressLabel": "Address",
     "phone": "+385 95 2244 355",
@@ -102,7 +72,6 @@
     "city": "HR-47000 Karlovac, Croatia"
   },
   "footer": {
-    "legal": "Carolo Canis d.o.o.",
-    "rights": "Dog training · equipment · cynology advice"
+    "legal": "Carolo Canis d.o.o."
   }
 }

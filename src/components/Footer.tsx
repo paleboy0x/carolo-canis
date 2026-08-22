@@ -6,16 +6,11 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-dusk">
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-8">
-        <div className="flex items-center gap-3">
-          <LogoMark size={26} />
-          <p className="text-[12px] tracking-[0.08em] text-straw/65">
-            © {year} {t("legal")}
-          </p>
-        </div>
-        <p className="text-[12px] tracking-[0.08em] text-straw/55">
-          {t("rights")}
+    <footer className="border-t border-rule">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-7 sm:px-8">
+        <LogoMark size={24} />
+        <p className="text-[12px] tracking-[0.08em] text-ink-soft">
+          © {year} {t("legal")}
         </p>
       </div>
     </footer>

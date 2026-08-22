@@ -61,7 +61,7 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${grotesk.variable} ${fraunces.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-paper text-ink">
+      <body className="min-h-full bg-paper text-ivory">
         <NextIntlClientProvider messages={messages}>
           <div className="flex min-h-full flex-col">
             <Header />

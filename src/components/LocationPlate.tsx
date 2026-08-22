@@ -26,7 +26,7 @@ export async function LocationPlate({ location }: LocationPlateProps) {
             className={`h-8 w-6 ${maps ? "text-rust" : "text-rule"}`}
           />
         </div>
-        <h3 className="font-display mt-5 text-4xl text-ink">{location.city}</h3>
+        <h3 className="font-display mt-5 text-4xl text-ivory">{location.city}</h3>
         {location.address ? (
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">
             {location.address}
@@ -40,7 +40,7 @@ export async function LocationPlate({ location }: LocationPlateProps) {
   );
 
   const frame =
-    "relative min-h-[16.5rem] overflow-hidden border border-rule bg-paper-deep/40 px-6 py-7 transition-colors";
+    "relative min-h-[14.5rem] overflow-hidden border border-rule bg-paper-deep px-6 py-7 transition-colors";
 
   if (maps) {
     return (
@@ -48,7 +48,7 @@ export async function LocationPlate({ location }: LocationPlateProps) {
         href={maps}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${frame} hover:bg-paper-deep/70`}
+        className={`${frame} hover:bg-dusk-mid`}
       >
         {inner}
       </a>
