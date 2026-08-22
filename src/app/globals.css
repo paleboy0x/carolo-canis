@@ -26,7 +26,7 @@
   --color-clay: var(--clay);
   --color-line: var(--line);
   --color-line-2: var(--line-2);
-  --font-display: var(--font-bodoni), "Bodoni Moda", Didot, serif;
+  --font-display: var(--font-display), "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-text: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
 }
 
@@ -45,12 +45,12 @@ body {
   background:
     radial-gradient(
       1200px 600px at 78% 0%,
-      color-mix(in srgb, var(--brass) 8%, transparent),
+      color-mix(in srgb, var(--brass) 7%, transparent),
       transparent 60%
     ),
     radial-gradient(
       900px 500px at 8% 92%,
-      color-mix(in srgb, var(--clay) 6%, transparent),
+      color-mix(in srgb, var(--clay) 5%, transparent),
       transparent 60%
     ),
     var(--void);
@@ -74,7 +74,7 @@ body::after {
 }
 
 body::before {
-  opacity: 0.08;
+  opacity: 0.07;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -82,7 +82,7 @@ body::before {
 body::after {
   background: radial-gradient(
     ellipse at center,
-    transparent 40%,
+    transparent 45%,
     rgba(0, 0, 0, 0.5) 100%
   );
 }
@@ -106,7 +106,7 @@ body::after {
 
 .band {
   position: relative;
-  padding-block: clamp(44px, 6vw, 84px);
+  padding-block: clamp(56px, 7vw, 104px);
 }
 
 .band[id] {
@@ -115,48 +115,33 @@ body::after {
 
 /* ---------- Typography ---------- */
 .font-display {
-  font-family: var(--font-display), Didot, serif;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01";
 }
 
 .font-text {
   font-family: var(--font-text), Georgia, serif;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-text), serif;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.28em;
-  color: var(--brass);
-}
-
-.eyebrow::before,
-.eyebrow.trail::after {
-  content: "";
-  width: 32px;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.75;
-}
-
 .section-title {
   position: relative;
   display: inline-block;
   margin: 0;
-  font-family: var(--font-display), Didot, serif;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-style: italic;
-  font-weight: 400;
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
   line-height: 1.02;
   color: var(--bone);
 }
 
-.section-title em {
-  color: var(--brass);
-  font-style: italic;
+.section-title::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 18px;
+  background: var(--brass);
 }
 
 .lede,
@@ -171,13 +156,14 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
-  padding: 0.85em 1.35em;
+  padding: 0.85em 1.4em;
   border: 1px solid var(--bone);
   background: transparent;
   color: var(--bone);
-  font-family: var(--font-display), Didot, serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
   box-shadow: 5px 5px 0 var(--brass);
@@ -213,13 +199,13 @@ body::after {
 /* ---------- Card ---------- */
 .card {
   position: relative;
-  padding: 26px 26px 28px;
+  padding: 28px 26px 30px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.035),
     rgba(255, 255, 255, 0.005)
   );
-  border: 1px solid color-mix(in srgb, var(--brass) 28%, var(--line));
+  border: 1px solid color-mix(in srgb, var(--brass) 25%, var(--line));
   clip-path: polygon(
     0 0,
     calc(100% - 16px) 0,
@@ -241,12 +227,12 @@ body::after {
   background:
     radial-gradient(
       circle at 100% 0%,
-      color-mix(in srgb, var(--brass) 14%, transparent),
+      color-mix(in srgb, var(--brass) 12%, transparent),
       transparent 42%
     ),
     radial-gradient(
       circle at 0% 100%,
-      color-mix(in srgb, var(--clay) 12%, transparent),
+      color-mix(in srgb, var(--clay) 10%, transparent),
       transparent 42%
     );
 }
@@ -258,17 +244,18 @@ body::after {
 
 .card-num {
   position: absolute;
-  top: 14px;
+  top: 18px;
   right: 22px;
-  font-family: var(--font-display), Didot, serif;
-  font-style: italic;
-  font-size: 3.4rem;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
   line-height: 1;
-  color: color-mix(in srgb, var(--brass) 65%, transparent);
+  color: color-mix(in srgb, var(--brass) 55%, transparent);
+  letter-spacing: -0.03em;
   pointer-events: none;
 }
 
-/* corner ticks appear on hover, like an engraving plate */
+/* corner ticks appear on hover */
 .card-tick {
   position: absolute;
   width: 12px;
@@ -287,100 +274,16 @@ body::after {
 .card-tick-bl { bottom: 10px; left: 10px; border-right: 0; border-top: 0; }
 .card-tick-br { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
 
-/* ---------- Hero plate ---------- */
-.plate {
-  position: relative;
-  aspect-ratio: 4 / 5;
-}
-
-.plate-frame {
-  position: relative;
-  height: 100%;
-  padding: 22px;
-  background:
-    radial-gradient(
-      ellipse at center,
-      color-mix(in srgb, var(--brass) 6%, var(--turf)),
-      var(--turf) 70%
-    );
-  border: 1px solid color-mix(in srgb, var(--brass) 45%, var(--line));
-  box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, var(--brass) 15%, transparent),
-    12px 12px 0 color-mix(in srgb, var(--brass) 55%, transparent);
-}
-
-.plate-corner {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border: 1px solid var(--brass);
-  pointer-events: none;
-}
-.plate-corner-tl { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
-.plate-corner-tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
-.plate-corner-bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
-.plate-corner-br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
-
-.plate-inner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 8px 4px 0;
-}
-
-.plate-glyph {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 12px;
-}
-
-.plate-glyph svg {
-  width: 100%;
-  height: 100%;
-  max-height: 320px;
-  filter: drop-shadow(0 8px 24px rgba(208, 166, 99, 0.14));
-}
-
-.plate-meta {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 6px 4px;
-  border-top: 1px solid color-mix(in srgb, var(--brass) 35%, transparent);
-  font-family: var(--font-display), Didot, serif;
-  font-style: italic;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  color: var(--brass);
-}
-
 /* ---------- Owner ---------- */
-.seal {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 78px;
-  height: 78px;
-  color: var(--brass);
-  opacity: 0.9;
-}
-
 .credential {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.2rem 0.55rem;
+  padding: 0.25rem 0.65rem;
   border: 1px solid color-mix(in srgb, var(--brass) 55%, transparent);
   font-family: var(--font-text), serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
   color: var(--bone);
   border-radius: 999px;
 }
@@ -410,22 +313,55 @@ body::after {
 }
 
 .step-num {
-  font-family: var(--font-display), Didot, serif;
-  font-style: italic;
-  font-size: 3rem;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 2.6rem;
   line-height: 1;
+  letter-spacing: -0.03em;
   color: var(--brass);
+}
+
+/* ---------- Hero shepherd stage ---------- */
+.hero-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.hero-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 50%,
+      color-mix(in srgb, var(--brass) 10%, transparent),
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+/* ---------- Background shepherd (watermark) ---------- */
+.bg-shepherd {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.bg-shepherd img {
+  filter: grayscale(1) brightness(0.85);
+  mix-blend-mode: screen;
 }
 
 /* ---------- Contact poster ---------- */
 .poster-phone {
   display: block;
-  font-family: var(--font-display), Didot, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 7.5vw, 5.4rem);
   line-height: 0.95;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
   color: var(--bone);
   text-decoration: none;
   transition: color 220ms ease;
@@ -433,6 +369,20 @@ body::after {
 
 .poster-phone:hover {
   color: var(--brass);
+}
+
+/* ---------- Divider ---------- */
+.rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--brass) 55%, transparent) 12%,
+    color-mix(in srgb, var(--brass) 55%, transparent) 88%,
+    transparent
+  );
 }
 
 /* ---------- Nav ---------- */
@@ -464,36 +414,6 @@ body::after {
   transform: scaleX(1);
 }
 
-/* ---------- Marquee ---------- */
-.marquee {
-  overflow: hidden;
-  border-block: 1px solid var(--line);
-  background: color-mix(in srgb, var(--turf) 70%, transparent);
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  gap: 3rem;
-  padding-block: 0.85rem;
-  font-family: var(--font-display), Didot, serif;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-style: italic;
-  color: var(--mute);
-  animation: marquee 44s linear infinite;
-}
-
-.marquee-track span::after {
-  content: "·";
-  margin-left: 3rem;
-  color: var(--brass);
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 /* ---------- Reveal ---------- */
 .reveal {
   opacity: 0;
@@ -517,19 +437,9 @@ body::after {
   animation: enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* subtle paw watermark for section backgrounds */
-.paw-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.045;
-  color: var(--brass);
-}
-
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
-  .enter,
-  .marquee-track {
+  .enter {
     animation: none;
   }
 

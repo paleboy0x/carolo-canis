@@ -23,7 +23,7 @@ export function Header() {
       <div className="wrap flex h-[3.75rem] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 text-bone no-underline">
           <LogoMark size={28} />
-          <span className="font-display text-[1.35rem] italic leading-none">
+          <span className="font-display text-[1.15rem] font-bold leading-none tracking-[-0.02em]">
             Carolo Canis
           </span>
         </Link>
@@ -57,7 +57,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-display text-3xl italic text-bone no-underline"
+                className="font-display text-3xl font-bold tracking-[-0.02em] text-bone no-underline"
                 onClick={() => setOpen(false)}
               >
                 {t(link.key)}

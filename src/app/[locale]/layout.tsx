@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Bodoni_Moda, Newsreader } from "next/font/google";
+import { Manrope, Newsreader } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -9,11 +9,11 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import "../globals.css";
 
-const display = Bodoni_Moda({
+const display = Manrope({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-bodoni",
+  variable: "--font-display",
   display: "swap",
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const text = Newsreader({
