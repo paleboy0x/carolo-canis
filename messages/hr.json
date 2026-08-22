@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Carolo Canis — školovanje pasa, Karlovac",
+    "description": "Individualno školovanje pasa, oprema i hrana te kinološki savjeti. Carolo Canis d.o.o., Karlovac. Vlasnik Marinko Alić, sudski vještak za kinologiju."
+  },
+  "nav": {
+    "services": "Usluge",
+    "about": "O nama",
+    "method": "Način rada",
+    "locations": "Lokacije",
+    "contact": "Kontakt",
+    "menu": "Izbornik",
+    "close": "Zatvori"
+  },
+  "hero": {
+    "eyebrow": "Kinološki atelier · Karlovac",
+    "titleLead": "Individualno",
+    "titleEm": "školovanje pasa.",
+    "lede": "Mala tvrtka, usko profilirana. Radimo s vlasnikom i psom — jedan na jedan — već više od dvadeset godina.",
+    "cta": "Dogovorite termin",
+    "statValue": "20+",
+    "statLabel": "godina rada s vlasnikom i psom"
+  },
+  "services": {
+    "eyebrow": "01",
+    "title": "Tri stvari koje radimo.",
+    "items": {
+      "training": {
+        "title": "Školovanje pasa",
+        "body": "Tečajevi s vlasnicima, isključivo individualno. Niti su svi psi isti, niti su svi zahtjevi vlasnika identični — zato smo grupni rad odavno odbacili."
+      },
+      "shop": {
+        "title": "Oprema i hrana",
+        "body": "Trgovina opremom i hranom za pse. Savjet pri odabiru dolazi iz prakse, ne s police."
+      },
+      "advice": {
+        "title": "Savjeti i vještačenja",
+        "body": "Kinološki savjeti iz ovlasti vlasnika: sudski vještak za kinologiju i kinološki sudac za rad školovanih pasa."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "02",
+    "title": "O nama",
+    "p1": "Mnogi u svijet kinologije krenu nepripremljeni, znatiželjni i iskrenog srca, no razni ih problemi ponekad sustignu već na prvim koracima, a s vremenom neki postanu i preveliki. Tradicija duga 20-tak godina dozvoljava nam slobodu da vam ponudimo pomoć da sve postane lakše, brže i bolje.",
+    "p2": "Kroz ove stranice možete nas upoznati, riješiti osnovne probleme sa svojim psom, pa i uživati u kinologiji ako vam ona postane više od razonode.",
+    "p3": "Carolo Canis d.o.o. mala je i usko profilirana tvrtka na području kinologije: školovanje pasa, trgovina opremom i hranom, te savjeti proizašli iz ovlasti vlasnika.",
+    "ownerLabel": "Vlasnik",
+    "ownerName": "Marinko Alić",
+    "credentials": [
+      "Sudski vještak za kinologiju",
+      "Kinološki sudac za rad školovanih pasa",
+      "Instruktor za školovanje pasa",
+      "Markirant"
+    ]
+  },
+  "method": {
+    "eyebrow": "03",
+    "title": "Način rada",
+    "intro": "Koncept se zasniva na tečajevima s vlasnicima pasa. Sa svima se radi individualno.",
+    "points": {
+      "individual": {
+        "title": "Samo individualno",
+        "body": "Grupni rad s tečajcima odavno ne radimo. Svaki pas i svaki vlasnik ima svoje zahtjeve."
+      },
+      "open": {
+        "title": "Otvoreni termin",
+        "body": "Jednom tjedno, u dogovorenom terminu. Niste vezani za preciznu minutu — dolazite kad vama odgovara. Poštuje se red tko je došao prije, ili unaprijed zakazana obaveza."
+      },
+      "exam": {
+        "title": "Ispit školovanosti",
+        "body": "Po završetku tečaja predlažemo polaganje ispita — kao potvrdu uloženog i pokazatelj okolini da imate školovanog, dobro odgojenog psa. Pomažemo na više razina školovanosti."
+      },
+      "pay": {
+        "title": "Plaćanje po napretku",
+        "body": "Obročno, prema razini postignutog. Ništa unaprijed. Propušteni termini zbog bolesti psa ili vaše nemogućnosti dolaska ne naplaćuju se. Cijene su predmet dogovora, u izravnom kontaktu."
+      }
+    }
+  },
+  "locations": {
+    "eyebrow": "04",
+    "title": "Lokacije treninga",
+    "intro": "Treninge vodimo u nekoliko gradova. Ovdje ćemo uskoro upisati točne adrese i termine.",
+    "headquarters": "Sjedište",
+    "coming": "Uskoro",
+    "tba": "Grad",
+    "tbaHint": "Adresa i termin slijede."
+  },
+  "contact": {
+    "eyebrow": "05",
+    "title": "Kontakt",
+    "intro": "Za tečaj, opremu ili savjet — javite se izravno.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-mail",
+    "addressLabel": "Adresa",
+    "phone": "+385 95 2244 355",
+    "phoneHref": "tel:+385952244355",
+    "email": "marinko-alic@net.hr",
+    "address": "Smičiklasova 11b",
+    "city": "HR-47000 Karlovac, Hrvatska"
+  },
+  "footer": {
+    "legal": "Carolo Canis d.o.o.",
+    "rights": "Školovanje pasa · oprema · kinološki savjeti"
+  }
+}

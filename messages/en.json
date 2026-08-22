@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Carolo Canis — dog training, Karlovac",
+    "description": "Individual dog training, equipment and food, and cynology advice. Carolo Canis Ltd., Karlovac. Owner Marinko Alić, court expert in cynology."
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "method": "How we work",
+    "locations": "Locations",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "Cynology atelier · Karlovac",
+    "titleLead": "Individual",
+    "titleEm": "dog training.",
+    "lede": "A small, tightly focused firm. We work with the owner and the dog — one at a time — and have done so for more than twenty years.",
+    "cta": "Arrange a session",
+    "statValue": "20+",
+    "statLabel": "years working with owner and dog"
+  },
+  "services": {
+    "eyebrow": "01",
+    "title": "Three things we do.",
+    "items": {
+      "training": {
+        "title": "Dog training",
+        "body": "Courses with owners, strictly one-to-one. No two dogs are the same, and neither are their owners’ aims — so we dropped group classes long ago."
+      },
+      "shop": {
+        "title": "Equipment and food",
+        "body": "A shop for dog equipment and food. Advice on what to buy comes from the field, not from a catalogue."
+      },
+      "advice": {
+        "title": "Advice and expert work",
+        "body": "Cynology advice grounded in the owner’s credentials: court expert in cynology, and a working-dog judge."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "02",
+    "title": "About us",
+    "p1": "Many enter the world of cynology unprepared, curious and sincere — and problems can catch them on the first steps, some of them growing too large with time. Twenty years of practice give us the freedom to make the path easier, faster and better.",
+    "p2": "These pages are a place to meet us, settle basic issues with your own dog, and — if cynology becomes more than a pastime — to enjoy it.",
+    "p3": "Carolo Canis Ltd. is a small, tightly profiled company in cynology: dog training, equipment and food, and advice that follows from the owner’s professional authority.",
+    "ownerLabel": "Owner",
+    "ownerName": "Marinko Alić",
+    "credentials": [
+      "Court expert in cynology",
+      "Working-dog judge",
+      "Dog training instructor",
+      "Decoy / helper"
+    ]
+  },
+  "method": {
+    "eyebrow": "03",
+    "title": "How we work",
+    "intro": "The work is built around courses with dog owners. Everyone is trained individually.",
+    "points": {
+      "individual": {
+        "title": "Individual only",
+        "body": "We no longer run group courses. Every dog and every owner brings a different set of demands."
+      },
+      "open": {
+        "title": "Open time slot",
+        "body": "Once a week, in an agreed window. You are not tied to a precise minute — arrive when it suits you. First come, first trained, unless a session was booked ahead."
+      },
+      "exam": {
+        "title": "Training exam",
+        "body": "After the course we recommend a proficiency exam — proof of the work invested, and a sign to others that you keep a trained, well-mannered dog. We can help at several levels."
+      },
+      "pay": {
+        "title": "Pay as you progress",
+        "body": "In instalments, according to the level reached. Nothing in advance. Missed sessions for the dog’s illness or your own inability to attend are not charged. Prices are agreed in direct contact, according to the owner’s aims."
+      }
+    }
+  },
+  "locations": {
+    "eyebrow": "04",
+    "title": "Training locations",
+    "intro": "We run sessions in a few cities. Exact addresses and times will be listed here shortly.",
+    "headquarters": "Headquarters",
+    "coming": "Coming soon",
+    "tba": "City",
+    "tbaHint": "Address and hours to follow."
+  },
+  "contact": {
+    "eyebrow": "05",
+    "title": "Contact",
+    "intro": "For a course, equipment or advice — write or call directly.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "phone": "+385 95 2244 355",
+    "phoneHref": "tel:+385952244355",
+    "email": "marinko-alic@net.hr",
+    "address": "Smičiklasova 11b",
+    "city": "HR-47000 Karlovac, Croatia"
+  },
+  "footer": {
+    "legal": "Carolo Canis d.o.o.",
+    "rights": "Dog training · equipment · cynology advice"
+  }
+}
