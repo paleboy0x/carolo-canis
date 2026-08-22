@@ -23,20 +23,19 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <>
-      <PrintFilter />
-
       <section className="relative overflow-hidden border-b border-line">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[min(42rem,70%)]">
-          <Image
-            src="/shepherd.png"
-            alt=""
-            fill
-            priority
-            sizes="70vw"
-            className="dog-print object-cover object-[70%_28%]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-void via-void/70 to-void/20" />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-void to-transparent" />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="relative h-full w-[min(40rem,78%)]">
+            <Image
+              src="/shepherd-print.png"
+              alt=""
+              fill
+              priority
+              sizes="(min-width: 1024px) 40rem, 78vw"
+              className="dog-mark object-contain object-center"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
         </div>
 
         <div className="relative mx-auto max-w-[88rem] px-5 py-10 sm:px-8 sm:py-12">
@@ -46,7 +45,7 @@ export default async function HomePage({ params }: HomePageProps) {
             <em className="text-brass">Canis</em>
           </h1>
           <p
-            className="enter mt-5 max-w-[34rem] font-text text-[1.05rem] leading-[1.65] text-mute"
+            className="enter copy mt-5 max-w-[36rem] font-text text-[1.05rem] leading-[1.65] text-mute"
             style={{ animationDelay: "90ms" }}
           >
             {hero("lede")}
@@ -73,7 +72,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 <h3 className="font-display text-2xl text-brass">
                   {services(`items.${key}.title`)}
                 </h3>
-                <p className="mt-3 font-text text-[0.98rem] leading-[1.65] text-mute">
+                <p className="copy mt-3 font-text text-[0.98rem] leading-[1.65] text-mute">
                   {services(`items.${key}.body`)}
                 </p>
               </article>
@@ -88,7 +87,7 @@ export default async function HomePage({ params }: HomePageProps) {
             <h2 className="font-display text-4xl italic text-bone">
               {about("title")}
             </h2>
-            <div className="mt-5 space-y-4 font-text text-[1.02rem] leading-[1.7] text-mute">
+            <div className="copy mt-5 space-y-4 font-text text-[1.02rem] leading-[1.7] text-mute">
               <p>{about("p1")}</p>
               <p>{about("p2")}</p>
               <p>{about("p3")}</p>
@@ -123,7 +122,7 @@ export default async function HomePage({ params }: HomePageProps) {
             {methodKeys.map((key) => (
               <p
                 key={key}
-                className="card px-5 py-5 font-text text-[0.98rem] leading-[1.65] text-mute"
+                className="card copy px-5 py-5 font-text text-[0.98rem] leading-[1.65] text-mute"
               >
                 {method(key)}
               </p>
@@ -182,20 +181,5 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
     </>
-  );
-}
-
-function PrintFilter() {
-  return (
-    <svg className="absolute h-0 w-0" aria-hidden>
-      <filter id="dog-print" colorInterpolationFilters="sRGB">
-        <feColorMatrix type="saturate" values="0" />
-        <feComponentTransfer>
-          <feFuncR type="table" tableValues="0.03 0.82" />
-          <feFuncG type="table" tableValues="0.03 0.66" />
-          <feFuncB type="table" tableValues="0.03 0.32" />
-        </feComponentTransfer>
-      </filter>
-    </svg>
   );
 }

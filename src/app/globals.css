@@ -74,9 +74,14 @@ body::after {
   animation: enter 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.dog-print {
-  filter: url("#dog-print");
-  opacity: 0.34;
+.dog-mark {
+  opacity: 0.2;
+}
+
+.copy {
+  text-align: justify;
+  hyphens: auto;
+  text-wrap: pretty;
 }
 
 .card {
