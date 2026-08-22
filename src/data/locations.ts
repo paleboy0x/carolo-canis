@@ -38,8 +38,12 @@ export const locations: TrainingLocation[] = [
   },
 ];
 
-export function googleMapsUrl(location: TrainingLocation): string | null {
+export function mapEmbedUrl(
+  location: TrainingLocation,
+  locale: string = "hr",
+): string | null {
   if (!location.coords) return null;
   const { lat, lng } = location.coords;
-  return `https://www.google.com/maps?q=${lat},${lng}`;
+  const hl = locale === "en" ? "en" : "hr";
+  return `https://maps.google.com/maps?q=${lat},${lng}&z=14&hl=${hl}&output=embed`;
 }
