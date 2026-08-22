@@ -1,37 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #14110e;
-  --paper-deep: #1f1a15;
-  --ink: #f3eadc;
-  --ink-soft: #b4a58d;
-  --rule: #3a3228;
-  --rust: #c45a2e;
-  --rust-deep: #8f3a1c;
-  --indigo: #8d9bb8;
-  --stamp: #ffffff;
-  --dusk: #100d0b;
-  --dusk-mid: #221c16;
-  --straw: #e6d3ad;
-  --ivory: #f6eedd;
+  --void: #070807;
+  --turf: #101410;
+  --bone: #e6decc;
+  --mute: #9a927e;
+  --brass: #c9a25a;
+  --clay: #8f3d24;
+  --line: #2a3128;
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-deep: var(--paper-deep);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-rule: var(--rule);
-  --color-rust: var(--rust);
-  --color-rust-deep: var(--rust-deep);
-  --color-indigo: var(--indigo);
-  --color-stamp: var(--stamp);
-  --color-dusk: var(--dusk);
-  --color-dusk-mid: var(--dusk-mid);
-  --color-straw: var(--straw);
-  --color-ivory: var(--ivory);
-  --font-sans: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --color-void: var(--void);
+  --color-turf: var(--turf);
+  --color-bone: var(--bone);
+  --color-mute: var(--mute);
+  --color-brass: var(--brass);
+  --color-clay: var(--clay);
+  --color-line: var(--line);
+  --font-display: var(--font-bodoni), "Bodoni Moda", Didot, serif;
+  --font-text: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
 }
 
 html {
@@ -39,9 +27,9 @@ html {
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+  background: var(--void);
+  color: var(--bone);
+  font-family: var(--font-text), "Iowan Old Style", Georgia, serif;
 }
 
 body::before {
@@ -49,33 +37,53 @@ body::before {
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: 80;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 50;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background-image:
+    linear-gradient(rgba(201, 162, 90, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 90, 0.035) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--rust) 40%, var(--paper));
-  color: var(--ivory);
+  background: #c9a25a;
+  color: #070807;
 }
 
-@keyframes rise {
+@keyframes enter {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
-.rise {
-  animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+.enter {
+  animation: enter 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.font-display {
+  font-family: var(--font-display), "Bodoni Moda", Didot, serif;
+}
+
+.font-text {
+  font-family: var(--font-text), Georgia, serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rise {
+  .enter {
     animation: none;
   }
 }

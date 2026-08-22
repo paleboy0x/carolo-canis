@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Fraunces, Schibsted_Grotesk } from "next/font/google";
+import { Bodoni_Moda, Newsreader } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -8,15 +8,16 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "../globals.css";
 
-const grotesk = Schibsted_Grotesk({
+const display = Bodoni_Moda({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-grotesk",
+  variable: "--font-bodoni",
   display: "swap",
+  style: ["normal", "italic"],
 });
 
-const fraunces = Fraunces({
+const text = Newsreader({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-fraunces",
+  variable: "--font-newsreader",
   display: "swap",
 });
 
@@ -59,11 +60,11 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${grotesk.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${display.variable} ${text.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-paper text-ivory">
+      <body className="min-h-full bg-void text-bone">
         <NextIntlClientProvider messages={messages}>
-          <div className="flex min-h-full flex-col">
+          <div className="relative z-10 flex min-h-full flex-col">
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />

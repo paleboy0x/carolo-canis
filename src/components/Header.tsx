@@ -19,21 +19,21 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-rule bg-dusk/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <LogoMark size={32} />
-          <span className="font-display text-[1.1rem] leading-none tracking-tight text-ivory">
+    <header className="sticky top-0 z-40 border-b border-line bg-void/92 backdrop-blur-sm">
+      <div className="mx-auto flex h-[3.75rem] max-w-[88rem] items-center justify-between px-5 sm:px-8">
+        <Link href="/" className="flex items-center gap-2.5">
+          <LogoMark size={28} />
+          <span className="font-display text-[1.35rem] italic leading-none text-bone">
             Carolo Canis
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[12px] tracking-[0.16em] uppercase text-ink-soft transition-colors hover:text-ivory"
+              className="font-text text-[0.95rem] text-mute transition-colors hover:text-bone"
             >
               {t(link.key)}
             </a>
@@ -45,7 +45,7 @@ export function Header() {
           <LanguageSwitcher />
           <button
             type="button"
-            className="text-[12px] tracking-[0.16em] uppercase text-ivory"
+            className="font-text text-bone"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
           >
@@ -55,13 +55,13 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav className="border-t border-rule px-5 py-4 lg:hidden">
+        <nav className="border-t border-line px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-3">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="font-display text-2xl text-ivory"
+                className="font-display text-3xl italic text-bone"
                 onClick={() => setOpen(false)}
               >
                 {t(link.key)}

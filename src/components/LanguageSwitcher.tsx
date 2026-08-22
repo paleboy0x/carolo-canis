@@ -10,11 +10,7 @@ export function LanguageSwitcher() {
   const router = useRouter();
 
   return (
-    <div
-      className="flex items-center gap-1 font-sans text-[11px] tracking-[0.18em] uppercase"
-      role="group"
-      aria-label="Language"
-    >
+    <div className="flex items-baseline gap-2 font-text text-sm" role="group">
       {routing.locales.map((loc) => {
         const active = loc === locale;
         return (
@@ -22,11 +18,7 @@ export function LanguageSwitcher() {
             key={loc}
             type="button"
             onClick={() => router.replace(pathname, { locale: loc })}
-            className={`px-1.5 py-0.5 transition-colors ${
-              active
-                ? "text-rust"
-                : "text-ink-soft hover:text-ivory"
-            }`}
+            className={active ? "text-brass" : "text-mute hover:text-bone"}
             aria-current={active ? "true" : undefined}
           >
             {loc}
