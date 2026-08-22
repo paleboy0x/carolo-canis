@@ -25,23 +25,9 @@ export default async function HomePage({ params }: HomePageProps) {
     <>
       {/* ============ HERO ============ */}
       <section className="band relative overflow-hidden">
-        <div
-          className="bg-shepherd hidden lg:block"
-          style={{
-            top: "-4rem",
-            right: "-8rem",
-            width: "72rem",
-            height: "44rem",
-            opacity: 0.08,
-          }}
-          aria-hidden
-        >
-          <Shepherd />
-        </div>
-
         <div className="wrap relative">
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-6">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-5">
               <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
                 Carolo
                 <br />
@@ -56,7 +42,7 @@ export default async function HomePage({ params }: HomePageProps) {
               </p>
 
               <div
-                className="enter mt-10 flex items-center gap-6"
+                className="enter mt-10"
                 style={{ animationDelay: "220ms" }}
               >
                 <a href="#contact" className="btn">
@@ -66,11 +52,11 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
 
             <div
-              className="enter lg:col-span-6"
+              className="enter lg:col-span-7"
               style={{ animationDelay: "180ms" }}
             >
               <div className="hero-stage">
-                <Shepherd priority />
+                <Shepherd priority sizes="(min-width: 1024px) 640px, 90vw" />
               </div>
             </div>
           </div>
@@ -107,21 +93,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ ABOUT ============ */}
-      <section id="about" className="band relative overflow-hidden border-t border-line">
-        <div
-          className="bg-shepherd hidden lg:block"
-          style={{
-            bottom: "-3rem",
-            left: "-6rem",
-            width: "48rem",
-            height: "34rem",
-            opacity: 0.05,
-          }}
-          aria-hidden
-        >
-          <Shepherd flip />
-        </div>
-
+      <section id="about" className="band relative border-t border-line">
         <div className="wrap relative">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
@@ -156,7 +128,14 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ METHOD ============ */}
-      <section id="method" className="band relative border-t border-line">
+      <section
+        id="method"
+        className="band relative overflow-hidden border-t border-line"
+      >
+        <div className="method-watermark" aria-hidden>
+          <Shepherd flip />
+        </div>
+
         <div className="wrap relative">
           <h2 className="section-title reveal">{method("title")}</h2>
 
@@ -184,24 +163,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section
-        id="contact"
-        className="band relative overflow-hidden border-t border-line"
-      >
-        <div
-          className="bg-shepherd hidden lg:block"
-          style={{
-            top: "-2rem",
-            right: "-10rem",
-            width: "56rem",
-            height: "36rem",
-            opacity: 0.06,
-          }}
-          aria-hidden
-        >
-          <Shepherd />
-        </div>
-
+      <section id="contact" className="band relative border-t border-line">
         <div className="wrap relative">
           <h2 className="section-title reveal">{contact("title")}</h2>
 

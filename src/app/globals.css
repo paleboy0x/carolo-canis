@@ -325,33 +325,27 @@ body::after {
 .hero-stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 2.35 / 1;
+  filter: drop-shadow(0 12px 28px rgba(208, 166, 99, 0.14));
 }
 
-.hero-stage::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      ellipse at 50% 50%,
-      color-mix(in srgb, var(--brass) 10%, transparent),
-      transparent 60%
-    );
-  pointer-events: none;
-}
-
-/* ---------- Background shepherd (watermark) ---------- */
-.bg-shepherd {
+/* ---------- Method watermark shepherd ---------- */
+.method-watermark {
   position: absolute;
   pointer-events: none;
   user-select: none;
-  overflow: hidden;
+  top: 50%;
+  right: -6rem;
+  transform: translateY(-50%);
+  width: 42rem;
+  aspect-ratio: 2.35 / 1;
+  opacity: 0.05;
 }
 
-.bg-shepherd img {
-  filter: grayscale(1) brightness(0.85);
-  mix-blend-mode: screen;
+@media (max-width: 1024px) {
+  .method-watermark {
+    display: none;
+  }
 }
 
 /* ---------- Contact poster ---------- */
