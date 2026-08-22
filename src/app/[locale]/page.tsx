@@ -1,4 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { FieldShepherd } from "@/components/FieldShepherd";
+import {
+  AdviceMark,
+  ShopMark,
+  TrainingMark,
+} from "@/components/KennelMarks";
+import { LocationPlate } from "@/components/LocationPlate";
 import { locations } from "@/data/locations";
 
 type HomePageProps = {
@@ -16,71 +23,81 @@ export default async function HomePage({ params }: HomePageProps) {
   const locationsT = await getTranslations("locations");
   const contact = await getTranslations("contact");
 
-  const serviceKeys = ["training", "shop", "advice"] as const;
+  const serviceItems = [
+    { key: "training" as const, Mark: TrainingMark },
+    { key: "shop" as const, Mark: ShopMark },
+    { key: "advice" as const, Mark: AdviceMark },
+  ];
   const methodKeys = ["individual", "open", "exam", "pay"] as const;
   const credentials = about.raw("credentials") as string[];
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-rule/80">
-        <div className="pointer-events-none absolute inset-y-0 left-[max(0px,calc(50%-36rem))] hidden w-px bg-rule/80 lg:block" />
-        <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-28">
-          <div className="lg:col-span-8">
-            <p className="rise text-[12px] tracking-[0.22em] uppercase text-rust">
+      <section className="relative isolate overflow-hidden bg-dusk text-ivory">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_78%_42%,rgba(196,90,46,0.28),transparent_58%),radial-gradient(70%_50%_at_20%_80%,rgba(237,215,174,0.08),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-dusk to-transparent" />
+
+        <div className="relative mx-auto grid min-h-[calc(100svh-4.25rem)] max-w-6xl items-end px-5 pb-14 pt-16 sm:px-8 lg:grid-cols-12 lg:pb-16">
+          <div className="z-10 lg:col-span-6 lg:pb-10">
+            <p className="rise text-[11px] tracking-[0.26em] uppercase text-rust">
               {hero("eyebrow")}
             </p>
-            <h1 className="rise font-display mt-6 max-w-3xl text-[3.15rem] leading-[0.95] text-ink sm:text-7xl lg:text-[5.4rem]">
+            <h1 className="rise font-display mt-6 max-w-xl text-[3.4rem] leading-[0.92] sm:text-7xl">
               {hero("titleLead")}
               <br />
-              <em className="font-display font-light italic text-indigo">
+              <em className="font-display font-light italic text-straw">
                 {hero("titleEm")}
               </em>
             </h1>
             <p
-              className="rise mt-8 max-w-xl text-lg leading-relaxed text-ink-soft"
-              style={{ animationDelay: "120ms" }}
+              className="rise mt-7 max-w-md text-lg leading-relaxed text-straw/80"
+              style={{ animationDelay: "110ms" }}
             >
               {hero("lede")}
             </p>
             <a
               href="#contact"
-              className="rise mt-10 inline-flex items-center gap-3 text-[12px] tracking-[0.2em] uppercase text-ink"
-              style={{ animationDelay: "220ms" }}
+              className="rise mt-10 inline-flex items-center gap-3 text-[12px] tracking-[0.22em] uppercase text-ivory"
+              style={{ animationDelay: "200ms" }}
             >
               <span className="h-px w-10 bg-rust" />
               {hero("cta")}
             </a>
-          </div>
-
-          <aside
-            className="rise lg:col-span-4 lg:self-end"
-            style={{ animationDelay: "180ms" }}
-          >
-            <div className="border border-rule bg-paper-deep/40 px-6 py-8">
-              <p className="font-display text-6xl leading-none text-rust">
+            <div
+              className="rise mt-12 max-w-[13rem] border-t border-straw/20 pt-5"
+              style={{ animationDelay: "260ms" }}
+            >
+              <p className="font-display text-5xl leading-none text-rust">
                 {hero("statValue")}
               </p>
-              <p className="mt-3 max-w-[12rem] text-sm leading-snug text-ink-soft">
+              <p className="mt-2 text-sm leading-snug text-straw/70">
                 {hero("statLabel")}
               </p>
             </div>
-          </aside>
+          </div>
+
+          <div className="pointer-events-none relative lg:col-span-6">
+            <FieldShepherd className="field-drift mx-auto w-[min(46rem,118%)] text-straw drop-shadow-[0_30px_40px_rgba(0,0,0,0.35)] lg:absolute lg:-right-16 lg:bottom-[-2rem] lg:w-[52rem]" />
+          </div>
         </div>
+
+        <GrassLine />
       </section>
 
       <section id="services" className="scroll-mt-24 border-b border-rule/80">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
           <SectionHead eyebrow={services("eyebrow")} title={services("title")} />
           <div className="mt-14 grid gap-px bg-rule/80 sm:grid-cols-3">
-            {serviceKeys.map((key, index) => (
+            {serviceItems.map(({ key, Mark }, index) => (
               <article
                 key={key}
-                className="bg-paper px-6 py-10 transition-colors hover:bg-paper-deep/50"
+                className="bg-paper px-6 py-10 transition-colors hover:bg-paper-deep/55"
               >
-                <p className="font-display text-3xl text-rust/80">
+                <Mark className="h-12 w-[4.4rem] text-rust" />
+                <p className="font-display mt-6 text-3xl text-rust/70">
                   0{index + 1}
                 </p>
-                <h3 className="font-display mt-6 text-2xl text-ink">
+                <h3 className="font-display mt-3 text-2xl text-ink">
                   {services(`items.${key}.title`)}
                 </h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
@@ -92,8 +109,12 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      <section id="about" className="scroll-mt-24 border-b border-rule/80">
-        <div className="mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-24">
+      <section
+        id="about"
+        className="relative scroll-mt-24 overflow-hidden border-b border-rule/80"
+      >
+        <FieldShepherd className="pointer-events-none absolute -right-24 bottom-[-4rem] hidden w-[28rem] text-ink/[0.05] lg:block" />
+        <div className="relative mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-7">
             <SectionHead eyebrow={about("eyebrow")} title={about("title")} />
             <div className="mt-10 space-y-5 text-[16px] leading-[1.75] text-ink-soft">
@@ -104,7 +125,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
 
           <aside className="lg:col-span-5 lg:pt-16">
-            <div className="border border-rule bg-paper-deep/30 p-7">
+            <div className="border border-rule bg-paper-deep/40 p-7">
               <p className="text-[11px] tracking-[0.2em] uppercase text-rust">
                 {about("ownerLabel")}
               </p>
@@ -160,71 +181,45 @@ export default async function HomePage({ params }: HomePageProps) {
             intro={locationsT("intro")}
           />
           <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {locations.map((location) => {
-              const coming = location.status === "coming";
-              return (
-                <article
-                  key={location.id}
-                  className={`min-h-[14rem] border px-6 py-7 ${
-                    coming
-                      ? "border-dashed border-rule bg-transparent"
-                      : "border-rule bg-paper-deep/35"
-                  }`}
-                >
-                  <p className="text-[11px] tracking-[0.18em] uppercase text-rust">
-                    {coming
-                      ? locationsT("coming")
-                      : location.noteKey
-                        ? locationsT(location.noteKey)
-                        : null}
-                  </p>
-                  <h3 className="font-display mt-4 text-3xl text-ink">
-                    {location.city || locationsT("tba")}
-                  </h3>
-                  {location.address ? (
-                    <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                      {location.address}
-                    </p>
-                  ) : (
-                    <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                      {locationsT("tbaHint")}
-                    </p>
-                  )}
-                </article>
-              );
-            })}
+            {locations.map((location) => (
+              <LocationPlate key={location.id} location={location} />
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-24">
+      <section id="contact" className="scroll-mt-24 bg-dusk text-ivory">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-5">
-            <SectionHead
-              eyebrow={contact("eyebrow")}
-              title={contact("title")}
-              intro={contact("intro")}
-            />
+            <p className="text-[12px] tracking-[0.22em] uppercase text-rust">
+              {contact("eyebrow")}
+            </p>
+            <h2 className="font-display mt-3 text-4xl leading-tight text-ivory sm:text-5xl">
+              {contact("title")}
+            </h2>
+            <p className="mt-5 max-w-md text-base leading-relaxed text-straw/75">
+              {contact("intro")}
+            </p>
           </div>
           <div className="space-y-8 lg:col-span-7 lg:pt-2">
-            <ContactRow label={contact("phoneLabel")}>
+            <ContactRow label={contact("phoneLabel")} dark>
               <a
                 href={contact("phoneHref")}
-                className="font-display text-3xl text-ink transition-colors hover:text-rust sm:text-4xl"
+                className="font-display text-3xl text-ivory transition-colors hover:text-rust sm:text-4xl"
               >
                 {contact("phone")}
               </a>
             </ContactRow>
-            <ContactRow label={contact("emailLabel")}>
+            <ContactRow label={contact("emailLabel")} dark>
               <a
                 href={`mailto:${contact("email")}`}
-                className="text-lg text-ink underline decoration-rule underline-offset-4 transition-colors hover:decoration-rust"
+                className="text-lg text-straw underline decoration-straw/30 underline-offset-4 transition-colors hover:decoration-rust"
               >
                 {contact("email")}
               </a>
             </ContactRow>
-            <ContactRow label={contact("addressLabel")}>
-              <p className="text-lg leading-snug text-ink">
+            <ContactRow label={contact("addressLabel")} dark>
+              <p className="text-lg leading-snug text-ivory">
                 {contact("address")}
                 <br />
                 {contact("city")}
@@ -234,6 +229,22 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
     </>
+  );
+}
+
+function GrassLine() {
+  return (
+    <svg
+      viewBox="0 0 1440 48"
+      className="relative block w-full text-paper"
+      aria-hidden
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="currentColor"
+        d="M0 48V22c48 10 72-12 120-6s84 18 132 6 90-16 140 2 96 14 148-8 110-4 160 10 100 16 148-4 90-18 140 6 96 12 140-6 72 8 112 14v12H0z"
+      />
+    </svg>
   );
 }
 
@@ -264,13 +275,21 @@ function SectionHead({
 function ContactRow({
   label,
   children,
+  dark = false,
 }: {
   label: string;
   children: React.ReactNode;
+  dark?: boolean;
 }) {
   return (
-    <div className="border-t border-rule/80 pt-5">
-      <p className="text-[11px] tracking-[0.2em] uppercase text-ink-soft">
+    <div
+      className={`border-t pt-5 ${dark ? "border-straw/20" : "border-rule/80"}`}
+    >
+      <p
+        className={`text-[11px] tracking-[0.2em] uppercase ${
+          dark ? "text-straw/55" : "text-ink-soft"
+        }`}
+      >
         {label}
       </p>
       <div className="mt-2">{children}</div>

@@ -13,13 +13,13 @@
     "close": "Close"
   },
   "hero": {
-    "eyebrow": "Cynology atelier · Karlovac",
-    "titleLead": "Individual",
-    "titleEm": "dog training.",
-    "lede": "A small, tightly focused firm. We work with the owner and the dog — one at a time — and have done so for more than twenty years.",
+    "eyebrow": "The trained dog · Karlovac · Zagreb · Rijeka",
+    "titleLead": "Dog and owner.",
+    "titleEm": "One pair at a time.",
+    "lede": "We work in the field, not in a group. More than twenty years of individual training, equipment, and cynology advice.",
     "cta": "Arrange a session",
     "statValue": "20+",
-    "statLabel": "years working with owner and dog"
+    "statLabel": "years in the field with owner and dog"
   },
   "services": {
     "eyebrow": "01",
@@ -80,11 +80,13 @@
   "locations": {
     "eyebrow": "04",
     "title": "Training locations",
-    "intro": "We run sessions in a few cities. Exact addresses and times will be listed here shortly.",
+    "intro": "We train in Karlovac, Zagreb and Rijeka. Map pins will be added once the exact spots are set.",
     "headquarters": "Headquarters",
     "coming": "Coming soon",
     "tba": "City",
-    "tbaHint": "Address and hours to follow."
+    "tbaHint": "Address and hours to follow.",
+    "mapsPending": "Map pin to follow",
+    "openMap": "Open in maps"
   },
   "contact": {
     "eyebrow": "05",

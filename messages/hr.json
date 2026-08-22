@@ -13,13 +13,13 @@
     "close": "Zatvori"
   },
   "hero": {
-    "eyebrow": "Kinološki atelier · Karlovac",
-    "titleLead": "Individualno",
-    "titleEm": "školovanje pasa.",
-    "lede": "Mala tvrtka, usko profilirana. Radimo s vlasnikom i psom — jedan na jedan — već više od dvadeset godina.",
+    "eyebrow": "Školovani pas · Karlovac · Zagreb · Rijeka",
+    "titleLead": "Pas i vlasnik.",
+    "titleEm": "Jedan na jedan.",
+    "lede": "Radimo na terenu, ne u grupi. Više od dvadeset godina individualnog školovanja, opreme i kinoloških savjeta.",
     "cta": "Dogovorite termin",
     "statValue": "20+",
-    "statLabel": "godina rada s vlasnikom i psom"
+    "statLabel": "godina na terenu s vlasnikom i psom"
   },
   "services": {
     "eyebrow": "01",
@@ -80,11 +80,13 @@
   "locations": {
     "eyebrow": "04",
     "title": "Lokacije treninga",
-    "intro": "Treninge vodimo u nekoliko gradova. Ovdje ćemo uskoro upisati točne adrese i termine.",
+    "intro": "Treninge vodimo u Karlovcu, Zagrebu i Rijeci. Točne točke na karti dodajemo čim ih potvrdimo.",
     "headquarters": "Sjedište",
     "coming": "Uskoro",
     "tba": "Grad",
-    "tbaHint": "Adresa i termin slijede."
+    "tbaHint": "Adresa i termin slijede.",
+    "mapsPending": "Točka na karti slijedi",
+    "openMap": "Otvori na karti"
   },
   "contact": {
     "eyebrow": "05",
