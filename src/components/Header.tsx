@@ -7,8 +7,8 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LogoMark } from "./LogoMark";
 
 const links = [
-  { href: "#services", key: "services" },
   { href: "#about", key: "about" },
+  { href: "#services", key: "services" },
   { href: "#method", key: "method" },
   { href: "#locations", key: "locations" },
   { href: "#contact", key: "contact" },
