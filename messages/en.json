@@ -14,8 +14,17 @@
   },
   "hero": {
     "title": "Carolo Canis",
+    "eyebrow": "Cynology · Karlovac · Est. 20+",
     "lede": "Carolo Canis Ltd. is a small, tightly focused company working in cynology in the areas of dog training, trade in dog equipment and food, and cynology advice arising from the owner’s authority as a court expert in cynology and a working-dog judge.",
-    "cta": "Contact"
+    "cta": "Contact",
+    "secondaryCta": "Services"
+  },
+  "plates": {
+    "services": "Pl. II · Practice",
+    "about": "Pl. III · Firm",
+    "method": "Pl. IV · Method",
+    "locations": "Pl. V · Fields",
+    "contact": "Pl. VI · Contact"
   },
   "services": {
     "title": "Services",
