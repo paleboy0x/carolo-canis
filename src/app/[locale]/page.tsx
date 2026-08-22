@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocationRoute } from "@/components/LocationRoute";
-import { Shepherd } from "@/components/marks/Shepherd";
+import { Motif } from "@/components/marks/Motif";
 
 type HomePageProps = {
   params: Promise<{ locale: string }>;
@@ -25,39 +25,29 @@ export default async function HomePage({ params }: HomePageProps) {
     <>
       {/* ============ HERO ============ */}
       <section className="band relative overflow-hidden">
-        <div className="wrap">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-5">
-              <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
-                Carolo
-                <br />
-                <span className="text-brass">Canis</span>
-              </h1>
+        <div className="motif-bg motif-hero" aria-hidden>
+          <Motif priority />
+        </div>
 
-              <p
-                className="enter lede mt-8 max-w-[38rem] text-[1.06rem] leading-[1.75] text-mute"
-                style={{ animationDelay: "120ms" }}
-              >
-                {hero("lede")}
-              </p>
+        <div className="wrap relative">
+          <div className="max-w-[46rem]">
+            <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
+              Carolo
+              <br />
+              <span className="text-brass">Canis</span>
+            </h1>
 
-              <div
-                className="enter mt-10"
-                style={{ animationDelay: "220ms" }}
-              >
-                <a href="#contact" className="btn">
-                  {hero("cta")}
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="enter lg:col-span-7"
-              style={{ animationDelay: "180ms" }}
+            <p
+              className="enter lede mt-8 text-[1.06rem] leading-[1.75] text-mute"
+              style={{ animationDelay: "120ms" }}
             >
-              <div className="hero-stage">
-                <Shepherd priority sizes="(min-width: 1024px) 640px, 90vw" />
-              </div>
+              {hero("lede")}
+            </p>
+
+            <div className="enter mt-10" style={{ animationDelay: "220ms" }}>
+              <a href="#contact" className="btn">
+                {hero("cta")}
+              </a>
             </div>
           </div>
         </div>
@@ -105,15 +95,8 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ METHOD ============ */}
-      <section
-        id="method"
-        className="band relative overflow-hidden border-t border-line"
-      >
-        <div className="method-watermark" aria-hidden>
-          <Shepherd flip />
-        </div>
-
-        <div className="wrap relative">
+      <section id="method" className="band border-t border-line">
+        <div className="wrap">
           <h2 className="section-title reveal">{method("title")}</h2>
 
           <ol className="steps">
@@ -140,8 +123,15 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section id="contact" className="band border-t border-line">
-        <div className="wrap">
+      <section
+        id="contact"
+        className="band relative overflow-hidden border-t border-line"
+      >
+        <div className="motif-bg motif-contact" aria-hidden>
+          <Motif />
+        </div>
+
+        <div className="wrap relative">
           <h2 className="section-title reveal">{contact("title")}</h2>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">

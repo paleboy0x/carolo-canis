@@ -334,29 +334,34 @@ body::after {
   color: var(--brass);
 }
 
-/* ---------- Hero shepherd stage ---------- */
-.hero-stage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2.35 / 1;
-  filter: drop-shadow(0 12px 28px rgba(208, 166, 99, 0.14));
-}
-
-/* ---------- Method watermark shepherd ---------- */
-.method-watermark {
+/* ---------- Background motif (subtle watermark) ---------- */
+.motif-bg {
   position: absolute;
   pointer-events: none;
   user-select: none;
+}
+
+.motif-hero {
   top: 50%;
   right: -6rem;
   transform: translateY(-50%);
-  width: 42rem;
-  aspect-ratio: 2.35 / 1;
-  opacity: 0.05;
+  width: min(32rem, 55vw);
+  aspect-ratio: 3 / 4;
+  opacity: 0.11;
 }
 
-@media (max-width: 1024px) {
-  .method-watermark {
+.motif-contact {
+  top: 50%;
+  left: -8rem;
+  transform: translateY(-50%);
+  width: min(28rem, 45vw);
+  aspect-ratio: 3 / 4;
+  opacity: 0.06;
+}
+
+@media (max-width: 768px) {
+  .motif-hero,
+  .motif-contact {
     display: none;
   }
 }
