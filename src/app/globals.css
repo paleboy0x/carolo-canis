@@ -74,6 +74,28 @@ body::after {
   animation: enter 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.dog-print {
+  filter: url("#dog-print");
+  opacity: 0.34;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--turf) 88%, transparent);
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--brass) 70%, var(--line));
+  background: var(--turf);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
 .font-display {
   font-family: var(--font-display), "Bodoni Moda", Didot, serif;
 }
@@ -85,5 +107,10 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .enter {
     animation: none;
+  }
+
+  .card,
+  .card:hover {
+    transform: none;
   }
 }
