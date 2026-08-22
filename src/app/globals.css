@@ -343,20 +343,20 @@ body::after {
 
 .motif-hero {
   top: 50%;
-  right: -6rem;
+  right: -4rem;
   transform: translateY(-50%);
-  width: min(32rem, 55vw);
-  aspect-ratio: 3 / 4;
-  opacity: 0.11;
+  width: min(30rem, 50vw);
+  aspect-ratio: 978 / 1412;
+  opacity: 0.16;
 }
 
 .motif-contact {
   top: 50%;
-  left: -8rem;
+  left: -6rem;
   transform: translateY(-50%);
-  width: min(28rem, 45vw);
-  aspect-ratio: 3 / 4;
-  opacity: 0.06;
+  width: min(26rem, 40vw);
+  aspect-ratio: 978 / 1412;
+  opacity: 0.09;
 }
 
 @media (max-width: 768px) {
