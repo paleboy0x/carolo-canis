@@ -55,10 +55,7 @@
     "p3": "Način plaćanja tečaja je obročni, a poštuje se redoslijed razine postignutog u određenoj fazi školovanja psa, pri čemu niste u obavezi ništa platiti unaprijed, kao što ne plaćate ni propuštene termine zbog nekih „viših“ razloga (bolesti psa, Vaše nemogućnosti dolaska i sl.). Cijene tečaja su predmet dogovora s osnova zahtjeva vlasnika psa i njegovih potreba i o njima ćete biti informirani u direktnom kontaktu."
   },
   "locations": {
-    "title": "Lokacije treninga",
-    "headquarters": "Sjedište",
-    "mapsPending": "Točka na karti slijedi",
-    "openMap": "Otvori na karti"
+    "title": "Lokacije treninga"
   },
   "contact": {
     "title": "Kontakt",

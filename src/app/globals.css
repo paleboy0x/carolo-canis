@@ -2,30 +2,24 @@
 
 :root {
   --void: #070807;
-  --void-2: #0c0d0b;
   --turf: #10120f;
   --bone: #ecdfc4;
   --mute: #9a927e;
   --brass: #d0a663;
-  --brass-deep: #a97b3d;
   --clay: #8f3d24;
   --line: #2a2e28;
-  --line-2: #363b34;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
 }
 
 @theme inline {
   --color-void: var(--void);
-  --color-void-2: var(--void-2);
   --color-turf: var(--turf);
   --color-bone: var(--bone);
   --color-mute: var(--mute);
   --color-brass: var(--brass);
-  --color-brass-deep: var(--brass-deep);
   --color-clay: var(--clay);
   --color-line: var(--line);
-  --color-line-2: var(--line-2);
   --font-display: var(--font-display), "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-text: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
 }
@@ -116,7 +110,6 @@ body::after {
 /* ---------- Typography ---------- */
 .font-display {
   font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
-  font-feature-settings: "ss01";
 }
 
 .font-text {

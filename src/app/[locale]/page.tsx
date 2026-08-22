@@ -25,7 +25,7 @@ export default async function HomePage({ params }: HomePageProps) {
     <>
       {/* ============ HERO ============ */}
       <section className="band relative overflow-hidden">
-        <div className="wrap relative">
+        <div className="wrap">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-5">
               <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
@@ -64,8 +64,8 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ ABOUT + SERVICES (merged) ============ */}
-      <section id="about" className="band relative border-t border-line">
-        <div className="wrap relative">
+      <section id="about" className="band border-t border-line">
+        <div className="wrap">
           <h2 className="section-title reveal">{about("title")}</h2>
 
           <div className="copy reveal mt-10 max-w-[62rem] space-y-5 text-[1.04rem] leading-[1.8] text-mute">
@@ -132,16 +132,16 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ LOCATIONS ============ */}
-      <section id="locations" className="band relative border-t border-line">
-        <div className="wrap relative">
+      <section id="locations" className="band border-t border-line">
+        <div className="wrap">
           <h2 className="section-title reveal">{locationsT("title")}</h2>
           <LocationRoute />
         </div>
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section id="contact" className="band relative border-t border-line">
-        <div className="wrap relative">
+      <section id="contact" className="band border-t border-line">
+        <div className="wrap">
           <h2 className="section-title reveal">{contact("title")}</h2>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">

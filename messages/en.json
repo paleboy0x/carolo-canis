@@ -55,10 +55,7 @@
     "p3": "Course payment is in instalments, following the level reached in a given phase of training. You are not obliged to pay anything in advance, and you are not charged for missed sessions due to “higher” reasons (the dog’s illness, your inability to attend, and the like). Course prices are a matter of agreement based on the owner’s aims and needs, and you will be informed about them in direct contact."
   },
   "locations": {
-    "title": "Training locations",
-    "headquarters": "Headquarters",
-    "mapsPending": "Map pin to follow",
-    "openMap": "Open in maps"
+    "title": "Training locations"
   },
   "contact": {
     "title": "Contact",
