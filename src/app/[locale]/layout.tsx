@@ -6,6 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
 import "../globals.css";
 
 const display = Bodoni_Moda({
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <Reveal />
           </div>
         </NextIntlClientProvider>
       </body>

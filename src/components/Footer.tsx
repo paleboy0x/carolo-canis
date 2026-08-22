@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto flex max-w-[88rem] items-center gap-3 px-5 py-6 sm:px-8">
+      <div className="wrap flex items-center gap-3 py-6">
         <LogoMark size={22} />
         <p className="font-text text-sm text-mute">
           © {year} {t("legal")}
