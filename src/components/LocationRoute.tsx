@@ -16,7 +16,7 @@ export async function LocationRoute() {
               <iframe
                 title={location.city}
                 src={embed}
-                className="h-40 w-full border-0 grayscale contrast-[0.92]"
+                className="h-40 w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />

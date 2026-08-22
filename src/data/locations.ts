@@ -19,8 +19,6 @@ export const locations: TrainingLocation[] = [
   {
     id: "karlovac",
     city: "Karlovac",
-    address: "Smičiklasova 11b, HR-47000",
-    noteKey: "headquarters",
     status: "active",
     coords: { lat: 45.4928, lng: 15.5552 },
   },
