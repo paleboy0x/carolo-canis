@@ -22,19 +22,19 @@ export const locations: TrainingLocation[] = [
     address: "Smičiklasova 11b, HR-47000",
     noteKey: "headquarters",
     status: "active",
-    coords: null,
+    coords: { lat: 45.4928, lng: 15.5552 },
   },
   {
     id: "zagreb",
     city: "Zagreb",
     status: "active",
-    coords: null,
+    coords: { lat: 45.8131, lng: 15.9772 },
   },
   {
     id: "rijeka",
     city: "Rijeka",
     status: "active",
-    coords: null,
+    coords: { lat: 45.3271, lng: 14.4422 },
   },
 ];
 
