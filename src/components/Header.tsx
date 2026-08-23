@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LogoMark } from "./LogoMark";
+import { ScrollProgress } from "./ScrollProgress";
 
 const links = [
   { href: "#about", key: "about" },
@@ -65,6 +66,8 @@ export function Header() {
           </div>
         </nav>
       ) : null}
+
+      <ScrollProgress />
     </header>
   );
 }

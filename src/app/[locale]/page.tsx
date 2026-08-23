@@ -34,6 +34,7 @@ export default async function HomePage({ params }: HomePageProps) {
     payment: "scale",
   };
   const credentials = about.raw("credentials") as string[];
+  const heroStats = hero.raw("stats") as string[];
 
   return (
     <>
@@ -52,9 +53,9 @@ export default async function HomePage({ params }: HomePageProps) {
 
         <div className="wrap relative">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            {/* LEFT — brand + intro + CTA */}
+            {/* LEFT — brand + intro + CTA + stats */}
             <div className="lg:col-span-7">
-              <h1 className="enter font-display text-[clamp(2.8rem,6.5vw,4.8rem)] font-extrabold leading-[0.95] tracking-[-0.03em] text-bone whitespace-nowrap">
+              <h1 className="enter font-display text-[clamp(3rem,7vw,6rem)] font-extrabold leading-[0.95] tracking-[-0.03em] text-bone whitespace-nowrap">
                 Carolo <span className="text-brass">Canis</span>
               </h1>
 
@@ -76,15 +77,27 @@ export default async function HomePage({ params }: HomePageProps) {
                   {hero("cta")}
                 </a>
               </div>
+
+              <ul
+                className="enter mt-10 flex flex-wrap gap-x-7 gap-y-3"
+                style={{ animationDelay: "360ms" }}
+              >
+                {heroStats.map((stat) => (
+                  <li key={stat} className="stat-item">
+                    {stat}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* RIGHT — three service cards */}
-            <div
-              className="enter space-y-3 lg:col-span-5"
-              style={{ animationDelay: "220ms" }}
-            >
+            <div className="space-y-3 lg:col-span-5">
               {serviceKeys.map((key, i) => (
-                <article key={key} className="hero-card">
+                <article
+                  key={key}
+                  className="hero-card enter"
+                  style={{ animationDelay: `${240 + i * 100}ms` }}
+                >
                   <span className="hero-card-num" aria-hidden>
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -103,9 +116,22 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{about("title")}</h2>
 
-          <div className="copy reveal mt-8 max-w-[62rem] space-y-4 text-[1.04rem] leading-[1.75] text-mute">
-            <p>{about("p1")}</p>
-            <p>{about("p2")}</p>
+          <div className="mt-8 grid gap-10 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-8">
+              <p className="about-lead reveal">{about("lead")}</p>
+
+              <div className="copy reveal mt-6 space-y-4 text-[1.04rem] leading-[1.75] text-mute">
+                <p>{about("p1")}</p>
+                <p>{about("p2")}</p>
+              </div>
+            </div>
+
+            <aside className="reveal order-first lg:order-none lg:col-span-4 lg:self-center">
+              <div className="stat-block">
+                <span className="stat-value">{about("statValue")}</span>
+                <span className="stat-label">{about("statLabel")}</span>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -115,7 +141,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{method("title")}</h2>
 
-          <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <ol className="steps-line stagger mt-10 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-5">
             {stepKeys.map((key, i) => (
               <li key={key} className="step reveal">
                 <span className="step-icon-wrap" aria-hidden>
@@ -139,6 +165,16 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{locationsT("title")}</h2>
           <LocationRoute />
+        </div>
+      </section>
+
+      {/* ============ CTA BAND ============ */}
+      <section className="band-cta">
+        <div className="wrap flex flex-col items-center gap-6 py-10 text-center sm:flex-row sm:justify-between sm:py-12 sm:text-left">
+          <p className="cta-line reveal">{contact("ctaLine")}</p>
+          <a href={contact("phoneHref")} className="btn reveal shrink-0">
+            {contact("phone")}
+          </a>
         </div>
       </section>
 

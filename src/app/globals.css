@@ -304,36 +304,76 @@ body::after {
   background: var(--brass);
 }
 
-/* ---------- Method steps ---------- */
+/* ---------- Method steps (timeline) ---------- */
+.steps-line {
+  position: relative;
+}
+
+/* horizontal connector on desktop — passes behind the icon boxes */
+@media (min-width: 1024px) {
+  .steps-line::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 1%;
+    right: 1%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      color-mix(in srgb, var(--brass) 45%, transparent) 5%,
+      color-mix(in srgb, var(--brass) 45%, transparent) 95%,
+      transparent
+    );
+  }
+}
+
+/* vertical connector on single-column mobile */
+@media (max-width: 639px) {
+  .steps-line::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 23px;
+    width: 1px;
+    background: color-mix(in srgb, var(--brass) 30%, transparent);
+  }
+}
+
 .step {
   position: relative;
-  padding: 22px 20px 22px;
-  border-top: 2px solid color-mix(in srgb, var(--brass) 55%, transparent);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.028),
-    rgba(255, 255, 255, 0.005)
-  );
-  transition:
-    transform 220ms ease,
-    border-color 220ms ease;
+  transition: transform 220ms ease;
 }
 
 .step:hover {
   transform: translateY(-3px);
+}
+
+.step:hover .step-icon-wrap {
   border-color: var(--brass);
+  color: var(--bone);
 }
 
 .step-icon-wrap {
-  display: block;
-  width: 34px;
-  height: 34px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid color-mix(in srgb, var(--brass) 55%, var(--line));
+  background: var(--turf);
   color: var(--brass);
+  transition:
+    border-color 220ms ease,
+    color 220ms ease;
 }
 
 .step-icon-wrap svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .step-index {
@@ -419,25 +459,117 @@ body::after {
   position: absolute;
   pointer-events: none;
   user-select: none;
-  top: 50%;
-  left: 50%;
+  top: 42%;
+  left: 55%;
   transform: translate(-50%, -50%);
-  width: min(78rem, 132vw);
+  width: min(80rem, 135vw);
   aspect-ratio: 1989 / 781;
-  opacity: 0.11;
+  opacity: 0.14;
   z-index: 0;
 }
 
 @media (max-width: 640px) {
   .hero-shadow {
+    top: 46%;
+    left: 50%;
     width: 160vw;
-    opacity: 0.08;
+    opacity: 0.09;
   }
+}
+
+/* ---------- Hero stats ---------- */
+.stat-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.stat-item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: var(--brass);
+  transform: rotate(45deg);
+}
+
+/* ---------- About editorial ---------- */
+.about-lead {
+  margin: 0;
+  font-family: var(--font-text), serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  line-height: 1.55;
+  color: var(--bone);
+  text-wrap: pretty;
+}
+
+.stat-block {
+  position: relative;
+  padding: 30px 26px 28px;
+  border: 1px solid color-mix(in srgb, var(--brass) 35%, var(--line));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% 100%,
+    16px 100%,
+    0 calc(100% - 16px)
+  );
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.4rem, 5.5vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--brass);
+}
+
+.stat-label {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+/* ---------- CTA band ---------- */
+.band-cta {
+  border-top: 1px solid var(--line);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--brass) 8%, transparent),
+    transparent 80%
+  );
+}
+
+.cta-line {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--bone);
 }
 
 /* ---------- Contact poster ---------- */
 .poster-phone {
-  display: block;
+  position: relative;
+  display: inline-block;
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
   font-size: clamp(2.6rem, 7.5vw, 5.4rem);
@@ -448,8 +580,128 @@ body::after {
   transition: color 220ms ease;
 }
 
+.poster-phone::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 3px;
+  background: var(--brass);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 320ms ease;
+}
+
 .poster-phone:hover {
   color: var(--brass);
+}
+
+.poster-phone:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Location poster cards ---------- */
+.loc-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--brass) 25%, var(--line));
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% 100%,
+    16px 100%,
+    0 calc(100% - 16px)
+  );
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease;
+}
+
+.loc-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brass);
+}
+
+.loc-map {
+  position: relative;
+  overflow: hidden;
+}
+
+.loc-map iframe {
+  display: block;
+  transition: transform 500ms ease;
+}
+
+.loc-card:hover .loc-map iframe {
+  transform: scale(1.045);
+}
+
+.loc-overlay {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 46px 20px 16px;
+  background: linear-gradient(
+    to top,
+    rgba(7, 8, 7, 0.94),
+    rgba(7, 8, 7, 0.55) 55%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.loc-num {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--brass);
+}
+
+.loc-city {
+  margin: 4px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--bone);
+}
+
+.loc-compass {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  color: var(--brass);
+  pointer-events: none;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.65));
+}
+
+/* ---------- Footer ---------- */
+.footer-shepherd {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  right: -5rem;
+  bottom: -2rem;
+  width: 30rem;
+  aspect-ratio: 1989 / 781;
+  opacity: 0.05;
+}
+
+/* ---------- Header scroll progress ---------- */
+.scroll-progress {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--brass);
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 /* ---------- Divider ---------- */
