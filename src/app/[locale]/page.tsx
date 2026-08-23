@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocationRoute } from "@/components/LocationRoute";
-import { Motif } from "@/components/marks/Motif";
 
 type HomePageProps = {
   params: Promise<{ locale: string }>;
@@ -24,12 +23,8 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="band relative overflow-hidden">
-        <div className="motif-bg motif-hero" aria-hidden>
-          <Motif priority />
-        </div>
-
-        <div className="wrap relative">
+      <section className="band">
+        <div className="wrap">
           <div className="max-w-[46rem]">
             <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
               Carolo
@@ -61,7 +56,6 @@ export default async function HomePage({ params }: HomePageProps) {
           <div className="copy reveal mt-10 max-w-[62rem] space-y-5 text-[1.04rem] leading-[1.8] text-mute">
             <p>{about("p1")}</p>
             <p>{about("p2")}</p>
-            <p>{about("p3")}</p>
           </div>
 
           <div className="rule mt-16 reveal" aria-hidden />
@@ -123,15 +117,8 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section
-        id="contact"
-        className="band relative overflow-hidden border-t border-line"
-      >
-        <div className="motif-bg motif-contact" aria-hidden>
-          <Motif />
-        </div>
-
-        <div className="wrap relative">
+      <section id="contact" className="band border-t border-line">
+        <div className="wrap">
           <h2 className="section-title reveal">{contact("title")}</h2>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
