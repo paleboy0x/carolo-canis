@@ -78,9 +78,6 @@ export default async function HomePage({ params }: HomePageProps) {
                   <h4 className="relative mt-1 max-w-[85%] font-display text-2xl font-bold leading-tight tracking-[-0.02em] text-bone">
                     {services(`items.${key}.title`)}
                   </h4>
-                  <p className="copy relative mt-4 text-[0.98rem] leading-[1.75] text-mute">
-                    {services(`items.${key}.body`)}
-                  </p>
                 </article>
               ))}
             </div>

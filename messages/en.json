@@ -21,16 +21,13 @@
     "title": "Services",
     "items": {
       "training": {
-        "title": "Dog training",
-        "body": "The work is based on courses with dog owners. Everyone is trained individually, as we long ago dropped group classes (because no two dogs are the same, and neither are their owners’ demands)."
+        "title": "Dog training"
       },
       "shop": {
-        "title": "Dog equipment and food",
-        "body": "The company also works in the trade of dog equipment and food."
+        "title": "Dog equipment and food"
       },
       "advice": {
-        "title": "Cynology advice",
-        "body": "Cynology advice arising from the owner’s authority as a court expert in cynology and a working-dog judge."
+        "title": "Cynology advice"
       }
     }
   },
