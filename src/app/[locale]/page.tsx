@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocationRoute } from "@/components/LocationRoute";
 
@@ -23,8 +24,19 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="band">
-        <div className="wrap">
+      <section className="band relative overflow-hidden">
+        <div className="hero-shadow" aria-hidden>
+          <Image
+            src="/shepherd-hero.png"
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 62rem, 120vw"
+            className="object-contain object-left"
+          />
+        </div>
+
+        <div className="wrap relative">
           <div className="max-w-[46rem]">
             <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
               Carolo
@@ -48,7 +60,7 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* ============ ABOUT + SERVICES (merged) ============ */}
+      {/* ============ ABOUT (services merged in) ============ */}
       <section id="about" className="band border-t border-line">
         <div className="wrap">
           <h2 className="section-title reveal">{about("title")}</h2>
@@ -58,30 +70,21 @@ export default async function HomePage({ params }: HomePageProps) {
             <p>{about("p2")}</p>
           </div>
 
-          <div className="rule mt-16 reveal" aria-hidden />
-
-          <div id="services" className="mt-16 scroll-mt-24">
-            <h3 className="subsection-title reveal">{services("title")}</h3>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {serviceKeys.map((key, i) => (
-                <article key={key} className="card reveal">
-                  <span className="card-tick card-tick-tl" aria-hidden />
-                  <span className="card-tick card-tick-tr" aria-hidden />
-                  <span className="card-tick card-tick-bl" aria-hidden />
-                  <span className="card-tick card-tick-br" aria-hidden />
-
-                  <span className="card-num" aria-hidden>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-
-                  <h4 className="relative mt-1 max-w-[85%] font-display text-2xl font-bold leading-tight tracking-[-0.02em] text-bone">
-                    {services(`items.${key}.title`)}
-                  </h4>
-                </article>
-              ))}
-            </div>
-          </div>
+          <ul
+            id="services"
+            className="mt-14 grid scroll-mt-24 gap-x-10 gap-y-8 sm:grid-cols-3"
+          >
+            {serviceKeys.map((key, i) => (
+              <li key={key} className="reveal border-t border-line pt-4">
+                <span className="block font-display text-3xl font-extrabold leading-none tracking-[-0.03em] text-brass">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h4 className="mt-3 font-display text-lg font-semibold leading-snug text-bone">
+                  {services(`items.${key}.title`)}
+                </h4>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

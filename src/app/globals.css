@@ -263,19 +263,6 @@ body::after {
   border-color: var(--brass);
 }
 
-.card-num {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  font-family: var(--font-display), sans-serif;
-  font-weight: 800;
-  font-size: 2.2rem;
-  line-height: 1;
-  color: color-mix(in srgb, var(--brass) 55%, transparent);
-  letter-spacing: -0.03em;
-  pointer-events: none;
-}
-
 /* corner ticks appear on hover */
 .card-tick {
   position: absolute;
@@ -340,6 +327,28 @@ body::after {
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--brass);
+}
+
+/* ---------- Hero shepherd shadow ---------- */
+.hero-shadow {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  top: 2rem;
+  left: -3rem;
+  width: min(62rem, 116vw);
+  aspect-ratio: 1989 / 781;
+  opacity: 0.12;
+  z-index: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-shadow {
+    top: 1rem;
+    left: -8vw;
+    width: 130vw;
+    opacity: 0.09;
+  }
 }
 
 /* ---------- Contact poster ---------- */

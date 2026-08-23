@@ -8,7 +8,6 @@ import { LogoMark } from "./LogoMark";
 
 const links = [
   { href: "#about", key: "about" },
-  { href: "#services", key: "services" },
   { href: "#method", key: "method" },
   { href: "#locations", key: "locations" },
   { href: "#contact", key: "contact" },
