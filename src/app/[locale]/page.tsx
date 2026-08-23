@@ -24,34 +24,42 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="band relative overflow-hidden">
-        <div className="hero-shadow" aria-hidden>
-          <Image
-            src="/shepherd-hero.png"
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 1024px) 62rem, 120vw"
-            className="object-contain object-left"
-          />
-        </div>
-
+      <section className="band relative overflow-hidden py-24 lg:py-32">
         <div className="wrap relative">
-          <div className="max-w-[46rem]">
-            <h1 className="enter font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
-              Carolo
-              <br />
-              <span className="text-brass">Canis</span>
-            </h1>
+          <div className="mx-auto max-w-[46rem] text-center">
+            <div className="relative">
+              <div className="hero-shadow" aria-hidden>
+                <Image
+                  src="/shepherd-hero.png"
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 64rem, 122vw"
+                  className="object-contain"
+                />
+              </div>
+
+              <h1 className="enter relative font-display text-[clamp(3.4rem,8vw,5.6rem)] font-extrabold leading-[0.9] tracking-[-0.03em] text-bone">
+                Carolo
+                <br />
+                <span className="text-brass">Canis</span>
+              </h1>
+            </div>
+
+            <div
+              className="enter mx-auto mt-8 h-[3px] w-14 bg-brass"
+              style={{ animationDelay: "80ms" }}
+              aria-hidden
+            />
 
             <p
-              className="enter lede mt-8 text-[1.06rem] leading-[1.75] text-mute"
-              style={{ animationDelay: "120ms" }}
+              className="enter mt-8 text-balance text-[1.08rem] leading-[1.75] text-mute"
+              style={{ animationDelay: "160ms" }}
             >
               {hero("lede")}
             </p>
 
-            <div className="enter mt-10" style={{ animationDelay: "220ms" }}>
+            <div className="enter mt-10" style={{ animationDelay: "260ms" }}>
               <a href="#contact" className="btn">
                 {hero("cta")}
               </a>
@@ -70,21 +78,32 @@ export default async function HomePage({ params }: HomePageProps) {
             <p>{about("p2")}</p>
           </div>
 
-          <ul
+          <div
             id="services"
-            className="mt-14 grid scroll-mt-24 gap-x-10 gap-y-8 sm:grid-cols-3"
+            className="mt-16 grid scroll-mt-24 gap-6 md:grid-cols-3"
           >
             {serviceKeys.map((key, i) => (
-              <li key={key} className="reveal border-t border-line pt-4">
-                <span className="block font-display text-3xl font-extrabold leading-none tracking-[-0.03em] text-brass">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h4 className="mt-3 font-display text-lg font-semibold leading-snug text-bone">
-                  {services(`items.${key}.title`)}
-                </h4>
-              </li>
+              <article key={key} className="card reveal">
+                <span className="card-tick card-tick-tl" aria-hidden />
+                <span className="card-tick card-tick-tr" aria-hidden />
+                <span className="card-tick card-tick-bl" aria-hidden />
+                <span className="card-tick card-tick-br" aria-hidden />
+
+                <div className="relative">
+                  <span className="block font-display text-[3.4rem] font-extrabold leading-[0.85] tracking-[-0.04em] text-brass">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className="mt-5 block h-[2px] w-9 bg-brass"
+                    aria-hidden
+                  />
+                  <h4 className="mt-5 font-display text-2xl font-bold leading-tight tracking-[-0.02em] text-bone">
+                    {services(`items.${key}.title`)}
+                  </h4>
+                </div>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
