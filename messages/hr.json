@@ -46,9 +46,28 @@
   },
   "method": {
     "title": "Način rada",
-    "p1": "Koncept rada zasniva se kroz tečajeve sa vlasnicima pasa. Sa svima se radi individualno, pošto smo odavno odbacili koncept grupnog rada s tečajcima (jer niti su svi psi isti, niti su svi zahtjevi vlasnika identični).",
-    "p2": "Tečajevi se odvijaju jednom tjedno u dogovorenom terminu, na principu „otvorenog“ termina, što znači da niste vezani za precizno vrijeme već unutar dogovorenog termina možete doći kad Vama odgovara, pri čemu se jedino poštuje red „tko je došao prije – radi prije“ ili neka prije zakazana obaveza u radu. Po završenim tečajevima sugeriramo svakako polaganje ispita školovanosti psa, kao pokazatelj uspješnosti u školovanju Vašeg ljubimca (pri čemu smo Vam spremni pomoći u mnogim razinama školovanosti). Ispiti su, također, pokazatelj Vašoj okolini da posjedujete školovanog i dobro odgojenog psa, kao i potvrda uloženog u Vašeg ljubimca.",
-    "p3": "Način plaćanja tečaja je obročni, a poštuje se redoslijed razine postignutog u određenoj fazi školovanja psa, pri čemu niste u obavezi ništa platiti unaprijed, kao što ne plaćate ni propuštene termine zbog nekih „viših“ razloga (bolesti psa, Vaše nemogućnosti dolaska i sl.). Cijene tečaja su predmet dogovora s osnova zahtjeva vlasnika psa i njegovih potreba i o njima ćete biti informirani u direktnom kontaktu."
+    "steps": {
+      "consult": {
+        "title": "Razgovor i procjena",
+        "body": "Prvi kontakt, razumijevanje potreba psa i vlasnika, dogovor o ciljevima školovanja."
+      },
+      "individual": {
+        "title": "Individualan pristup",
+        "body": "Bez grupnog rada — svaki pas i vlasnik dobiju svoj plan. Niti su svi psi isti, niti su zahtjevi vlasnika identični."
+      },
+      "session": {
+        "title": "Otvoreni tjedni termin",
+        "body": "Jedan tečaj tjedno u dogovorenom prozoru. Dolazite kad Vam odgovara — poštuje se red dolaska."
+      },
+      "exam": {
+        "title": "Ispit školovanosti",
+        "body": "Po završetku tečaja sugeriramo polaganje — potvrda uspjeha Vama i okolini, na više razina."
+      },
+      "payment": {
+        "title": "Fleksibilno plaćanje",
+        "body": "Obročno, po fazama školovanja. Ništa unaprijed, propušteni termini se ne naplaćuju."
+      }
+    }
   },
   "locations": {
     "title": "Lokacije treninga"

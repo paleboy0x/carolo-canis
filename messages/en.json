@@ -46,9 +46,28 @@
   },
   "method": {
     "title": "How we work",
-    "p1": "The work is based on courses with dog owners. Everyone is trained individually, as we long ago dropped group classes (because no two dogs are the same, and neither are their owners’ demands).",
-    "p2": "Courses take place once a week in an agreed slot, on an “open” time principle: you are not bound to a precise minute, but may arrive when it suits you within the agreed window, observing only the order of who came first — or a previously booked obligation. After the courses we recommend taking a training exam, as a measure of success in training your dog (and we are ready to help at many levels). Exams are also a sign to those around you that you have a trained, well-mannered dog, and confirmation of what you have invested in your companion.",
-    "p3": "Course payment is in instalments, following the level reached in a given phase of training. You are not obliged to pay anything in advance, and you are not charged for missed sessions due to “higher” reasons (the dog’s illness, your inability to attend, and the like). Course prices are a matter of agreement based on the owner’s aims and needs, and you will be informed about them in direct contact."
+    "steps": {
+      "consult": {
+        "title": "Talk and assessment",
+        "body": "First contact, understanding the needs of dog and owner, and agreeing on training goals."
+      },
+      "individual": {
+        "title": "Individual approach",
+        "body": "No group classes — every dog and owner get their own plan. No two dogs are the same, nor are their owners’ demands."
+      },
+      "session": {
+        "title": "Open weekly slot",
+        "body": "One course per week within an agreed window. Come when it suits you — order of arrival is respected."
+      },
+      "exam": {
+        "title": "Training exam",
+        "body": "At the end of the course we recommend taking one — a confirmation of success for you and those around you, at multiple levels."
+      },
+      "payment": {
+        "title": "Flexible payment",
+        "body": "In instalments, phased with the training. Nothing upfront, missed sessions are not charged."
+      }
+    }
   },
   "locations": {
     "title": "Training locations"
