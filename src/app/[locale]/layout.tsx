@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Manrope, Newsreader } from "next/font/google";
+import { Bricolage_Grotesque, Newsreader } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -9,11 +9,10 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import "../globals.css";
 
-const display = Manrope({
+const display = Bricolage_Grotesque({
   subsets: ["latin", "latin-ext"],
   variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
 });
 
 const text = Newsreader({
