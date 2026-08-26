@@ -9,11 +9,12 @@ const navLinks = [
   { href: "#contact", key: "contact" },
 ] as const;
 
+// TODO: zamijeniti stvarnim Facebook linkom kad bude dostupan
+const FACEBOOK_URL = "#";
+
 export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
-  const meta = useTranslations("meta");
-  const contact = useTranslations("contact");
   const year = new Date().getFullYear();
 
   return (
@@ -29,50 +30,36 @@ export function Footer() {
       </div>
 
       <div className="wrap relative">
-        <div className="grid gap-10 py-12 md:grid-cols-12 md:gap-8">
-          <div className="md:col-span-6">
-            <div className="flex items-center gap-2.5">
-              <LogoMark size={26} />
-              <span className="font-display text-lg font-bold leading-none tracking-[-0.02em] text-bone">
-                Carolo Canis
-              </span>
-            </div>
-            <p className="mt-4 max-w-[26rem] font-text text-sm leading-relaxed text-mute">
-              {meta("description")}
-            </p>
+        <div className="flex flex-col gap-8 py-10 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-2.5">
+            <LogoMark size={26} />
+            <span className="font-display text-lg font-bold leading-none tracking-[-0.02em] text-bone">
+              Carolo Canis
+            </span>
           </div>
 
-          <nav className="md:col-span-3">
-            <ul className="space-y-2.5">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="nav-link font-text text-sm">
-                    {nav(link.key)}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <nav className="flex flex-wrap items-center gap-x-7 gap-y-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-link font-text text-sm"
+              >
+                {nav(link.key)}
+              </a>
+            ))}
+
+            <a
+              href={FACEBOOK_URL}
+              className="fb-link"
+              aria-label="Facebook"
+              title="Facebook"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M13.5 21v-8.25h2.77l.41-3.22h-3.18V7.47c0-.93.26-1.57 1.6-1.57h1.7V3.02c-.3-.04-1.31-.13-2.49-.13-2.46 0-4.15 1.5-4.15 4.27v2.37H7.38v3.22h2.78V21h3.34z" />
+              </svg>
+            </a>
           </nav>
-
-          <div className="md:col-span-3">
-            <a
-              href={contact("phoneHref")}
-              className="block font-display text-base font-semibold text-bone no-underline transition-colors hover:text-brass"
-            >
-              {contact("phone")}
-            </a>
-            <a
-              href={`mailto:${contact("email")}`}
-              className="mt-2 block font-text text-sm text-mute no-underline transition-colors hover:text-brass"
-            >
-              {contact("email")}
-            </a>
-            <p className="mt-4 font-text text-sm leading-snug text-mute">
-              {contact("address")}
-              <br />
-              {contact("city")}
-            </p>
-          </div>
         </div>
 
         <div className="border-t border-line py-5">

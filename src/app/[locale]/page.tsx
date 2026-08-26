@@ -19,19 +19,12 @@ export default async function HomePage({ params }: HomePageProps) {
   const contact = await getTranslations("contact");
 
   const serviceKeys = ["training", "shop", "advice"] as const;
-  const stepKeys = [
-    "consult",
-    "individual",
-    "session",
-    "exam",
-    "payment",
-  ] as const;
+  const stepKeys = ["consult", "individual", "session", "exam"] as const;
   const stepIcon: Record<(typeof stepKeys)[number], StepIconType> = {
     consult: "chat",
     individual: "focus",
     session: "clock",
     exam: "award",
-    payment: "scale",
   };
   const credentials = about.raw("credentials") as string[];
   const heroStats = hero.raw("stats") as string[];
@@ -141,22 +134,45 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{method("title")}</h2>
 
-          <ol className="steps-line stagger mt-10 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-5">
+          <ol className="stagger mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {stepKeys.map((key, i) => (
-              <li key={key} className="step reveal">
-                <span className="step-icon-wrap" aria-hidden>
-                  <StepIcon type={stepIcon[key]} />
-                </span>
-                <span className="step-index">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h4 className="step-title">
-                  {method(`steps.${key}.title`)}
-                </h4>
-                <p className="step-body">{method(`steps.${key}.body`)}</p>
+              <li key={key} className="card reveal">
+                <span className="card-tick card-tick-tl" aria-hidden />
+                <span className="card-tick card-tick-tr" aria-hidden />
+                <span className="card-tick card-tick-bl" aria-hidden />
+                <span className="card-tick card-tick-br" aria-hidden />
+
+                <div className="relative">
+                  <span className="step-icon-wrap" aria-hidden>
+                    <StepIcon type={stepIcon[key]} />
+                  </span>
+                  <span className="step-index">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h4 className="step-title">
+                    {method(`steps.${key}.title`)}
+                  </h4>
+                  <p className="step-body">{method(`steps.${key}.body`)}</p>
+                </div>
               </li>
             ))}
           </ol>
+
+          {/* payment — special, full-width */}
+          <div className="card reveal mt-6">
+            <span className="card-tick card-tick-tl" aria-hidden />
+            <span className="card-tick card-tick-br" aria-hidden />
+
+            <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
+              <span className="step-icon-wrap shrink-0" aria-hidden>
+                <StepIcon type="scale" />
+              </span>
+              <div>
+                <h4 className="step-title">{method("steps.payment.title")}</h4>
+                <p className="step-body">{method("steps.payment.body")}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -165,16 +181,6 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{locationsT("title")}</h2>
           <LocationRoute />
-        </div>
-      </section>
-
-      {/* ============ CTA BAND ============ */}
-      <section className="band-cta">
-        <div className="wrap flex flex-col items-center gap-6 py-10 text-center sm:flex-row sm:justify-between sm:py-12 sm:text-left">
-          <p className="cta-line reveal">{contact("ctaLine")}</p>
-          <a href={contact("phoneHref")} className="btn reveal shrink-0">
-            {contact("phone")}
-          </a>
         </div>
       </section>
 

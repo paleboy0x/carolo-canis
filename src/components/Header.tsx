@@ -34,6 +34,7 @@ export function Header() {
               {t(link.key)}
             </a>
           ))}
+          <span className="mx-1 h-5 w-px bg-line" aria-hidden />
           <LanguageSwitcher />
         </nav>
 

@@ -167,8 +167,8 @@ body::after {
 
 .lede,
 .copy {
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+  hyphens: none;
   text-wrap: pretty;
 }
 
@@ -304,65 +304,13 @@ body::after {
   background: var(--brass);
 }
 
-/* ---------- Method steps (timeline) ---------- */
-.steps-line {
-  position: relative;
-}
-
-/* horizontal connector on desktop — passes behind the icon boxes */
-@media (min-width: 1024px) {
-  .steps-line::before {
-    content: "";
-    position: absolute;
-    top: 23px;
-    left: 1%;
-    right: 1%;
-    height: 1px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      color-mix(in srgb, var(--brass) 45%, transparent) 5%,
-      color-mix(in srgb, var(--brass) 45%, transparent) 95%,
-      transparent
-    );
-  }
-}
-
-/* vertical connector on single-column mobile */
-@media (max-width: 639px) {
-  .steps-line::before {
-    content: "";
-    position: absolute;
-    top: 24px;
-    bottom: 24px;
-    left: 23px;
-    width: 1px;
-    background: color-mix(in srgb, var(--brass) 30%, transparent);
-  }
-}
-
-.step {
-  position: relative;
-  transition: transform 220ms ease;
-}
-
-.step:hover {
-  transform: translateY(-3px);
-}
-
-.step:hover .step-icon-wrap {
-  border-color: var(--brass);
-  color: var(--bone);
-}
-
+/* ---------- Method steps ---------- */
 .step-icon-wrap {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
+  width: 58px;
+  height: 58px;
   border: 1px solid color-mix(in srgb, var(--brass) 55%, var(--line));
   background: var(--turf);
   color: var(--brass);
@@ -372,8 +320,13 @@ body::after {
 }
 
 .step-icon-wrap svg {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+}
+
+.card:hover .step-icon-wrap {
+  border-color: var(--brass);
+  color: var(--bone);
 }
 
 .step-index {
@@ -546,26 +499,6 @@ body::after {
   color: var(--mute);
 }
 
-/* ---------- CTA band ---------- */
-.band-cta {
-  border-top: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--brass) 8%, transparent),
-    transparent 80%
-  );
-}
-
-.cta-line {
-  margin: 0;
-  font-family: var(--font-display), sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--bone);
-}
-
 /* ---------- Contact poster ---------- */
 .poster-phone {
   position: relative;
@@ -702,6 +635,58 @@ body::after {
   background: var(--brass);
   transform: scaleX(0);
   transform-origin: left;
+}
+
+/* ---------- Language flags ---------- */
+.lang-flag {
+  display: inline-flex;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: none;
+  cursor: pointer;
+  opacity: 0.45;
+  transition:
+    opacity 180ms ease,
+    border-color 180ms ease;
+}
+
+.lang-flag svg {
+  display: block;
+  width: 23px;
+  height: 15px;
+}
+
+.lang-flag:hover {
+  opacity: 0.85;
+}
+
+.lang-flag-active {
+  opacity: 1;
+  border-color: var(--brass);
+}
+
+/* ---------- Facebook link ---------- */
+.fb-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  color: var(--mute);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.fb-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.fb-link:hover {
+  color: var(--brass);
+  border-color: var(--brass);
 }
 
 /* ---------- Divider ---------- */
