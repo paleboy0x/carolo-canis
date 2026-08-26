@@ -634,10 +634,11 @@ body::after {
     border-color 180ms ease;
 }
 
-.lang-flag svg {
+.lang-flag img {
   display: block;
   width: 23px;
   height: 15px;
+  object-fit: cover;
 }
 
 .lang-flag:hover {
@@ -656,11 +657,12 @@ body::after {
   justify-content: center;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--line);
-  color: var(--mute);
+  border-radius: 999px;
+  background: #1877f2;
+  color: #fff;
   transition:
-    color 180ms ease,
-    border-color 180ms ease;
+    background-color 180ms ease,
+    transform 180ms ease;
 }
 
 .fb-link svg {
@@ -669,8 +671,8 @@ body::after {
 }
 
 .fb-link:hover {
-  color: var(--brass);
-  border-color: var(--brass);
+  background: #0d65d9;
+  transform: translateY(-1px);
 }
 
 /* ---------- Divider ---------- */

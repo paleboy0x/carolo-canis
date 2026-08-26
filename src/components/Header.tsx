@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { FacebookLink } from "./FacebookLink";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LogoMark } from "./LogoMark";
 import { ScrollProgress } from "./ScrollProgress";
@@ -21,12 +22,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-[linear-gradient(to_bottom,rgba(7,8,7,0.9),rgba(7,8,7,0.62))] backdrop-blur-[10px]">
       <div className="wrap flex h-[3.75rem] items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 text-bone no-underline">
-          <LogoMark size={28} />
-          <span className="font-display text-[1.15rem] font-bold leading-none tracking-[-0.02em]">
-            Carolo Canis
-          </span>
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-2.5 text-bone no-underline">
+            <LogoMark size={28} />
+            <span className="font-display text-[1.15rem] font-bold leading-none tracking-[-0.02em]">
+              Carolo Canis
+            </span>
+          </Link>
+          <FacebookLink />
+        </div>
 
         <nav className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
