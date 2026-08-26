@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LogoMark } from "./LogoMark";
 
@@ -18,18 +17,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-line">
-      <div className="footer-shepherd" aria-hidden>
-        <Image
-          src="/shepherd-hero.png"
-          alt=""
-          fill
-          sizes="30rem"
-          className="object-contain"
-        />
-      </div>
-
-      <div className="wrap relative">
+    <footer className="border-t border-line">
+      <div className="wrap">
         <div className="flex flex-col gap-8 py-10 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-2.5">
             <LogoMark size={26} />

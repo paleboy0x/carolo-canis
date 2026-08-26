@@ -33,18 +33,17 @@ export default async function HomePage({ params }: HomePageProps) {
     <>
       {/* ============ HERO ============ */}
       <section className="band relative overflow-hidden py-20 lg:py-28">
-        <div className="hero-shadow" aria-hidden>
-          <Image
-            src="/shepherd-hero.png"
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 1024px) 68rem, 130vw"
-            className="object-contain"
-          />
-        </div>
-
         <div className="wrap relative">
+          <div className="hero-shadow" aria-hidden>
+            <Image
+              src="/shepherd-hero.png"
+              alt=""
+              fill
+              priority
+              sizes="(min-width: 1280px) 70rem, 92vw"
+              className="object-contain"
+            />
+          </div>
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
             {/* LEFT — brand + intro + CTA + stats */}
             <div className="lg:col-span-7">

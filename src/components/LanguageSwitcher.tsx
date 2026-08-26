@@ -7,19 +7,20 @@ import { routing } from "@/i18n/routing";
 function FlagHR() {
   return (
     <svg viewBox="0 0 24 16" aria-hidden>
-      <rect width="24" height="16" fill="#fff" />
       <rect width="24" height="5.33" fill="#ce1126" />
+      <rect y="5.33" width="24" height="5.34" fill="#fff" />
       <rect y="10.67" width="24" height="5.33" fill="#0093dd" />
-      <g transform="translate(9 5)">
-        <rect width="6" height="6" fill="#fff" />
-        <rect width="1.5" height="1.5" fill="#ce1126" />
-        <rect x="3" width="1.5" height="1.5" fill="#ce1126" />
-        <rect x="1.5" y="1.5" width="1.5" height="1.5" fill="#ce1126" />
-        <rect x="4.5" y="1.5" width="1.5" height="1.5" fill="#ce1126" />
-        <rect y="3" width="1.5" height="1.5" fill="#ce1126" />
-        <rect x="3" y="3" width="1.5" height="1.5" fill="#ce1126" />
-        <rect x="1.5" y="4.5" width="1.5" height="1.5" fill="#ce1126" />
-        <rect x="4.5" y="4.5" width="1.5" height="1.5" fill="#ce1126" />
+      {/* šahovnica — 4×4, počinje crvenim poljem u gornjem lijevom kutu */}
+      <g transform="translate(7 3)">
+        <rect width="10" height="10" fill="#fff" />
+        <rect x="0" y="0" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="5" y="0" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="2.5" y="2.5" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="7.5" y="2.5" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="0" y="5" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="5" y="5" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="2.5" y="7.5" width="2.5" height="2.5" fill="#ce1126" />
+        <rect x="7.5" y="7.5" width="2.5" height="2.5" fill="#ce1126" />
       </g>
     </svg>
   );
