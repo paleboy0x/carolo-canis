@@ -957,7 +957,7 @@ body::after {
   display: block;
   position: relative;
   overflow: hidden;
-  width: min(100%, 17rem);
+  width: 100%;
   padding: 0;
   text-decoration: none;
   color: inherit;
