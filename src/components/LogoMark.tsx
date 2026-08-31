@@ -1,23 +1,24 @@
-import Image from "next/image";
+import type { CSSProperties } from "react";
 
 type LogoMarkProps = {
   size?: number;
   className?: string;
 };
 
-export function LogoMark({ size = 36, className = "" }: LogoMarkProps) {
+export function LogoMark({ size = 28, className = "" }: LogoMarkProps) {
   return (
     <span
-      className={`inline-flex shrink-0 items-center justify-center overflow-hidden bg-white ring-1 ring-line ${className}`}
-      style={{ width: size, height: size }}
+      className={`logo-mark ${className}`.trim()}
+      style={{ "--logo-mark-h": `${size}px` } as CSSProperties}
+      aria-hidden
     >
-      <Image
-        src="/logo.jpg"
-        alt="Carolo Canis"
-        width={size}
-        height={size}
-        className="h-full w-full object-contain p-[3px]"
-        priority={size >= 32}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/shepherd-hero.png"
+        alt=""
+        width={900}
+        height={430}
+        decoding="async"
       />
     </span>
   );

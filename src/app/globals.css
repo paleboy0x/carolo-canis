@@ -457,6 +457,27 @@ body::after {
   color: var(--bone);
 }
 
+/* ---------- Brand mark (header / footer) ---------- */
+.logo-mark {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: var(--logo-mark-h, 1.75rem);
+  width: calc(var(--logo-mark-h, 1.75rem) * 1.55);
+  overflow: hidden;
+}
+
+.logo-mark img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  object-position: 68% center;
+  mix-blend-mode: lighten;
+  opacity: 0.94;
+}
+
 /* ---------- Hero shepherd shadow ---------- */
 .hero-shadow {
   position: absolute;
