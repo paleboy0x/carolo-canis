@@ -1106,11 +1106,6 @@ body::after {
   height: 2rem;
 }
 
-.service-item:nth-child(even) .service-icon {
-  border-color: color-mix(in srgb, var(--bone) 35%, var(--line));
-  color: var(--bone);
-}
-
 .service-item-title {
   margin: 0;
   font-family: var(--font-display), sans-serif;
