@@ -48,9 +48,6 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
 
         <div id="vlasnik" className="mt-16 scroll-mt-28">
           <h2 className="gallery-section-title reveal">{t("ownerTitle")}</h2>
-          <p className="reveal mt-3 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
-            {t("ownerLede")}
-          </p>
           <div className="mt-8">
             <GalleryGrid images={ownerImages} />
           </div>

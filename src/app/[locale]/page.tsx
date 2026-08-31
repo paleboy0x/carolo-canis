@@ -107,16 +107,10 @@ export default async function HomePage({ params }: HomePageProps) {
             </aside>
           </div>
 
-          <h3 className="gallery-section-title reveal mt-14">
-            {services("title")}
-          </h3>
-          <ul className="service-grid stagger mt-6">
-            {serviceItems.map((item, i) => (
+          <ul className="service-grid stagger mt-10">
+            {serviceItems.map((item) => (
               <li key={item} className="service-card reveal">
-                <span className="service-card-num" aria-hidden>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h4 className="service-card-title">{item}</h4>
+                <p className="service-card-title">{item}</p>
               </li>
             ))}
           </ul>
@@ -253,6 +247,34 @@ export default async function HomePage({ params }: HomePageProps) {
                   </p>
                 </div>
               </div>
+
+              <Link
+                href="/galerija#vlasnik"
+                className="gallery-teaser gallery-teaser-sm card reveal no-underline"
+              >
+                <span className="card-tick card-tick-tl" aria-hidden />
+                <span className="card-tick card-tick-br" aria-hidden />
+
+                <div className="gallery-teaser-media">
+                  <Image
+                    src="/gallery/owner-collage.jpg"
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 36rem, 92vw"
+                    className="object-cover"
+                  />
+                  <div className="gallery-teaser-veil" aria-hidden />
+                </div>
+
+                <div className="gallery-teaser-copy">
+                  <p className="gallery-teaser-hint">{gallery("ownerHint")}</p>
+                  <p className="gallery-teaser-cta">
+                    {gallery("ownerCta")}
+                    <span aria-hidden> →</span>
+                  </p>
+                  <p className="gallery-teaser-lede">{gallery("ownerTeaser")}</p>
+                </div>
+              </Link>
             </div>
 
             <aside className="lg:col-span-5">
@@ -264,41 +286,13 @@ export default async function HomePage({ params }: HomePageProps) {
                   {about("ownerName")}
                 </h3>
 
-                <ul className="credential-list relative mt-6">
+                <ul className="credential-list relative mt-8">
                   {credentials.map((item) => (
                     <li key={item} className="credential">
                       {item}
                     </li>
                   ))}
                 </ul>
-
-                <Link
-                  href="/galerija#vlasnik"
-                  className="gallery-teaser gallery-teaser-sm card reveal no-underline"
-                >
-                  <span className="card-tick card-tick-tl" aria-hidden />
-                  <span className="card-tick card-tick-br" aria-hidden />
-
-                  <div className="gallery-teaser-media">
-                    <Image
-                      src="/gallery/owner-collage.jpg"
-                      alt=""
-                      fill
-                      sizes="(min-width: 1024px) 24rem, 92vw"
-                      className="object-cover"
-                    />
-                    <div className="gallery-teaser-veil" aria-hidden />
-                  </div>
-
-                  <div className="gallery-teaser-copy">
-                    <p className="gallery-teaser-hint">{gallery("ownerHint")}</p>
-                    <p className="gallery-teaser-cta">
-                      {gallery("ownerCta")}
-                      <span aria-hidden> →</span>
-                    </p>
-                    <p className="gallery-teaser-lede">{gallery("ownerTeaser")}</p>
-                  </div>
-                </Link>
               </div>
             </aside>
           </div>

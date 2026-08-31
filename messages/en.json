@@ -22,17 +22,17 @@
   "services": {
     "title": "Services",
     "items": [
-      "individual training",
-      "puppy rearing advice",
-      "obedience basics",
-      "socialization",
-      "exam programmes",
-      "preparation for dog shows",
-      "identifying and correcting unwanted behaviour",
-      "legal advice in cynology disputes",
-      "education for owners who want to advance personally in cynology",
-      "support for cynology associations",
-      "cooperation with state and local government on dog-related regulations and projects"
+      "Individual training",
+      "Puppy rearing advice",
+      "Obedience basics",
+      "Socialization",
+      "Exam programmes",
+      "Preparation for dog shows",
+      "Identifying and correcting unwanted behaviour",
+      "Legal advice in cynology disputes",
+      "Education for owners who want to advance personally in cynology",
+      "Support for cynology associations",
+      "Cooperation with state and local government on dog-related regulations and projects"
     ]
   },
   "about": {
@@ -45,11 +45,11 @@
     "ownerLabel": "Owner of Carolo Canis Ltd.",
     "ownerName": "Marinko Alić",
     "credentials": [
-      "working-dog judge",
-      "decoy / helper (markirant)",
-      "dog training instructor",
-      "selector of the Croatian national team 1996–2001",
-      "court expert in cynology 2009–2017"
+      "Working-dog judge",
+      "Decoy / helper (markirant)",
+      "Dog training instructor",
+      "Selector of the Croatian national team 1996–2001",
+      "Court expert in cynology 2009–2017"
     ]
   },
   "method": {
@@ -89,8 +89,7 @@
     "ctaHint": "12 photos",
     "workTitle": "Courses and exams",
     "workLede": "Training, exams and moments from the field — what work with our dogs and owners looks like.",
-    "ownerTitle": "Owner",
-    "ownerLede": "Historical photographs of Marinko Alić — working-dog judge and court expert in cynology.",
+    "ownerTitle": "Historical photographs",
     "ownerCta": "Historical photographs",
     "ownerHint": "4 photos",
     "ownerTeaser": "Images from his work as a judge, decoy and court expert.",

@@ -22,17 +22,17 @@
   "services": {
     "title": "Usluge",
     "items": [
-      "individualni treninzi",
-      "savjeti kod odgoja štenaca",
-      "osnove poslušnosti",
-      "socijalizacija",
-      "ispitni programi",
-      "priprema za izlaganje na izložbama",
-      "detekcija i otklanjanje neželjenih ponašanja",
-      "pravni savjeti u sporovima u kinologiji",
-      "edukacija vlasnika koji žele napredovati na osobnoj razini u kinologiji",
-      "pomoć kinološkim udrugama u radu",
-      "suradnja s državnim tijelima i tijelima lokalne samouprave oko propisa i projekata vezanih uz pse"
+      "Individualni treninzi",
+      "Savjeti kod odgoja štenaca",
+      "Osnove poslušnosti",
+      "Socijalizacija",
+      "Ispitni programi",
+      "Priprema za izlaganje na izložbama",
+      "Detekcija i otklanjanje neželjenih ponašanja",
+      "Pravni savjeti u sporovima u kinologiji",
+      "Edukacija vlasnika koji žele napredovati na osobnoj razini u kinologiji",
+      "Pomoć kinološkim udrugama u radu",
+      "Suradnja s državnim tijelima i tijelima lokalne samouprave oko propisa i projekata vezanih uz pse"
     ]
   },
   "about": {
@@ -45,11 +45,11 @@
     "ownerLabel": "Vlasnik tvrtke „Carolo Canis“ d.o.o.",
     "ownerName": "Marinko Alić",
     "credentials": [
-      "kinološki sudac za rad školovanih pasa",
-      "markirant",
-      "instruktor za školovanje pasa",
-      "izbornik hrvatske reprezentacije 1996.–2001.",
-      "sudski vještak za kinologiju 2009.–2017."
+      "Kinološki sudac za rad školovanih pasa",
+      "Markirant",
+      "Instruktor za školovanje pasa",
+      "Izbornik hrvatske reprezentacije 1996.–2001.",
+      "Sudski vještak za kinologiju 2009.–2017."
     ]
   },
   "method": {
@@ -89,8 +89,7 @@
     "ctaHint": "12 fotografija",
     "workTitle": "Tečajevi i ispiti",
     "workLede": "Treninzi, ispiti i trenuci s terena — kako izgleda rad s našim psima i vlasnicima.",
-    "ownerTitle": "Vlasnik",
-    "ownerLede": "Povijesne fotografije Marinka Alića — kinološki sudac i sudski vještak za kinologiju.",
+    "ownerTitle": "Povijesne fotografije",
     "ownerCta": "Povijesne fotografije",
     "ownerHint": "4 fotografije",
     "ownerTeaser": "Snimke iz razdoblja rada kao suca, markiranta i sudskog vještaka.",
