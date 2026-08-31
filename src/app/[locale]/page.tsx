@@ -170,19 +170,16 @@ export default async function HomePage({ params }: HomePageProps) {
             ))}
           </ol>
 
-          {/* payment — special, full-width */}
-          <div className="card reveal mt-6">
+          {/* payment — highlighted, centered band */}
+          <div className="payment-band card reveal mt-8">
             <span className="card-tick card-tick-tl" aria-hidden />
+            <span className="card-tick card-tick-tr" aria-hidden />
+            <span className="card-tick card-tick-bl" aria-hidden />
             <span className="card-tick card-tick-br" aria-hidden />
 
-            <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
-              <span className="step-icon-wrap shrink-0" aria-hidden>
-                <StepIcon type="scale" />
-              </span>
-              <div>
-                <h4 className="step-title">{method("steps.payment.title")}</h4>
-                <p className="step-body">{method("steps.payment.body")}</p>
-              </div>
+            <div className="payment-band-inner">
+              <h4 className="payment-title">{method("steps.payment.title")}</h4>
+              <p className="payment-body">{method("steps.payment.body")}</p>
             </div>
           </div>
         </div>

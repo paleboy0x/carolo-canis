@@ -370,6 +370,43 @@ body::after {
   color: var(--mute);
 }
 
+/* Payment highlight — distinct from the four step cards */
+.payment-band {
+  padding: clamp(2rem, 4vw, 2.85rem) clamp(1.5rem, 4vw, 3rem);
+  border-color: color-mix(in srgb, var(--brass) 55%, var(--line));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--brass) 12%, transparent),
+    rgba(255, 255, 255, 0.02) 45%,
+    color-mix(in srgb, var(--brass) 6%, transparent)
+  );
+}
+
+.payment-band-inner {
+  position: relative;
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.payment-title {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bone);
+}
+
+.payment-body {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-text), serif;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--mute);
+}
+
 /* ---------- Hero side cards ---------- */
 .hero-card {
   display: flex;
