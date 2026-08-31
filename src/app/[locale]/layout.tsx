@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Bricolage_Grotesque, Cormorant_Garamond, Newsreader } from "next/font/google";
+import { Bricolage_Grotesque, Newsreader, Playfair_Display } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -15,9 +15,9 @@ const display = Bricolage_Grotesque({
   display: "swap",
 });
 
-const brand = Cormorant_Garamond({
+const brand = Playfair_Display({
   subsets: ["latin", "latin-ext"],
-  weight: ["600", "700"],
+  weight: ["700", "800", "900"],
   variable: "--font-brand",
   display: "swap",
 });

@@ -60,7 +60,7 @@ export default async function HomePage({ params }: HomePageProps) {
             />
           </div>
           <div className="relative max-w-[42rem]">
-            <h1 className="enter hero-brand text-[clamp(3rem,7vw,6rem)] font-semibold leading-[0.95] tracking-[-0.02em] text-bone whitespace-nowrap">
+            <h1 className="enter hero-brand text-[clamp(3rem,7vw,6rem)] leading-[0.95] tracking-[-0.02em] text-bone whitespace-nowrap">
               Carolo <span className="text-brass">Canis</span>
             </h1>
 
