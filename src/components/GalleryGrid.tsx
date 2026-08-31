@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useId, useState } from "react";
 import { useTranslations } from "next-intl";
 import { galleryImages, type GalleryImage } from "@/data/gallery";
@@ -43,23 +42,24 @@ export function GalleryGrid() {
 
   return (
     <>
-      <ul className="gallery-grid stagger">
+      <ul className="gallery-grid">
         {galleryImages.map((image, index) => (
-          <li key={image.id} className="reveal">
+          <li key={image.id}>
             <button
               type="button"
               className="gallery-thumb"
               onClick={() => setActive(index)}
               aria-label={`${t("openImage")} ${index + 1}`}
             >
-              <Image
+              {/* Pre-sized JPEGs — skip /_next/image to avoid optimizer failures */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={image.thumb}
                 alt=""
-                fill
-                sizes="(min-width: 1100px) 25vw, (min-width: 768px) 33vw, 50vw"
-                className="object-cover"
-                loading={index < 4 ? "eager" : "lazy"}
-                quality={70}
+                width={480}
+                height={360}
+                loading={index < 6 ? "eager" : "lazy"}
+                decoding="async"
               />
             </button>
           </li>
@@ -103,14 +103,14 @@ export function GalleryGrid() {
             className="lightbox-figure"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={current.src}
               alt=""
               width={current.width}
               height={current.height}
               className="lightbox-img"
-              sizes="92vw"
-              priority
+              decoding="async"
             />
             <p className="lightbox-count">
               {active! + 1} / {galleryImages.length}

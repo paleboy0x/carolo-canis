@@ -37,13 +37,13 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="band relative overflow-hidden py-20 lg:py-28">
         <div className="wrap relative">
           <div className="hero-shadow" aria-hidden>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/shepherd-hero.png"
               alt=""
-              fill
-              priority
-              sizes="(min-width: 1280px) 70rem, 92vw"
-              className="object-contain object-center"
+              width={900}
+              height={430}
+              decoding="async"
             />
           </div>
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
