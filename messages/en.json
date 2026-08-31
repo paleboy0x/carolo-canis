@@ -21,17 +21,19 @@
   },
   "services": {
     "title": "Services",
-    "items": {
-      "training": {
-        "title": "Dog training"
-      },
-      "shop": {
-        "title": "Dog equipment and food"
-      },
-      "advice": {
-        "title": "Cynology advice"
-      }
-    }
+    "items": [
+      "individual training",
+      "puppy rearing advice",
+      "obedience basics",
+      "socialization",
+      "exam programmes",
+      "preparation for dog shows",
+      "identifying and correcting unwanted behaviour",
+      "legal advice in cynology disputes",
+      "education for owners who want to advance personally in cynology",
+      "support for cynology associations",
+      "cooperation with state and local government on dog-related regulations and projects"
+    ]
   },
   "about": {
     "title": "About",
@@ -89,7 +91,9 @@
     "workLede": "Training, exams and moments from the field — what work with our dogs and owners looks like.",
     "ownerTitle": "Owner",
     "ownerLede": "Historical photographs of Marinko Alić — working-dog judge and court expert in cynology.",
-    "ownerLink": "View historical photographs →",
+    "ownerCta": "Historical photographs",
+    "ownerHint": "4 photos",
+    "ownerTeaser": "Images from his work as a judge, decoy and court expert.",
     "backHome": "← Home",
     "openImage": "Enlarge image",
     "lightboxLabel": "Enlarged photo view",

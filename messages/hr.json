@@ -21,17 +21,19 @@
   },
   "services": {
     "title": "Usluge",
-    "items": {
-      "training": {
-        "title": "Školovanje pasa"
-      },
-      "shop": {
-        "title": "Trgovina opremom i hranom za pse"
-      },
-      "advice": {
-        "title": "Savjeti u kinologiji"
-      }
-    }
+    "items": [
+      "individualni treninzi",
+      "savjeti kod odgoja štenaca",
+      "osnove poslušnosti",
+      "socijalizacija",
+      "ispitni programi",
+      "priprema za izlaganje na izložbama",
+      "detekcija i otklanjanje neželjenih ponašanja",
+      "pravni savjeti u sporovima u kinologiji",
+      "edukacija vlasnika koji žele napredovati na osobnoj razini u kinologiji",
+      "pomoć kinološkim udrugama u radu",
+      "suradnja s državnim tijelima i tijelima lokalne samouprave oko propisa i projekata vezanih uz pse"
+    ]
   },
   "about": {
     "title": "O nama",
@@ -89,7 +91,9 @@
     "workLede": "Treninzi, ispiti i trenuci s terena — kako izgleda rad s našim psima i vlasnicima.",
     "ownerTitle": "Vlasnik",
     "ownerLede": "Povijesne fotografije Marinka Alića — kinološki sudac i sudski vještak za kinologiju.",
-    "ownerLink": "Pogledajte povijesne fotografije →",
+    "ownerCta": "Povijesne fotografije",
+    "ownerHint": "4 fotografije",
+    "ownerTeaser": "Snimke iz razdoblja rada kao suca, markiranta i sudskog vještaka.",
     "backHome": "← Početna",
     "openImage": "Povećaj sliku",
     "lightboxLabel": "Povećani prikaz fotografije",

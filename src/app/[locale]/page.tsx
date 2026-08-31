@@ -14,6 +14,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   const hero = await getTranslations("hero");
   const about = await getTranslations("about");
+  const services = await getTranslations("services");
   const method = await getTranslations("method");
   const locationsT = await getTranslations("locations");
   const gallery = await getTranslations("gallery");
@@ -27,6 +28,7 @@ export default async function HomePage({ params }: HomePageProps) {
     exam: "award",
   };
   const credentials = about.raw("credentials") as string[];
+  const serviceItems = services.raw("items") as string[];
   const heroStats = hero.raw("stats") as string[];
 
   return (
@@ -104,6 +106,20 @@ export default async function HomePage({ params }: HomePageProps) {
               </div>
             </aside>
           </div>
+
+          <h3 className="gallery-section-title reveal mt-14">
+            {services("title")}
+          </h3>
+          <ul className="service-grid stagger mt-6">
+            {serviceItems.map((item, i) => (
+              <li key={item} className="service-card reveal">
+                <span className="service-card-num" aria-hidden>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h4 className="service-card-title">{item}</h4>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -258,9 +274,30 @@ export default async function HomePage({ params }: HomePageProps) {
 
                 <Link
                   href="/galerija#vlasnik"
-                  className="relative mt-7 inline-block font-display text-base font-semibold text-brass underline decoration-line underline-offset-4 hover:decoration-brass"
+                  className="gallery-teaser gallery-teaser-sm card reveal no-underline"
                 >
-                  {gallery("ownerLink")}
+                  <span className="card-tick card-tick-tl" aria-hidden />
+                  <span className="card-tick card-tick-br" aria-hidden />
+
+                  <div className="gallery-teaser-media">
+                    <Image
+                      src="/gallery/owner-collage.jpg"
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 24rem, 92vw"
+                      className="object-cover"
+                    />
+                    <div className="gallery-teaser-veil" aria-hidden />
+                  </div>
+
+                  <div className="gallery-teaser-copy">
+                    <p className="gallery-teaser-hint">{gallery("ownerHint")}</p>
+                    <p className="gallery-teaser-cta">
+                      {gallery("ownerCta")}
+                      <span aria-hidden> →</span>
+                    </p>
+                    <p className="gallery-teaser-lede">{gallery("ownerTeaser")}</p>
+                  </div>
                 </Link>
               </div>
             </aside>
