@@ -37,9 +37,9 @@
   },
   "about": {
     "title": "O nama",
-    "lead": "Mnogi u svijet kinologije krenu nepripremljeni, znatiželjni i iskrenog srca, no nažalost kao i u mnogo čemu razni ih problemi ponekad sustignu već na prvim koracima, a s vremenom neki postanu i preveliki.",
-    "p1": "Tradicija duga 30 godina dozvoljava nam slobodu da Vam ponudimo, kao tvrtka, pomoć da sve postane lakše, brže i bolje.",
-    "p2": "Kroz ove stranice imate mogućnost upoznati nas, naše partnere i dobiti odgovore na neka Vaša pitanja, riješit osnovne probleme sa vlastitim psom, pa i uživati u kinologiji ako Vam ona postane više od razonode.",
+    "lead": "Mnogi u svijet kinologije krenu nepripremljeni, znatiželjni i iskrenog srca, no nažalost — kao i u mnogome — razni ih problemi ponekad sustignu već na prvim koracima, a s vremenom neki postanu i preveliki.",
+    "p1": "Tradicija duga preko tridesetak godina dozvoljava nam slobodu da Vam ponudimo, kao tvrtka, pomoć da sve postane lakše, brže i bolje.",
+    "p2": "Kroz ove stranice imate mogućnost upoznati nas, naše partnere i dobiti odgovore na neka Vaša pitanja, riješiti osnovne probleme s vlastitim psom, pa i uživati u kinologiji ako Vam ona postane više od razonode.",
     "statValue": "30",
     "statLabel": "godina iskustva",
     "ownerLabel": "Vlasnik tvrtke „Carolo Canis“ d.o.o.",
@@ -55,21 +55,17 @@
   "method": {
     "title": "Način rada",
     "steps": {
-      "consult": {
-        "title": "Razgovor i procjena",
-        "body": "Prvi kontakt, razumijevanje potreba psa i vlasnika, dogovor o ciljevima školovanja."
-      },
       "individual": {
         "title": "Individualan pristup",
-        "body": "Bez grupnog rada — svaki pas i vlasnik dobiju svoj plan. Niti su svi psi isti, niti su zahtjevi vlasnika identični."
+        "body": "Svaki pas i vlasnik kroz individualni pristup dobivaju svoj plan i hodogram aktivnosti sukladan njihovim potrebama i mogućnostima. Niti su svi psi isti, niti su zahtjevi vlasnika identični."
       },
       "session": {
         "title": "Otvoreni tjedni termin",
-        "body": "Jedan tečaj tjedno u dogovorenom prozoru. Dolazite kad Vam odgovara — poštuje se red dolaska."
+        "body": "Termini tečaja dogovaraju se sukladno mogućnostima i vremenskim uvjetima te se usklađuju s Vašim napretkom."
       },
       "exam": {
         "title": "Ispit školovanosti",
-        "body": "Po završetku tečaja sugeriramo polaganje — potvrda uspjeha Vama i okolini, na više razina."
+        "body": "Po završetku tečaja sugeriramo polaganje ispita na više razina — potvrda uspjeha Vama i okolini u kojoj živite, ali i potvrda odgovornog vlasnika prema zajednici."
       },
       "payment": {
         "title": "Fleksibilno plaćanje",

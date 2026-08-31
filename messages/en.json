@@ -37,9 +37,9 @@
   },
   "about": {
     "title": "About",
-    "lead": "Many enter the world of cynology unprepared, curious and sincere — yet, as in so much else, problems sometimes catch them on the first steps, and with time some become too large.",
-    "p1": "A tradition of thirty years gives us the freedom to offer you, as a company, help so that everything becomes easier, faster and better.",
-    "p2": "Through these pages you can get to know us and our partners, get answers to some of your questions, resolve basic problems with your own dog, and even enjoy cynology if it becomes more than a pastime.",
+    "lead": "Many enter the world of cynology unprepared, curious and sincere — yet, as in so much else, various problems sometimes catch them on the very first steps, and with time some grow too large.",
+    "p1": "A tradition spanning more than thirty years gives us the freedom to offer you, as a company, help so that everything becomes easier, faster and better.",
+    "p2": "Through these pages you can get to know us and our partners, find answers to some of your questions, resolve basic problems with your own dog, and enjoy cynology if it becomes more than a pastime.",
     "statValue": "30",
     "statLabel": "years of experience",
     "ownerLabel": "Owner of Carolo Canis Ltd.",
@@ -55,21 +55,17 @@
   "method": {
     "title": "How we work",
     "steps": {
-      "consult": {
-        "title": "Talk and assessment",
-        "body": "First contact, understanding the needs of dog and owner, and agreeing on training goals."
-      },
       "individual": {
         "title": "Individual approach",
-        "body": "No group classes — every dog and owner get their own plan. No two dogs are the same, nor are their owners’ demands."
+        "body": "Through an individual approach, every dog and owner receive their own plan and activity timeline tailored to their needs and capabilities. No two dogs are alike, nor are their owners' requirements identical."
       },
       "session": {
         "title": "Open weekly slot",
-        "body": "One course per week within an agreed window. Come when it suits you — order of arrival is respected."
+        "body": "Course dates are arranged according to availability and weather conditions, and adjusted to your progress."
       },
       "exam": {
         "title": "Training exam",
-        "body": "At the end of the course we recommend taking one — a confirmation of success for you and those around you, at multiple levels."
+        "body": "After the course we recommend taking exams at several levels — confirmation of success for you and the community you live in, and proof of a responsible owner toward society."
       },
       "payment": {
         "title": "Flexible payment",

@@ -35,9 +35,8 @@ export default async function HomePage({ params }: HomePageProps) {
   const gallery = await getTranslations("gallery");
   const contact = await getTranslations("contact");
 
-  const stepKeys = ["consult", "individual", "session", "exam"] as const;
+  const stepKeys = ["individual", "session", "exam"] as const;
   const stepIcon: Record<(typeof stepKeys)[number], StepIconType> = {
-    consult: "chat",
     individual: "focus",
     session: "clock",
     exam: "award",
@@ -146,7 +145,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{method("title")}</h2>
 
-          <ol className="stagger mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="stagger mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {stepKeys.map((key, i) => (
               <li key={key} className="card reveal">
                 <span className="card-tick card-tick-tl" aria-hidden />
