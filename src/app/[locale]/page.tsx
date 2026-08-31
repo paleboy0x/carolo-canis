@@ -2,11 +2,26 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LocationRoute } from "@/components/LocationRoute";
+import { ServiceIcon, type ServiceIconType } from "@/components/marks/ServiceIcon";
 import { StepIcon, type StepIconType } from "@/components/marks/StepIcon";
 
 type HomePageProps = {
   params: Promise<{ locale: string }>;
 };
+
+const serviceKeys = [
+  "training",
+  "puppy",
+  "obedience",
+  "social",
+  "exam",
+  "show",
+  "behavior",
+  "legal",
+  "education",
+  "club",
+  "gov",
+] as const satisfies readonly ServiceIconType[];
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
@@ -28,7 +43,6 @@ export default async function HomePage({ params }: HomePageProps) {
     exam: "award",
   };
   const credentials = about.raw("credentials") as string[];
-  const serviceItems = services.raw("items") as string[];
   const heroStats = hero.raw("stats") as string[];
 
   return (
@@ -113,14 +127,14 @@ export default async function HomePage({ params }: HomePageProps) {
       <section id="services" className="band border-t border-line">
         <div className="wrap">
           <h2 className="section-title reveal">{services("title")}</h2>
-          <p className="reveal mt-4 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
-            {services("lede")}
-          </p>
 
-          <ul className="service-grid stagger mt-10">
-            {serviceItems.map((item) => (
-              <li key={item} className="service-card reveal">
-                <p className="service-card-title">{item}</p>
+          <ul className="service-list stagger mt-10">
+            {serviceKeys.map((key) => (
+              <li key={key} className="service-item reveal">
+                <span className="service-icon" aria-hidden>
+                  <ServiceIcon type={key} />
+                </span>
+                <p className="service-item-title">{services(`items.${key}`)}</p>
               </li>
             ))}
           </ul>
@@ -274,35 +288,29 @@ export default async function HomePage({ params }: HomePageProps) {
                   </p>
                 </div>
               </div>
+
+              <Link
+                href="/galerija#vlasnik"
+                className="gallery-teaser gallery-teaser-mini card no-underline"
+              >
+                <div className="gallery-teaser-media">
+                  <Image
+                    src="/gallery/owner-collage.jpg"
+                    alt=""
+                    fill
+                    sizes="280px"
+                    className="object-cover"
+                  />
+                  <div className="gallery-teaser-veil" aria-hidden />
+                </div>
+                <div className="gallery-teaser-copy">
+                  <p className="gallery-teaser-cta">
+                    {gallery("ownerCta")}
+                    <span aria-hidden> →</span>
+                  </p>
+                </div>
+              </Link>
             </div>
-
-            <Link
-              href="/galerija#vlasnik"
-              className="gallery-teaser gallery-teaser-sm card contact-album reveal no-underline"
-            >
-              <span className="card-tick card-tick-tl" aria-hidden />
-              <span className="card-tick card-tick-br" aria-hidden />
-
-              <div className="gallery-teaser-media">
-                <Image
-                  src="/gallery/owner-collage.jpg"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1100px) 70rem, 92vw"
-                  className="object-cover"
-                />
-                <div className="gallery-teaser-veil" aria-hidden />
-              </div>
-
-              <div className="gallery-teaser-copy">
-                <p className="gallery-teaser-hint">{gallery("ownerHint")}</p>
-                <p className="gallery-teaser-cta">
-                  {gallery("ownerCta")}
-                  <span aria-hidden> →</span>
-                </p>
-                <p className="gallery-teaser-lede">{gallery("ownerTeaser")}</p>
-              </div>
-            </Link>
           </div>
         </div>
       </section>

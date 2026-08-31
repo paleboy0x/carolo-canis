@@ -21,20 +21,19 @@
   },
   "services": {
     "title": "Services",
-    "lede": "What we do — from individual training and puppy rearing to exams, advice, and work with associations and institutions.",
-    "items": [
-      "Individual training",
-      "Puppy rearing advice",
-      "Obedience basics",
-      "Socialization",
-      "Exam programmes",
-      "Preparation for dog shows",
-      "Identifying and correcting unwanted behaviour",
-      "Legal advice in cynology disputes",
-      "Education for owners who want to advance personally in cynology",
-      "Support for cynology associations",
-      "Cooperation with state and local government on dog-related regulations and projects"
-    ]
+    "items": {
+      "training": "Individual training",
+      "puppy": "Puppy rearing advice",
+      "obedience": "Obedience basics",
+      "social": "Socialization",
+      "exam": "Exam programmes",
+      "show": "Preparation for dog shows",
+      "behavior": "Identifying and correcting unwanted behaviour",
+      "legal": "Legal advice in cynology disputes",
+      "education": "Education for owners who want to advance personally in cynology",
+      "club": "Support for cynology associations",
+      "gov": "Cooperation with state and local government on dog-related regulations and projects"
+    }
   },
   "about": {
     "title": "About",

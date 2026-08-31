@@ -21,20 +21,19 @@
   },
   "services": {
     "title": "Usluge",
-    "lede": "Što radimo — od individualnih treninga i odgoja do ispita, savjeta i suradnje s udrugama te institucijama.",
-    "items": [
-      "Individualni treninzi",
-      "Savjeti kod odgoja štenaca",
-      "Osnove poslušnosti",
-      "Socijalizacija",
-      "Ispitni programi",
-      "Priprema za izlaganje na izložbama",
-      "Detekcija i otklanjanje neželjenih ponašanja",
-      "Pravni savjeti u sporovima u kinologiji",
-      "Edukacija vlasnika koji žele napredovati na osobnoj razini u kinologiji",
-      "Pomoć kinološkim udrugama u radu",
-      "Suradnja s državnim tijelima i tijelima lokalne samouprave oko propisa i projekata vezanih uz pse"
-    ]
+    "items": {
+      "training": "Individualni treninzi",
+      "puppy": "Savjeti kod odgoja štenaca",
+      "obedience": "Osnove poslušnosti",
+      "social": "Socijalizacija",
+      "exam": "Ispitni programi",
+      "show": "Priprema za izlaganje na izložbama",
+      "behavior": "Detekcija i otklanjanje neželjenih ponašanja",
+      "legal": "Pravni savjeti u sporovima u kinologiji",
+      "education": "Edukacija vlasnika koji žele napredovati na osobnoj razini u kinologiji",
+      "club": "Pomoć kinološkim udrugama u radu",
+      "gov": "Suradnja s državnim tijelima i tijelima lokalne samouprave oko propisa i projekata vezanih uz pse"
+    }
   },
   "about": {
     "title": "O nama",
