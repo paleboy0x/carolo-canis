@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Carolo Canis Ltd.",
-    "description": "Carolo Canis Ltd. is a small, tightly focused company working in cynology: dog training, equipment and food, and cynology advice."
+    "description": "Carolo Canis Ltd. is a small, tightly focused company in cynology: dog training, equipment and food, and advice grounded in working-dog judging and court expertise."
   },
   "nav": {
     "services": "Services",
@@ -15,7 +15,7 @@
   },
   "hero": {
     "title": "Carolo Canis",
-    "lede": "Carolo Canis Ltd. is a small, tightly focused company working in cynology in the areas of dog training, trade in dog equipment and food, and cynology advice arising from the owner’s authority as a court expert in cynology and a working-dog judge.",
+    "lede": "Carolo Canis Ltd. is a small, tightly focused company working in cynology — dog training, trade in dog equipment and food, and cynology advice. That advice draws on the credentials of a working-dog judge and a court expert in cynology (2009–2017).",
     "cta": "Contact",
     "stats": ["30 years of experience", "3 cities", "Individual approach"]
   },
@@ -80,11 +80,15 @@
   "gallery": {
     "title": "Gallery",
     "metaTitle": "Gallery — Carolo Canis",
-    "metaDescription": "Photos from Carolo Canis training and working-dog work.",
-    "lede": "Training, exams and moments from the field — see what work with our dogs and owners looks like.",
+    "metaDescription": "Photos from courses, exams and historical images of the Carolo Canis owner.",
     "teaser": "Training, exams and moments from the field — an album with our dogs and owners.",
     "cta": "View the gallery",
     "ctaHint": "12 photos",
+    "workTitle": "Courses and exams",
+    "workLede": "Training, exams and moments from the field — what work with our dogs and owners looks like.",
+    "ownerTitle": "Owner",
+    "ownerLede": "Historical photographs of Marinko Alić — working-dog judge and court expert in cynology.",
+    "ownerLink": "View historical photographs →",
     "backHome": "← Home",
     "openImage": "Enlarge image",
     "lightboxLabel": "Enlarged photo view",

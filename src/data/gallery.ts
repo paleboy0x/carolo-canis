@@ -6,8 +6,7 @@ export type GalleryImage = {
   height: number;
 };
 
-/** Full images for lightbox; thumbs (~480px) for the grid. */
-export const galleryImages: GalleryImage[] = [
+const all: GalleryImage[] = [
   { id: "gallery-01", src: "/gallery/gallery-01.jpg", thumb: "/gallery/thumbs/gallery-01.jpg", width: 901, height: 1600 },
   { id: "gallery-02", src: "/gallery/gallery-02.jpg", thumb: "/gallery/thumbs/gallery-02.jpg", width: 1600, height: 1071 },
   { id: "gallery-03", src: "/gallery/gallery-03.jpg", thumb: "/gallery/thumbs/gallery-03.jpg", width: 640, height: 402 },
@@ -21,3 +20,26 @@ export const galleryImages: GalleryImage[] = [
   { id: "gallery-11", src: "/gallery/gallery-11.jpg", thumb: "/gallery/thumbs/gallery-11.jpg", width: 1099, height: 595 },
   { id: "gallery-12", src: "/gallery/gallery-12.jpg", thumb: "/gallery/thumbs/gallery-12.jpg", width: 1200, height: 1600 },
 ];
+
+const byId = (ids: string[]) =>
+  ids.map((id) => all.find((img) => img.id === id)!);
+
+/** Tečajevi, ispiti i rad na terenu */
+export const workImages = byId([
+  "gallery-01",
+  "gallery-02",
+  "gallery-04",
+  "gallery-08",
+  "gallery-09",
+  "gallery-10",
+  "gallery-11",
+  "gallery-12",
+]);
+
+/** Povijesne fotografije vlasnika */
+export const ownerImages = byId([
+  "gallery-03",
+  "gallery-05",
+  "gallery-06",
+  "gallery-07",
+]);

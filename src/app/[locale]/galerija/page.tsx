@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { ownerImages, workImages } from "@/data/gallery";
 
 type GalleryPageProps = {
   params: Promise<{ locale: string }>;
@@ -34,12 +35,25 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
         </p>
 
         <h1 className="section-title reveal mt-4">{t("title")}</h1>
-        <p className="reveal mt-4 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
-          {t("lede")}
-        </p>
 
-        <div className="mt-10">
-          <GalleryGrid />
+        <div className="mt-12">
+          <h2 className="gallery-section-title reveal">{t("workTitle")}</h2>
+          <p className="reveal mt-3 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
+            {t("workLede")}
+          </p>
+          <div className="mt-8">
+            <GalleryGrid images={workImages} />
+          </div>
+        </div>
+
+        <div id="vlasnik" className="mt-16 scroll-mt-28">
+          <h2 className="gallery-section-title reveal">{t("ownerTitle")}</h2>
+          <p className="reveal mt-3 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
+            {t("ownerLede")}
+          </p>
+          <div className="mt-8">
+            <GalleryGrid images={ownerImages} />
+          </div>
         </div>
       </div>
     </section>

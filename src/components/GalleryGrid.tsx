@@ -2,9 +2,13 @@
 
 import { useCallback, useEffect, useId, useState } from "react";
 import { useTranslations } from "next-intl";
-import { galleryImages, type GalleryImage } from "@/data/gallery";
+import type { GalleryImage } from "@/data/gallery";
 
-export function GalleryGrid() {
+type GalleryGridProps = {
+  images: GalleryImage[];
+};
+
+export function GalleryGrid({ images }: GalleryGridProps) {
   const t = useTranslations("gallery");
   const titleId = useId();
   const [active, setActive] = useState<number | null>(null);
@@ -12,12 +16,12 @@ export function GalleryGrid() {
   const close = useCallback(() => setActive(null), []);
   const showPrev = useCallback(() => {
     setActive((i) =>
-      i === null ? null : (i - 1 + galleryImages.length) % galleryImages.length,
+      i === null ? null : (i - 1 + images.length) % images.length,
     );
-  }, []);
+  }, [images.length]);
   const showNext = useCallback(() => {
-    setActive((i) => (i === null ? null : (i + 1) % galleryImages.length));
-  }, []);
+    setActive((i) => (i === null ? null : (i + 1) % images.length));
+  }, [images.length]);
 
   useEffect(() => {
     if (active === null) return;
@@ -38,12 +42,12 @@ export function GalleryGrid() {
   }, [active, close, showPrev, showNext]);
 
   const current: GalleryImage | null =
-    active === null ? null : galleryImages[active];
+    active === null ? null : images[active];
 
   return (
     <>
       <ul className="gallery-grid">
-        {galleryImages.map((image, index) => (
+        {images.map((image, index) => (
           <li key={image.id}>
             <button
               type="button"
@@ -51,14 +55,13 @@ export function GalleryGrid() {
               onClick={() => setActive(index)}
               aria-label={`${t("openImage")} ${index + 1}`}
             >
-              {/* Pre-sized JPEGs — skip /_next/image to avoid optimizer failures */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={image.thumb}
                 alt=""
                 width={480}
                 height={360}
-                loading={index < 6 ? "eager" : "lazy"}
+                loading={index < 4 ? "eager" : "lazy"}
                 decoding="async"
               />
             </button>
@@ -113,7 +116,7 @@ export function GalleryGrid() {
               decoding="async"
             />
             <p className="lightbox-count">
-              {active! + 1} / {galleryImages.length}
+              {active! + 1} / {images.length}
             </p>
           </div>
 

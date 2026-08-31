@@ -416,7 +416,7 @@ body::after {
   top: 52%;
   width: min(42rem, 72%);
   transform: translateY(-50%);
-  opacity: 0.11;
+  opacity: 0.18;
   z-index: 0;
 }
 
@@ -428,9 +428,10 @@ body::after {
 
 @media (max-width: 640px) {
   .hero-shadow {
-    width: min(28rem, 85%);
+    width: min(32rem, 92%);
     right: 0;
-    opacity: 0.08;
+    top: 58%;
+    opacity: 0.16;
     transform: translateY(-48%);
   }
 }
@@ -858,6 +859,14 @@ body::after {
 
 .gallery-teaser:hover .gallery-teaser-cta {
   color: var(--brass);
+}
+
+.gallery-section-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--bone);
 }
 
 .lightbox {
