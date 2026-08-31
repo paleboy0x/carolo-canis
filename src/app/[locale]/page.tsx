@@ -242,7 +242,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 {about("ownerName")}
               </h3>
 
-              <ul className="credential-list relative mt-8">
+              <ul className="credential-list relative mt-12">
                 {credentials.map((item) => (
                   <li key={item} className="credential">
                     {item}
@@ -253,12 +253,15 @@ export default async function HomePage({ params }: HomePageProps) {
 
             <div className="contact-details reveal">
               <div>
-                <a href={contact("phoneHref")} className="poster-phone">
-                  {contact("phone")}
-                </a>
-                <p className="mt-4 font-text text-xs tracking-[0.2em] uppercase text-mute">
+                <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
                   {contact("phoneLabel")}
                 </p>
+                <a
+                  href={contact("phoneHref")}
+                  className="mt-2 block font-display text-lg font-medium text-bone underline decoration-line underline-offset-4 hover:decoration-brass"
+                >
+                  {contact("phone")}
+                </a>
               </div>
 
               <div className="contact-meta">
@@ -295,7 +298,7 @@ export default async function HomePage({ params }: HomePageProps) {
                     src="/gallery/owner-collage.jpg"
                     alt=""
                     fill
-                    sizes="280px"
+                    sizes="(min-width: 900px) 40vw, 92vw"
                     className="object-cover"
                   />
                   <div className="gallery-teaser-veil" aria-hidden />
