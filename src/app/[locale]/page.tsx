@@ -128,7 +128,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{services("title")}</h2>
 
-          <ul className="service-list stagger mt-10">
+          <ul className="service-list stagger">
             {serviceKeys.map((key) => (
               <li key={key} className="service-item reveal">
                 <span className="service-icon" aria-hidden>
