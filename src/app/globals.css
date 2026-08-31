@@ -22,6 +22,7 @@
   --color-line: var(--line);
   --font-display: var(--font-display), "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
   --font-text: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
+  --font-brand: var(--font-brand), "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
 }
 
 *,
@@ -122,6 +123,10 @@ body::after {
 
 .font-text {
   font-family: var(--font-text), Georgia, serif;
+}
+
+.hero-brand {
+  font-family: var(--font-brand), Georgia, serif;
 }
 
 .section-title {
@@ -484,7 +489,7 @@ body::after {
   top: 52%;
   width: min(42rem, 72%);
   transform: translateY(-50%);
-  opacity: 0.18;
+  opacity: 0.28;
   z-index: 0;
 }
 
@@ -499,7 +504,7 @@ body::after {
     width: min(32rem, 92%);
     right: 0;
     top: 58%;
-    opacity: 0.16;
+    opacity: 0.24;
     transform: translateY(-48%);
   }
 }
@@ -1033,26 +1038,14 @@ body::after {
 }
 
 .contact-credentials {
-  margin-top: 3.25rem;
+  margin-top: 2.25rem;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  padding: 0.35rem 0;
-}
-
-.contact-meta {
-  display: grid;
   gap: 1.35rem;
-}
-
-@media (min-width: 520px) {
-  .contact-meta {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.35rem;
-  }
+  padding: 0.35rem 0;
 }
 
 /* Services — icon cards */

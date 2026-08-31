@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Bricolage_Grotesque, Newsreader } from "next/font/google";
+import { Bricolage_Grotesque, Cormorant_Garamond, Newsreader } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -12,6 +12,13 @@ import "../globals.css";
 const display = Bricolage_Grotesque({
   subsets: ["latin", "latin-ext"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const brand = Cormorant_Garamond({
+  subsets: ["latin", "latin-ext"],
+  weight: ["600", "700"],
+  variable: "--font-brand",
   display: "swap",
 });
 
@@ -60,7 +67,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${display.variable} ${text.variable} h-full antialiased`}
+      className={`${display.variable} ${brand.variable} ${text.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-void text-bone">
         <NextIntlClientProvider messages={messages}>

@@ -100,12 +100,9 @@
     "title": "Kontakt",
     "phoneLabel": "GSM",
     "emailLabel": "E-mail",
-    "addressLabel": "Adresa",
     "phone": "+385 95 2244 355",
     "phoneHref": "tel:+385952244355",
-    "email": "marinko-alic@net.hr",
-    "address": "Smičiklasova 11b",
-    "city": "HR-47000 Karlovac, Hrvatska"
+    "email": "marinko-alic@net.hr"
   },
   "footer": {
     "legal": "Carolo Canis d.o.o."

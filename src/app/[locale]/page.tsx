@@ -60,7 +60,7 @@ export default async function HomePage({ params }: HomePageProps) {
             />
           </div>
           <div className="relative max-w-[42rem]">
-            <h1 className="enter font-display text-[clamp(3rem,7vw,6rem)] font-extrabold leading-[0.95] tracking-[-0.03em] text-bone whitespace-nowrap">
+            <h1 className="enter hero-brand text-[clamp(3rem,7vw,6rem)] font-semibold leading-[0.95] tracking-[-0.02em] text-bone whitespace-nowrap">
               Carolo <span className="text-brass">Canis</span>
             </h1>
 
@@ -260,29 +260,16 @@ export default async function HomePage({ params }: HomePageProps) {
                 </a>
               </div>
 
-              <div className="contact-meta">
-                <div>
-                  <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
-                    {contact("emailLabel")}
-                  </p>
-                  <a
-                    href={`mailto:${contact("email")}`}
-                    className="mt-2 block font-display text-lg font-medium text-bone underline decoration-line underline-offset-4 hover:decoration-brass"
-                  >
-                    {contact("email")}
-                  </a>
-                </div>
-
-                <div>
-                  <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
-                    {contact("addressLabel")}
-                  </p>
-                  <p className="mt-2 font-display text-lg font-medium leading-snug text-bone">
-                    {contact("address")}
-                    <br />
-                    {contact("city")}
-                  </p>
-                </div>
+              <div>
+                <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
+                  {contact("emailLabel")}
+                </p>
+                <a
+                  href={`mailto:${contact("email")}`}
+                  className="mt-2 block font-display text-lg font-medium text-bone underline decoration-line underline-offset-4 hover:decoration-brass"
+                >
+                  {contact("email")}
+                </a>
               </div>
 
               <Link
