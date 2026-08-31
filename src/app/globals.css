@@ -415,7 +415,7 @@ body::after {
   left: 50%;
   top: 52%;
   width: min(42rem, 78%);
-  transform: translate(-42%, -50%);
+  transform: translate(-34%, -50%);
   opacity: 0.11;
   z-index: 0;
 }

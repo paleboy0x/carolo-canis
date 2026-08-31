@@ -13,14 +13,12 @@ export default async function HomePage({ params }: HomePageProps) {
   setRequestLocale(locale);
 
   const hero = await getTranslations("hero");
-  const services = await getTranslations("services");
   const about = await getTranslations("about");
   const method = await getTranslations("method");
   const locationsT = await getTranslations("locations");
   const gallery = await getTranslations("gallery");
   const contact = await getTranslations("contact");
 
-  const serviceKeys = ["training", "shop", "advice"] as const;
   const stepKeys = ["consult", "individual", "session", "exam"] as const;
   const stepIcon: Record<(typeof stepKeys)[number], StepIconType> = {
     consult: "chat",
@@ -46,61 +44,40 @@ export default async function HomePage({ params }: HomePageProps) {
               decoding="async"
             />
           </div>
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            {/* LEFT — brand + intro + CTA + stats */}
-            <div className="lg:col-span-7">
-              <h1 className="enter font-display text-[clamp(3rem,7vw,6rem)] font-extrabold leading-[0.95] tracking-[-0.03em] text-bone whitespace-nowrap">
-                Carolo <span className="text-brass">Canis</span>
-              </h1>
+          <div className="relative max-w-[42rem]">
+            <h1 className="enter font-display text-[clamp(3rem,7vw,6rem)] font-extrabold leading-[0.95] tracking-[-0.03em] text-bone whitespace-nowrap">
+              Carolo <span className="text-brass">Canis</span>
+            </h1>
 
-              <div
-                className="enter mt-6 h-[3px] w-14 bg-brass"
-                style={{ animationDelay: "80ms" }}
-                aria-hidden
-              />
+            <div
+              className="enter mt-6 h-[3px] w-14 bg-brass"
+              style={{ animationDelay: "80ms" }}
+              aria-hidden
+            />
 
-              <p
-                className="enter mt-6 max-w-[38rem] text-[1.04rem] leading-[1.7] text-mute"
-                style={{ animationDelay: "160ms" }}
-              >
-                {hero("lede")}
-              </p>
+            <p
+              className="enter mt-6 text-[1.04rem] leading-[1.7] text-mute"
+              style={{ animationDelay: "160ms" }}
+            >
+              {hero("lede")}
+            </p>
 
-              <div className="enter mt-8" style={{ animationDelay: "260ms" }}>
-                <a href="#contact" className="btn">
-                  {hero("cta")}
-                </a>
-              </div>
-
-              <ul
-                className="enter mt-10 flex flex-wrap gap-x-7 gap-y-3"
-                style={{ animationDelay: "360ms" }}
-              >
-                {heroStats.map((stat) => (
-                  <li key={stat} className="stat-item">
-                    {stat}
-                  </li>
-                ))}
-              </ul>
+            <div className="enter mt-8" style={{ animationDelay: "260ms" }}>
+              <a href="#contact" className="btn">
+                {hero("cta")}
+              </a>
             </div>
 
-            {/* RIGHT — three service cards */}
-            <div className="space-y-3 lg:col-span-5">
-              {serviceKeys.map((key, i) => (
-                <article
-                  key={key}
-                  className="hero-card enter"
-                  style={{ animationDelay: `${240 + i * 100}ms` }}
-                >
-                  <span className="hero-card-num" aria-hidden>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h4 className="hero-card-title">
-                    {services(`items.${key}.title`)}
-                  </h4>
-                </article>
+            <ul
+              className="enter mt-10 flex flex-wrap gap-x-7 gap-y-3"
+              style={{ animationDelay: "360ms" }}
+            >
+              {heroStats.map((stat) => (
+                <li key={stat} className="stat-item">
+                  {stat}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>
