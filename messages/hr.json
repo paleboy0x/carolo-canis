@@ -14,7 +14,6 @@
     "close": "Zatvori"
   },
   "hero": {
-    "title": "Carolo Canis",
     "lede": "„Carolo Canis“ d.o.o. mala je i usko profilirana tvrtka koja djeluje na području kinologije — u segmentima školovanja pasa, trgovine opremom i hranom za pse te savjeta u kinologiji. Savjeti proizlaze iz zvanja kinološkog suca za rad školovanih pasa i sudskog vještaka za kinologiju u razdoblju 2009.–2017.",
     "cta": "Kontakt",
     "stats": ["30 godina iskustva", "3 grada", "Individualan pristup"]
@@ -87,8 +86,6 @@
     "workLede": "Treninzi, ispiti i trenuci s terena — kako izgleda rad s našim psima i vlasnicima.",
     "ownerTitle": "Povijesne fotografije",
     "ownerCta": "Povijesne fotografije",
-    "ownerHint": "4 fotografije",
-    "ownerTeaser": "Snimke iz razdoblja rada kao suca, markiranta i sudskog vještaka.",
     "backHome": "← Početna",
     "openImage": "Povećaj sliku",
     "lightboxLabel": "Povećani prikaz fotografije",

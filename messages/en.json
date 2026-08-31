@@ -14,7 +14,6 @@
     "close": "Close"
   },
   "hero": {
-    "title": "Carolo Canis",
     "lede": "Carolo Canis Ltd. is a small, tightly focused company working in cynology — dog training, trade in dog equipment and food, and cynology advice. That advice draws on the credentials of a working-dog judge and a court expert in cynology (2009–2017).",
     "cta": "Contact",
     "stats": ["30 years of experience", "3 cities", "Individual approach"]
@@ -87,8 +86,6 @@
     "workLede": "Training, exams and moments from the field — what work with our dogs and owners looks like.",
     "ownerTitle": "Historical photographs",
     "ownerCta": "Historical photographs",
-    "ownerHint": "4 photos",
-    "ownerTeaser": "Images from his work as a judge, decoy and court expert.",
     "backHome": "← Home",
     "openImage": "Enlarge image",
     "lightboxLabel": "Enlarged photo view",

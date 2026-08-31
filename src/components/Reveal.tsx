@@ -64,6 +64,7 @@ export function Reveal() {
     return () => {
       window.clearTimeout(failsafe);
       observer.disconnect();
+      root.classList.remove("js-reveal");
     };
   }, [pathname]);
 

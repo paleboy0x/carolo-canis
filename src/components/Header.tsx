@@ -3,22 +3,11 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { sectionHref, sectionLinks } from "@/data/nav";
 import { FacebookLink } from "./FacebookLink";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LogoMark } from "./LogoMark";
 import { ScrollProgress } from "./ScrollProgress";
-
-const sectionLinks = [
-  { hash: "#about", key: "about" },
-  { hash: "#services", key: "services" },
-  { hash: "#method", key: "method" },
-  { hash: "#locations", key: "locations" },
-  { hash: "#contact", key: "contact" },
-] as const;
-
-function sectionHref(locale: string, hash: string) {
-  return locale === "en" ? `/en/${hash}` : `/${hash}`;
-}
 
 export function Header() {
   const t = useTranslations("nav");
@@ -26,7 +15,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-[linear-gradient(to_bottom,rgba(7,8,7,0.9),rgba(7,8,7,0.62))] backdrop-blur-[10px]">
+    <header className="sticky top-0 z-40 border-b border-line bg-[linear-gradient(to_bottom,rgba(16,18,15,0.92),rgba(16,18,15,0.62))] backdrop-blur-[10px]">
       <div className="wrap flex h-[3.75rem] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 text-bone no-underline">
           <LogoMark size={28} />

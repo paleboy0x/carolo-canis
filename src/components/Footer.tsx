@@ -1,19 +1,8 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { sectionHref, sectionLinks } from "@/data/nav";
 import { FacebookLink } from "./FacebookLink";
 import { LogoMark } from "./LogoMark";
-
-const sectionLinks = [
-  { hash: "#about", key: "about" },
-  { hash: "#services", key: "services" },
-  { hash: "#method", key: "method" },
-  { hash: "#locations", key: "locations" },
-  { hash: "#contact", key: "contact" },
-] as const;
-
-function sectionHref(locale: string, hash: string) {
-  return locale === "en" ? `/en/${hash}` : `/${hash}`;
-}
 
 export function Footer() {
   const t = useTranslations("footer");

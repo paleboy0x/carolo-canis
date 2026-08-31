@@ -1,12 +1,7 @@
-export type MapCoords = {
-  lat: number;
-  lng: number;
-};
-
-export type TrainingLocation = {
+type TrainingLocation = {
   id: string;
   city: string;
-  coords: MapCoords;
+  coords: { lat: number; lng: number };
 };
 
 export const locations: TrainingLocation[] = [

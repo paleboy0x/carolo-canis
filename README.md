@@ -20,9 +20,9 @@ npm run build      # production build
 
 ## Structure
 
-- `src/app/[locale]/` — locale-scoped routes; `page.tsx` is the landing page
-- `src/components/` — Header, Footer, LocationRoute, LanguageSwitcher, marks
-- `src/data/locations.ts` — training-location data (city + map coords)
+- `src/app/[locale]/` — locale-scoped routes; home + gallery
+- `src/components/` — layout, gallery lightbox, marks
+- `src/data/` — locations, gallery index, shared nav links
 - `src/i18n/` — next-intl routing, request and navigation helpers
 - `messages/{hr,en}.json` — copy for both languages
-- `public/` — brand assets (logo, shepherd silhouette)
+- `public/` — brand mark, hero silhouette, gallery assets

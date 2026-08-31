@@ -151,27 +151,6 @@ body::after {
   background: var(--brass);
 }
 
-.subsection-title {
-  margin: 0;
-  font-family: var(--font-display), ui-sans-serif, sans-serif;
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--bone);
-}
-
-.subsection-title::before {
-  content: "";
-  display: inline-block;
-  width: 26px;
-  height: 2px;
-  margin-right: 14px;
-  vertical-align: middle;
-  background: var(--brass);
-}
-
-.lede,
 .copy {
   text-align: left;
   hyphens: none;
@@ -411,56 +390,6 @@ body::after {
   font-size: clamp(1rem, 1.6vw, 1.12rem);
   line-height: 1.65;
   color: var(--mute);
-}
-
-/* ---------- Hero side cards ---------- */
-.hero-card {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 18px 22px;
-  border: 1px solid color-mix(in srgb, var(--brass) 30%, var(--line));
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.005)
-  );
-  clip-path: polygon(
-    0 0,
-    calc(100% - 12px) 0,
-    100% 12px,
-    100% 100%,
-    12px 100%,
-    0 calc(100% - 12px)
-  );
-  transition:
-    transform 200ms ease,
-    border-color 200ms ease;
-}
-
-.hero-card:hover {
-  transform: translateX(4px);
-  border-color: var(--brass);
-}
-
-.hero-card-num {
-  flex-shrink: 0;
-  font-family: var(--font-display), sans-serif;
-  font-weight: 800;
-  font-size: 1.9rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--brass);
-}
-
-.hero-card-title {
-  margin: 0;
-  font-family: var(--font-display), sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  color: var(--bone);
 }
 
 /* ---------- Brand mark (header / footer) ---------- */
@@ -805,20 +734,6 @@ body::after {
   transform: translateY(-1px);
 }
 
-/* ---------- Divider ---------- */
-.rule {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    color-mix(in srgb, var(--brass) 55%, transparent) 12%,
-    color-mix(in srgb, var(--brass) 55%, transparent) 88%,
-    transparent
-  );
-}
-
 /* ---------- Nav ---------- */
 .nav-link {
   position: relative;
@@ -989,40 +904,7 @@ body::after {
   color: var(--bone);
 }
 
-/* Compact owner album teaser (contact) */
-.gallery-teaser-sm {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  text-decoration: none;
-  color: inherit;
-}
-
-.gallery-teaser-sm:hover {
-  transform: translate(-2px, -2px);
-}
-
-.gallery-teaser-sm .gallery-teaser-media {
-  aspect-ratio: 900 / 420;
-}
-
-.gallery-teaser-sm .gallery-teaser-copy {
-  padding: 1rem 1.15rem 1.15rem;
-  max-width: none;
-}
-
-.gallery-teaser-sm .gallery-teaser-cta {
-  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
-}
-
-.gallery-teaser-sm .gallery-teaser-lede {
-  margin-top: 0.45rem;
-  font-size: 0.9rem;
-  max-width: none;
-}
-
-/* Mini historical-photos teaser (~1/4 previous size) */
+/* Mini historical-photos teaser */
 .gallery-teaser-mini {
   display: block;
   position: relative;
