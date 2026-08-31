@@ -412,10 +412,10 @@ body::after {
   position: absolute;
   pointer-events: none;
   user-select: none;
-  left: 50%;
+  right: 0;
   top: 52%;
-  width: min(42rem, 78%);
-  transform: translate(-34%, -50%);
+  width: min(42rem, 72%);
+  transform: translateY(-50%);
   opacity: 0.11;
   z-index: 0;
 }
@@ -428,9 +428,10 @@ body::after {
 
 @media (max-width: 640px) {
   .hero-shadow {
-    width: min(28rem, 88%);
+    width: min(28rem, 85%);
+    right: 0;
     opacity: 0.08;
-    transform: translate(-50%, -48%);
+    transform: translateY(-48%);
   }
 }
 
