@@ -1,17 +1,23 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { FacebookLink } from "./FacebookLink";
 import { LogoMark } from "./LogoMark";
 
-const navLinks = [
-  { href: "#about", key: "about" },
-  { href: "#method", key: "method" },
-  { href: "#locations", key: "locations" },
-  { href: "#contact", key: "contact" },
+const sectionLinks = [
+  { hash: "#about", key: "about" },
+  { hash: "#method", key: "method" },
+  { hash: "#locations", key: "locations" },
+  { hash: "#contact", key: "contact" },
 ] as const;
+
+function sectionHref(locale: string, hash: string) {
+  return locale === "en" ? `/en/${hash}` : `/${hash}`;
+}
 
 export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -26,15 +32,18 @@ export function Footer() {
           </div>
 
           <nav className="flex flex-wrap items-center gap-x-7 gap-y-3">
-            {navLinks.map((link) => (
+            {sectionLinks.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={link.hash}
+                href={sectionHref(locale, link.hash)}
                 className="nav-link font-text text-sm"
               >
                 {nav(link.key)}
               </a>
             ))}
+            <Link href="/galerija" className="nav-link font-text text-sm">
+              {nav("gallery")}
+            </Link>
             <FacebookLink />
           </nav>
         </div>

@@ -8,6 +8,7 @@
     "about": "About",
     "method": "How we work",
     "locations": "Locations",
+    "gallery": "Gallery",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Close"
@@ -75,6 +76,20 @@
   },
   "locations": {
     "title": "Training locations"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "metaTitle": "Gallery — Carolo Canis",
+    "metaDescription": "Photos from Carolo Canis training and working-dog work.",
+    "lede": "Training, exams and moments from the field — see what work with our dogs and owners looks like.",
+    "teaser": "See photos from training, exams and work in the field.",
+    "cta": "Open gallery",
+    "backHome": "← Home",
+    "openImage": "Enlarge image",
+    "lightboxLabel": "Enlarged photo view",
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image"
   },
   "contact": {
     "title": "Contact",

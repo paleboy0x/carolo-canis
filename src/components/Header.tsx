@@ -1,22 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { FacebookLink } from "./FacebookLink";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LogoMark } from "./LogoMark";
 import { ScrollProgress } from "./ScrollProgress";
 
-const links = [
-  { href: "#about", key: "about" },
-  { href: "#method", key: "method" },
-  { href: "#locations", key: "locations" },
-  { href: "#contact", key: "contact" },
+const sectionLinks = [
+  { hash: "#about", key: "about" },
+  { hash: "#method", key: "method" },
+  { hash: "#locations", key: "locations" },
+  { hash: "#contact", key: "contact" },
 ] as const;
+
+function sectionHref(locale: string, hash: string) {
+  return locale === "en" ? `/en/${hash}` : `/${hash}`;
+}
 
 export function Header() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,11 +35,18 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link font-text text-[0.95rem]">
+          {sectionLinks.map((link) => (
+            <a
+              key={link.hash}
+              href={sectionHref(locale, link.hash)}
+              className="nav-link font-text text-[0.95rem]"
+            >
               {t(link.key)}
             </a>
           ))}
+          <Link href="/galerija" className="nav-link font-text text-[0.95rem]">
+            {t("gallery")}
+          </Link>
           <FacebookLink />
           <span className="mx-1 h-5 w-px bg-line" aria-hidden />
           <LanguageSwitcher />
@@ -56,16 +68,23 @@ export function Header() {
       {open ? (
         <nav className="border-t border-line">
           <div className="wrap flex flex-col gap-3 py-5 lg:hidden">
-            {links.map((link) => (
+            {sectionLinks.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={link.hash}
+                href={sectionHref(locale, link.hash)}
                 className="font-display text-3xl font-bold tracking-[-0.02em] text-bone no-underline"
                 onClick={() => setOpen(false)}
               >
                 {t(link.key)}
               </a>
             ))}
+            <Link
+              href="/galerija"
+              className="font-display text-3xl font-bold tracking-[-0.02em] text-bone no-underline"
+              onClick={() => setOpen(false)}
+            >
+              {t("gallery")}
+            </Link>
           </div>
         </nav>
       ) : null}

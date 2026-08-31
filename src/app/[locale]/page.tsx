@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { LocationRoute } from "@/components/LocationRoute";
 import { StepIcon, type StepIconType } from "@/components/marks/StepIcon";
 
@@ -16,6 +17,7 @@ export default async function HomePage({ params }: HomePageProps) {
   const about = await getTranslations("about");
   const method = await getTranslations("method");
   const locationsT = await getTranslations("locations");
+  const gallery = await getTranslations("gallery");
   const contact = await getTranslations("contact");
 
   const serviceKeys = ["training", "shop", "advice"] as const;
@@ -180,6 +182,19 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{locationsT("title")}</h2>
           <LocationRoute />
+        </div>
+      </section>
+
+      {/* ============ GALLERY TEASER ============ */}
+      <section id="gallery" className="band border-t border-line">
+        <div className="wrap">
+          <h2 className="section-title reveal">{gallery("title")}</h2>
+          <p className="reveal mt-6 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
+            {gallery("teaser")}{" "}
+            <Link href="/galerija" className="text-brass underline decoration-line underline-offset-4 hover:decoration-brass">
+              {gallery("cta")}
+            </Link>
+          </p>
         </div>
       </section>
 

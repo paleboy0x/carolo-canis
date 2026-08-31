@@ -8,6 +8,7 @@
     "about": "O nama",
     "method": "Način rada",
     "locations": "Lokacije",
+    "gallery": "Galerija",
     "contact": "Kontakt",
     "menu": "Izbornik",
     "close": "Zatvori"
@@ -75,6 +76,20 @@
   },
   "locations": {
     "title": "Lokacije treninga"
+  },
+  "gallery": {
+    "title": "Galerija",
+    "metaTitle": "Galerija — Carolo Canis",
+    "metaDescription": "Fotografije s treninga i kinološkog rada Carolo Canis.",
+    "lede": "Treninzi, ispiti i trenuci s terena — pogledajte kako izgleda rad s našim psima i vlasnicima.",
+    "teaser": "Pogledajte fotografije s treninga, ispita i rada na terenu.",
+    "cta": "Otvori galeriju",
+    "backHome": "← Početna",
+    "openImage": "Povećaj sliku",
+    "lightboxLabel": "Povećani prikaz fotografije",
+    "close": "Zatvori",
+    "prev": "Prethodna slika",
+    "next": "Sljedeća slika"
   },
   "contact": {
     "title": "Kontakt",
