@@ -248,7 +248,7 @@ export default async function HomePage({ params }: HomePageProps) {
                   {about("ownerName")}
                 </h3>
 
-                <ul className="relative mt-6 flex flex-wrap gap-2">
+                <ul className="credential-list relative mt-6">
                   {credentials.map((item) => (
                     <li key={item} className="credential">
                       {item}

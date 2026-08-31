@@ -283,23 +283,32 @@ body::after {
 .card-tick-br { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
 
 /* ---------- Owner ---------- */
+.credential-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .credential {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.65rem;
-  border: 1px solid color-mix(in srgb, var(--brass) 55%, transparent);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
   font-family: var(--font-text), serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
   color: var(--bone);
-  border-radius: 999px;
 }
 
 .credential::before {
   content: "";
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
+  margin-top: 0.45em;
+  flex-shrink: 0;
   border-radius: 999px;
   background: var(--brass);
 }
