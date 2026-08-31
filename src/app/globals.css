@@ -415,14 +415,14 @@ body::after {
   inset-inline: 0;
   top: 50%;
   transform: translateY(-50%);
-  aspect-ratio: 1989 / 781;
-  opacity: 0.14;
+  aspect-ratio: 1400 / 670;
+  opacity: 0.16;
   z-index: 0;
 }
 
 @media (max-width: 640px) {
   .hero-shadow {
-    opacity: 0.09;
+    opacity: 0.1;
   }
 }
 
@@ -766,6 +766,84 @@ body::after {
 
 .gallery-thumb:hover img {
   transform: scale(1.04);
+}
+
+/* ---------- Gallery teaser ---------- */
+.gallery-teaser {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-teaser:hover {
+  transform: translate(-2px, -2px);
+}
+
+.gallery-teaser-media {
+  position: relative;
+  aspect-ratio: 1400 / 780;
+  width: 100%;
+  background: #0a0b0a;
+}
+
+.gallery-teaser-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(7, 8, 7, 0.72) 0%,
+      rgba(7, 8, 7, 0.35) 42%,
+      rgba(7, 8, 7, 0.15) 100%
+    ),
+    linear-gradient(to top, rgba(7, 8, 7, 0.55) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.gallery-teaser-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  max-width: 36rem;
+}
+
+.gallery-teaser-hint {
+  margin: 0;
+  font-family: var(--font-text), serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+.gallery-teaser-cta {
+  margin: 0.55rem 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.85rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--bone);
+}
+
+.gallery-teaser-lede {
+  margin: 0.85rem 0 0;
+  max-width: 28rem;
+  font-family: var(--font-text), serif;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--mute) 88%, var(--bone));
+}
+
+.gallery-teaser:hover .gallery-teaser-cta {
+  color: var(--brass);
 }
 
 .lightbox {

@@ -43,7 +43,7 @@ export default async function HomePage({ params }: HomePageProps) {
               fill
               priority
               sizes="(min-width: 1280px) 70rem, 92vw"
-              className="object-contain"
+              className="object-contain object-center"
             />
           </div>
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -189,12 +189,34 @@ export default async function HomePage({ params }: HomePageProps) {
       <section id="gallery" className="band border-t border-line">
         <div className="wrap">
           <h2 className="section-title reveal">{gallery("title")}</h2>
-          <p className="reveal mt-6 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
-            {gallery("teaser")}{" "}
-            <Link href="/galerija" className="text-brass underline decoration-line underline-offset-4 hover:decoration-brass">
-              {gallery("cta")}
-            </Link>
-          </p>
+
+          <Link href="/galerija" className="gallery-teaser card reveal mt-8 no-underline">
+            <span className="card-tick card-tick-tl" aria-hidden />
+            <span className="card-tick card-tick-tr" aria-hidden />
+            <span className="card-tick card-tick-bl" aria-hidden />
+            <span className="card-tick card-tick-br" aria-hidden />
+
+            <div className="gallery-teaser-media">
+              <Image
+                src="/gallery/teaser-collage.jpg"
+                alt=""
+                fill
+                sizes="(min-width: 1100px) 70rem, 92vw"
+                className="object-cover"
+                priority={false}
+              />
+              <div className="gallery-teaser-veil" aria-hidden />
+            </div>
+
+            <div className="gallery-teaser-copy">
+              <p className="gallery-teaser-hint">{gallery("ctaHint")}</p>
+              <p className="gallery-teaser-cta">
+                {gallery("cta")}
+                <span aria-hidden> →</span>
+              </p>
+              <p className="gallery-teaser-lede">{gallery("teaser")}</p>
+            </div>
+          </Link>
         </div>
       </section>
 

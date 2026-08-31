@@ -53,11 +53,13 @@ export function GalleryGrid() {
               aria-label={`${t("openImage")} ${index + 1}`}
             >
               <Image
-                src={image.src}
+                src={image.thumb}
                 alt=""
                 fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                sizes="(min-width: 1100px) 25vw, (min-width: 768px) 33vw, 50vw"
                 className="object-cover"
+                loading={index < 4 ? "eager" : "lazy"}
+                quality={70}
               />
             </button>
           </li>
