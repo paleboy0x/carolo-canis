@@ -106,6 +106,16 @@ export default async function HomePage({ params }: HomePageProps) {
               </div>
             </aside>
           </div>
+        </div>
+      </section>
+
+      {/* ============ SERVICES ============ */}
+      <section id="services" className="band border-t border-line">
+        <div className="wrap">
+          <h2 className="section-title reveal">{services("title")}</h2>
+          <p className="reveal mt-4 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
+            {services("lede")}
+          </p>
 
           <ul className="service-grid stagger mt-10">
             {serviceItems.map((item) => (
@@ -212,18 +222,35 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="wrap">
           <h2 className="section-title reveal">{contact("title")}</h2>
 
-          <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-16">
-            <div className="space-y-10 lg:col-span-7">
+          <div className="contact-layout mt-10">
+            <div className="card reveal contact-owner">
+              <p className="relative font-text text-xs tracking-[0.2em] uppercase text-brass">
+                {about("ownerLabel")}
+              </p>
+              <h3 className="relative mt-3 font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-bone">
+                {about("ownerName")}
+              </h3>
+
+              <ul className="credential-list relative mt-8">
+                {credentials.map((item) => (
+                  <li key={item} className="credential">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="contact-details reveal">
               <div>
-                <a href={contact("phoneHref")} className="poster-phone reveal">
+                <a href={contact("phoneHref")} className="poster-phone">
                   {contact("phone")}
                 </a>
-                <p className="reveal mt-5 font-text text-xs tracking-[0.2em] uppercase text-mute">
+                <p className="mt-4 font-text text-xs tracking-[0.2em] uppercase text-mute">
                   {contact("phoneLabel")}
                 </p>
               </div>
 
-              <div className="reveal grid gap-8 sm:grid-cols-2">
+              <div className="contact-meta">
                 <div>
                   <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
                     {contact("emailLabel")}
@@ -247,54 +274,35 @@ export default async function HomePage({ params }: HomePageProps) {
                   </p>
                 </div>
               </div>
-
-              <Link
-                href="/galerija#vlasnik"
-                className="gallery-teaser gallery-teaser-sm card reveal no-underline"
-              >
-                <span className="card-tick card-tick-tl" aria-hidden />
-                <span className="card-tick card-tick-br" aria-hidden />
-
-                <div className="gallery-teaser-media">
-                  <Image
-                    src="/gallery/owner-collage.jpg"
-                    alt=""
-                    fill
-                    sizes="(min-width: 1024px) 36rem, 92vw"
-                    className="object-cover"
-                  />
-                  <div className="gallery-teaser-veil" aria-hidden />
-                </div>
-
-                <div className="gallery-teaser-copy">
-                  <p className="gallery-teaser-hint">{gallery("ownerHint")}</p>
-                  <p className="gallery-teaser-cta">
-                    {gallery("ownerCta")}
-                    <span aria-hidden> →</span>
-                  </p>
-                  <p className="gallery-teaser-lede">{gallery("ownerTeaser")}</p>
-                </div>
-              </Link>
             </div>
 
-            <aside className="lg:col-span-5">
-              <div className="card reveal">
-                <p className="relative font-text text-xs tracking-[0.2em] uppercase text-brass">
-                  {about("ownerLabel")}
-                </p>
-                <h3 className="relative mt-3 font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-bone">
-                  {about("ownerName")}
-                </h3>
+            <Link
+              href="/galerija#vlasnik"
+              className="gallery-teaser gallery-teaser-sm card contact-album reveal no-underline"
+            >
+              <span className="card-tick card-tick-tl" aria-hidden />
+              <span className="card-tick card-tick-br" aria-hidden />
 
-                <ul className="credential-list relative mt-8">
-                  {credentials.map((item) => (
-                    <li key={item} className="credential">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="gallery-teaser-media">
+                <Image
+                  src="/gallery/owner-collage.jpg"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1100px) 70rem, 92vw"
+                  className="object-cover"
+                />
+                <div className="gallery-teaser-veil" aria-hidden />
               </div>
-            </aside>
+
+              <div className="gallery-teaser-copy">
+                <p className="gallery-teaser-hint">{gallery("ownerHint")}</p>
+                <p className="gallery-teaser-cta">
+                  {gallery("ownerCta")}
+                  <span aria-hidden> →</span>
+                </p>
+                <p className="gallery-teaser-lede">{gallery("ownerTeaser")}</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
