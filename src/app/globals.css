@@ -285,7 +285,7 @@ body::after {
 /* ---------- Owner ---------- */
 .credential-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 0.5rem;
   margin: 0;
@@ -961,7 +961,7 @@ body::after {
   padding: 0;
   text-decoration: none;
   color: inherit;
-  margin-top: 0.25rem;
+  margin-top: 1.35rem;
 }
 
 .gallery-teaser-mini:hover {
@@ -1014,23 +1014,52 @@ body::after {
   height: 100%;
 }
 
-.contact-details {
+.contact-owner-name {
+  margin-bottom: 0;
+}
+
+.contact-credentials {
+  margin-top: 2.25rem;
+}
+
+.contact-fields {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  padding: 0.35rem 0;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
 }
 
-.contact-meta {
-  display: grid;
-  gap: 1.35rem;
+.contact-field-label {
+  margin: 0;
+  font-family: var(--font-text), serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass);
 }
 
-@media (min-width: 520px) {
-  .contact-meta {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.35rem;
-  }
+.contact-field-value {
+  margin: 0.65rem 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+}
+
+.contact-field-link {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.contact-field-link:hover {
+  color: var(--brass);
+  text-decoration-color: var(--brass);
 }
 
 /* Services — icon cards */

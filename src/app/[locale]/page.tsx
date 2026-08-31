@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FACEBOOK_URL } from "@/components/FacebookLink";
 import { LocationRoute } from "@/components/LocationRoute";
 import { ServiceIcon, type ServiceIconType } from "@/components/marks/ServiceIcon";
 import { StepIcon, type StepIconType } from "@/components/marks/StepIcon";
@@ -238,53 +239,17 @@ export default async function HomePage({ params }: HomePageProps) {
               <p className="relative font-text text-xs tracking-[0.2em] uppercase text-brass">
                 {about("ownerLabel")}
               </p>
-              <h3 className="relative mt-3 font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-bone">
+              <h3 className="contact-owner-name relative mt-3 font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-bone">
                 {about("ownerName")}
               </h3>
 
-              <ul className="credential-list relative mt-8">
+              <ul className="credential-list contact-credentials relative">
                 {credentials.map((item) => (
                   <li key={item} className="credential">
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="contact-details reveal">
-              <div>
-                <a href={contact("phoneHref")} className="poster-phone">
-                  {contact("phone")}
-                </a>
-                <p className="mt-4 font-text text-xs tracking-[0.2em] uppercase text-mute">
-                  {contact("phoneLabel")}
-                </p>
-              </div>
-
-              <div className="contact-meta">
-                <div>
-                  <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
-                    {contact("emailLabel")}
-                  </p>
-                  <a
-                    href={`mailto:${contact("email")}`}
-                    className="mt-2 block font-display text-lg font-medium text-bone underline decoration-line underline-offset-4 hover:decoration-brass"
-                  >
-                    {contact("email")}
-                  </a>
-                </div>
-
-                <div>
-                  <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
-                    {contact("addressLabel")}
-                  </p>
-                  <p className="mt-2 font-display text-lg font-medium leading-snug text-bone">
-                    {contact("address")}
-                    <br />
-                    {contact("city")}
-                  </p>
-                </div>
-              </div>
 
               <Link
                 href="/galerija#vlasnik"
@@ -307,6 +272,46 @@ export default async function HomePage({ params }: HomePageProps) {
                   </p>
                 </div>
               </Link>
+            </div>
+
+            <div className="contact-fields reveal">
+              <div className="contact-field">
+                <p className="contact-field-label">{contact("phoneLabel")}</p>
+                <a href={contact("phoneHref")} className="contact-field-value contact-field-link">
+                  {contact("phone")}
+                </a>
+              </div>
+
+              <div className="contact-field">
+                <p className="contact-field-label">{contact("emailLabel")}</p>
+                <a
+                  href={`mailto:${contact("email")}`}
+                  className="contact-field-value contact-field-link"
+                >
+                  {contact("email")}
+                </a>
+              </div>
+
+              <div className="contact-field">
+                <p className="contact-field-label">{contact("addressLabel")}</p>
+                <p className="contact-field-value">
+                  {contact("address")}
+                  <br />
+                  {contact("city")}
+                </p>
+              </div>
+
+              <div className="contact-field">
+                <p className="contact-field-label">{contact("facebookLabel")}</p>
+                <a
+                  href={FACEBOOK_URL}
+                  className="contact-field-value contact-field-link"
+                  target={FACEBOOK_URL === "#" ? undefined : "_blank"}
+                  rel={FACEBOOK_URL === "#" ? undefined : "noopener noreferrer"}
+                >
+                  {contact("facebookLink")}
+                </a>
+              </div>
             </div>
           </div>
         </div>
