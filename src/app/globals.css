@@ -1014,6 +1014,10 @@ body::after {
   height: 100%;
 }
 
+.contact-credentials {
+  margin-top: 3.25rem;
+}
+
 .contact-details {
   display: flex;
   flex-direction: column;

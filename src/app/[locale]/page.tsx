@@ -242,7 +242,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 {about("ownerName")}
               </h3>
 
-              <ul className="credential-list relative mt-12">
+              <ul className="credential-list contact-credentials relative">
                 {credentials.map((item) => (
                   <li key={item} className="credential">
                     {item}
@@ -256,10 +256,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 <p className="font-text text-xs tracking-[0.2em] uppercase text-brass">
                   {contact("phoneLabel")}
                 </p>
-                <a
-                  href={contact("phoneHref")}
-                  className="mt-2 block font-display text-lg font-medium text-bone underline decoration-line underline-offset-4 hover:decoration-brass"
-                >
+                <a href={contact("phoneHref")} className="poster-phone mt-2">
                   {contact("phone")}
                 </a>
               </div>
