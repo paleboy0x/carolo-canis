@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --void: #070807;
-  --turf: #10120f;
+  --void: #10120f;
+  --turf: #171a15;
   --bone: #ecdfc4;
   --mute: #9a927e;
   --brass: #d0a663;
   --clay: #8f3d24;
-  --line: #2a2e28;
+  --line: #2f342e;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
 }
@@ -86,7 +86,7 @@ body::after {
   background: radial-gradient(
     ellipse at center,
     transparent 45%,
-    rgba(0, 0, 0, 0.5) 100%
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
@@ -378,7 +378,7 @@ body::after {
 
 /* Payment highlight — distinct from the four step cards */
 .payment-band {
-  padding: clamp(2rem, 4vw, 2.85rem) clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(2rem, 4vw, 2.85rem) clamp(1.75rem, 5vw, 3.75rem);
   border-color: color-mix(in srgb, var(--brass) 55%, var(--line));
   background: linear-gradient(
     135deg,
@@ -390,7 +390,7 @@ body::after {
 
 .payment-band-inner {
   position: relative;
-  max-width: 40rem;
+  max-width: 52rem;
   margin-inline: auto;
   text-align: center;
 }
