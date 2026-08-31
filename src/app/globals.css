@@ -486,12 +486,25 @@ body::after {
   position: absolute;
   pointer-events: none;
   user-select: none;
-  right: 0;
+  left: 52%;
+  right: auto;
   top: 52%;
-  width: min(42rem, 72%);
+  width: min(40rem, 48%);
   transform: translateY(-50%);
-  opacity: 0.38;
+  opacity: 0.5;
   z-index: 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.55) 12%,
+    #000 28%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.55) 12%,
+    #000 28%
+  );
 }
 
 .hero-shadow img {
@@ -500,13 +513,46 @@ body::after {
   height: auto;
 }
 
+@media (max-width: 900px) {
+  .hero-shadow {
+    left: auto;
+    right: -4%;
+    width: min(34rem, 62%);
+    opacity: 0.42;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 18%,
+      #000 42%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 18%,
+      #000 42%
+    );
+  }
+}
+
 @media (max-width: 640px) {
   .hero-shadow {
-    width: min(32rem, 92%);
-    right: 0;
-    top: 58%;
-    opacity: 0.34;
-    transform: translateY(-48%);
+    width: min(30rem, 88%);
+    right: -8%;
+    top: 68%;
+    opacity: 0.36;
+    transform: translateY(-42%);
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 22%,
+      #000 48%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 22%,
+      #000 48%
+    );
   }
 }
 
