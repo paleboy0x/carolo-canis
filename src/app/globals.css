@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --void: #0f151c;
-  --turf: #161e28;
+  --void: #0c1522;
+  --turf: #132030;
   --bone: #ebe4d6;
-  --mute: #94a0ad;
+  --mute: #8a97ab;
   --brass: #e07a35;
   --clay: #c85a20;
-  --line: #2a3544;
+  --line: #263648;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
 }
@@ -48,13 +48,18 @@ body {
     ),
     radial-gradient(
       1200px 600px at 78% 0%,
-      color-mix(in srgb, var(--brass) 8%, transparent),
+      color-mix(in srgb, var(--brass) 7%, transparent),
       transparent 60%
     ),
     radial-gradient(
-      900px 500px at 8% 92%,
-      color-mix(in srgb, #4a6a8a 10%, transparent),
-      transparent 60%
+      1000px 560px at 12% 88%,
+      color-mix(in srgb, #5a82b0 16%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 480px at 88% 18%,
+      color-mix(in srgb, #3d5f8a 12%, transparent),
+      transparent 58%
     ),
     var(--void);
   background-attachment: fixed;
@@ -86,7 +91,7 @@ body::after {
   background: radial-gradient(
     ellipse at center,
     transparent 45%,
-    rgba(8, 12, 18, 0.4) 100%
+    rgba(8, 14, 24, 0.38) 100%
   );
 }
 
@@ -630,8 +635,8 @@ body::after {
   padding: 46px 20px 16px;
   background: linear-gradient(
     to top,
-    rgba(15, 21, 28, 0.94),
-    rgba(15, 21, 28, 0.55) 55%,
+    rgba(12, 21, 34, 0.94),
+    rgba(12, 21, 34, 0.55) 55%,
     transparent
   );
   pointer-events: none;
@@ -842,11 +847,11 @@ body::after {
   background:
     linear-gradient(
       105deg,
-      rgba(15, 21, 28, 0.72) 0%,
-      rgba(15, 21, 28, 0.35) 42%,
-      rgba(15, 21, 28, 0.15) 100%
+      rgba(12, 21, 34, 0.72) 0%,
+      rgba(12, 21, 34, 0.35) 42%,
+      rgba(12, 21, 34, 0.15) 100%
     ),
-    linear-gradient(to top, rgba(15, 21, 28, 0.55) 0%, transparent 45%);
+    linear-gradient(to top, rgba(12, 21, 34, 0.55) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -939,8 +944,8 @@ body::after {
 .gallery-teaser-mini .gallery-teaser-veil {
   background: linear-gradient(
     to top,
-    rgba(15, 21, 28, 0.82) 0%,
-    rgba(15, 21, 28, 0.2) 55%,
+    rgba(12, 21, 34, 0.82) 0%,
+    rgba(12, 21, 34, 0.2) 55%,
     transparent 100%
   );
 }
