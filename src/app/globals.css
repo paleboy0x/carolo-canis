@@ -406,12 +406,10 @@ body::after {
   width: auto;
   object-fit: contain;
   object-position: center;
-  mix-blend-mode: lighten;
-  opacity: 0.94;
-  filter: sepia(0.45) saturate(2.4) hue-rotate(352deg) brightness(1.06);
+  opacity: 1;
 }
 
-/* ---------- Hero shepherd shadow ---------- */
+/* ---------- Hero shepherd graphic ---------- */
 .hero-shadow {
   position: absolute;
   pointer-events: none;
@@ -421,19 +419,18 @@ body::after {
   top: 52%;
   width: min(40rem, 48%);
   transform: translateY(-50%);
-  opacity: 0.5;
   z-index: 0;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0, 0, 0, 0.55) 12%,
-    #000 28%
+    rgba(0, 0, 0, 0.35) 10%,
+    #000 22%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0, 0, 0, 0.55) 12%,
-    #000 28%
+    rgba(0, 0, 0, 0.35) 10%,
+    #000 22%
   );
 }
 
@@ -441,7 +438,6 @@ body::after {
   display: block;
   width: 100%;
   height: auto;
-  filter: sepia(0.45) saturate(2.4) hue-rotate(352deg) brightness(1.06);
 }
 
 @media (max-width: 900px) {
@@ -449,18 +445,17 @@ body::after {
     left: auto;
     right: 0;
     width: min(34rem, 68%);
-    opacity: 0.42;
     -webkit-mask-image: linear-gradient(
       to right,
       transparent 0%,
-      rgba(0, 0, 0, 0.4) 18%,
-      #000 42%
+      rgba(0, 0, 0, 0.3) 14%,
+      #000 32%
     );
     mask-image: linear-gradient(
       to right,
       transparent 0%,
-      rgba(0, 0, 0, 0.4) 18%,
-      #000 42%
+      rgba(0, 0, 0, 0.3) 14%,
+      #000 32%
     );
   }
 }
@@ -471,19 +466,18 @@ body::after {
     right: 0;
     width: min(28rem, 100%);
     top: 68%;
-    opacity: 0.36;
     transform: translateY(-42%);
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(0, 0, 0, 0.35) 22%,
-      #000 48%
+      rgba(0, 0, 0, 0.25) 18%,
+      #000 40%
     );
     mask-image: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(0, 0, 0, 0.35) 22%,
-      #000 48%
+      rgba(0, 0, 0, 0.25) 18%,
+      #000 40%
     );
   }
 }
