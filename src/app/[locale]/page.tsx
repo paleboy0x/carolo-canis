@@ -50,26 +50,14 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="band relative overflow-hidden py-20 lg:py-28">
         <div className="wrap relative">
           <div className="hero-shadow" aria-hidden>
-            <div className="hero-shadow-glow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/shepherd-hero.png"
-                alt=""
-                width={900}
-                height={430}
-                decoding="async"
-              />
-            </div>
-            <div className="hero-shadow-art">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/shepherd-hero.png"
-                alt=""
-                width={900}
-                height={430}
-                decoding="async"
-              />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/shepherd-hero.png"
+              alt=""
+              width={900}
+              height={430}
+              decoding="async"
+            />
           </div>
           <div className="relative z-10 max-w-[min(42rem,52%)] max-lg:max-w-[42rem]">
             <h1 className="enter hero-brand text-[clamp(3rem,7vw,6rem)] leading-[0.95] tracking-[-0.02em] text-bone whitespace-nowrap">
