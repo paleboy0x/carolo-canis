@@ -447,8 +447,8 @@ body::after {
 @media (max-width: 900px) {
   .hero-shadow {
     left: auto;
-    right: -4%;
-    width: min(34rem, 62%);
+    right: 0;
+    width: min(34rem, 68%);
     opacity: 0.42;
     -webkit-mask-image: linear-gradient(
       to right,
@@ -467,8 +467,9 @@ body::after {
 
 @media (max-width: 640px) {
   .hero-shadow {
-    width: min(30rem, 88%);
-    right: -8%;
+    left: auto;
+    right: 0;
+    width: min(28rem, 100%);
     top: 68%;
     opacity: 0.36;
     transform: translateY(-42%);
