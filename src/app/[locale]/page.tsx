@@ -48,7 +48,7 @@ export default async function HomePage({ params }: HomePageProps) {
     <>
       {/* ============ HERO ============ */}
       <section className="band relative overflow-hidden py-20 lg:py-28">
-        <div className="wrap relative">
+        <div className="wrap hero-wrap relative">
           <div className="hero-shadow" aria-hidden>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -59,7 +59,7 @@ export default async function HomePage({ params }: HomePageProps) {
               decoding="async"
             />
           </div>
-          <div className="relative z-10 max-w-[min(42rem,52%)] max-lg:max-w-[42rem]">
+          <div className="hero-content relative z-10 max-w-[min(42rem,52%)] max-lg:max-w-[42rem]">
             <h1 className="enter hero-brand text-[clamp(3rem,7vw,6rem)] leading-[0.95] tracking-[-0.02em] text-bone whitespace-nowrap">
               Carolo <span className="text-brass">Canis</span>
             </h1>
