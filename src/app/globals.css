@@ -433,31 +433,19 @@ body::after {
   overflow: visible;
 }
 
-.hero-shadow::before {
-  content: "";
-  position: absolute;
-  left: 8%;
-  top: 2%;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse at 55% 50%,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.5) 32%,
-    rgba(0, 0, 0, 0.18) 55%,
-    transparent 72%
-  );
-  filter: blur(28px);
-}
-
 .hero-shadow img {
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
+  /* Soft silhouette-shaped halo (follows alpha, not a box) + slight pop */
+  filter:
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.95))
+    drop-shadow(0 0 6px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 0 16px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 32px rgba(0, 0, 0, 0.28))
+    saturate(1.18)
+    contrast(1.08)
+    brightness(1.04);
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
@@ -477,14 +465,6 @@ body::after {
     left: auto;
     right: 0;
     width: min(34rem, 68%);
-  }
-
-  .hero-shadow::before {
-    left: 12%;
-    top: 4%;
-    width: 100%;
-    height: 96%;
-    filter: blur(26px);
   }
 
   .hero-shadow img {
@@ -512,15 +492,15 @@ body::after {
     transform: translateY(-42%);
   }
 
-  .hero-shadow::before {
-    left: 18%;
-    top: 8%;
-    width: 95%;
-    height: 90%;
-    filter: blur(22px);
-  }
-
   .hero-shadow img {
+    filter:
+      drop-shadow(0 0 1px rgba(0, 0, 0, 0.95))
+      drop-shadow(0 0 5px rgba(0, 0, 0, 0.65))
+      drop-shadow(0 0 14px rgba(0, 0, 0, 0.4))
+      drop-shadow(0 0 26px rgba(0, 0, 0, 0.24))
+      saturate(1.15)
+      contrast(1.06)
+      brightness(1.03);
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 0%,
