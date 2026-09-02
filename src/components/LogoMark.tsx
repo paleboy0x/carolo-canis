@@ -14,10 +14,10 @@ export function LogoMark({ size = 28, className = "" }: LogoMarkProps) {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/shepherd-hero.png"
+        src="/brand-mark.png"
         alt=""
-        width={900}
-        height={430}
+        width={1774}
+        height={887}
         decoding="async"
       />
     </span>

@@ -25,4 +25,4 @@ npm run build      # production build
 - `src/data/` — locations, gallery index, shared nav links
 - `src/i18n/` — next-intl routing, request and navigation helpers
 - `messages/{hr,en}.json` — copy for both languages
-- `public/` — brand mark, hero silhouette, gallery assets
+- `public/` — brand mark and gallery assets
