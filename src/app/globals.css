@@ -430,6 +430,41 @@ body::after {
   width: min(40rem, 48%);
   transform: translateY(-50%);
   z-index: 0;
+}
+
+.hero-shadow::before {
+  content: "";
+  position: absolute;
+  inset: -14% -10% -12% -6%;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse 78% 72% at 62% 54%,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.52) 38%,
+    rgba(0, 0, 0, 0.22) 62%,
+    transparent 82%
+  );
+  filter: blur(12px);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 12%,
+    #000 28%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 12%,
+    #000 28%
+  );
+}
+
+.hero-shadow img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
@@ -444,17 +479,37 @@ body::after {
   );
 }
 
-.hero-shadow img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 @media (max-width: 900px) {
   .hero-shadow {
     left: auto;
     right: 0;
     width: min(34rem, 68%);
+  }
+
+  .hero-shadow::before {
+    inset: -12% -8% -10% -4%;
+    background: radial-gradient(
+      ellipse 82% 74% at 68% 52%,
+      rgba(0, 0, 0, 0.76) 0%,
+      rgba(0, 0, 0, 0.48) 40%,
+      rgba(0, 0, 0, 0.18) 64%,
+      transparent 84%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 14%,
+      #000 32%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 14%,
+      #000 32%
+    );
+  }
+
+  .hero-shadow img {
     -webkit-mask-image: linear-gradient(
       to right,
       transparent 0%,
@@ -477,6 +532,33 @@ body::after {
     width: min(28rem, 100%);
     top: 68%;
     transform: translateY(-42%);
+  }
+
+  .hero-shadow::before {
+    inset: -10% -6% -8% -4%;
+    background: radial-gradient(
+      ellipse 88% 80% at 72% 58%,
+      rgba(0, 0, 0, 0.74) 0%,
+      rgba(0, 0, 0, 0.46) 42%,
+      rgba(0, 0, 0, 0.16) 66%,
+      transparent 86%
+    );
+    filter: blur(10px);
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 18%,
+      #000 40%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 18%,
+      #000 40%
+    );
+  }
+
+  .hero-shadow img {
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 0%,
