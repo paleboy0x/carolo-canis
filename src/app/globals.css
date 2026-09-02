@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --void: #083464;
-  --turf: #0c4278;
+  --void: #062a54;
+  --turf: #0a385f;
   --bone: #f0eadc;
-  --mute: #aec2d8;
+  --mute: #a6bbd4;
   --brass: #f27a28;
   --clay: #d45a18;
-  --line: #245a96;
+  --line: #1f5088;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
 }
@@ -96,7 +96,7 @@ body::after {
   background: radial-gradient(
     ellipse at center,
     transparent 48%,
-    rgba(6, 42, 82, 0.36) 100%
+    rgba(5, 32, 68, 0.38) 100%
   );
 }
 
@@ -640,8 +640,8 @@ body::after {
   padding: 46px 20px 16px;
   background: linear-gradient(
     to top,
-    rgba(8, 52, 100, 0.94),
-    rgba(8, 52, 100, 0.55) 55%,
+    rgba(6, 42, 84, 0.94),
+    rgba(6, 42, 84, 0.55) 55%,
     transparent
   );
   pointer-events: none;
@@ -852,11 +852,11 @@ body::after {
   background:
     linear-gradient(
       105deg,
-      rgba(8, 52, 100, 0.72) 0%,
-      rgba(8, 52, 100, 0.35) 42%,
-      rgba(8, 52, 100, 0.15) 100%
+      rgba(6, 42, 84, 0.72) 0%,
+      rgba(6, 42, 84, 0.35) 42%,
+      rgba(6, 42, 84, 0.15) 100%
     ),
-    linear-gradient(to top, rgba(8, 52, 100, 0.55) 0%, transparent 45%);
+    linear-gradient(to top, rgba(6, 42, 84, 0.55) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -949,8 +949,8 @@ body::after {
 .gallery-teaser-mini .gallery-teaser-veil {
   background: linear-gradient(
     to top,
-    rgba(8, 52, 100, 0.82) 0%,
-    rgba(8, 52, 100, 0.2) 55%,
+    rgba(6, 42, 84, 0.82) 0%,
+    rgba(6, 42, 84, 0.2) 55%,
     transparent 100%
   );
 }

@@ -15,7 +15,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-[linear-gradient(to_bottom,rgba(8,52,100,0.92),rgba(8,52,100,0.62))] backdrop-blur-[10px]">
+    <header className="sticky top-0 z-40 border-b border-line bg-[linear-gradient(to_bottom,rgba(6,42,84,0.92),rgba(6,42,84,0.62))] backdrop-blur-[10px]">
       <div className="wrap flex h-[3.75rem] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 text-bone no-underline">
           <LogoMark size={28} />
