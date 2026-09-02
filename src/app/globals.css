@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --void: #0f5fb0;
-  --turf: #1670c4;
-  --bone: #f4f0e6;
-  --mute: #d0e0f2;
+  --void: #0a3f78;
+  --turf: #0e4f90;
+  --bone: #f0eadc;
+  --mute: #b7c9de;
   --brass: #f27a28;
   --clay: #d45a18;
-  --line: #3d8fd6;
+  --line: #2a6aad;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
 }
@@ -48,22 +48,22 @@ body {
     ),
     radial-gradient(
       1200px 600px at 78% 0%,
-      color-mix(in srgb, var(--brass) 8%, transparent),
+      color-mix(in srgb, var(--brass) 7%, transparent),
       transparent 60%
     ),
     radial-gradient(
       1100px 620px at 8% 92%,
-      color-mix(in srgb, #2eb8c8 22%, transparent),
+      color-mix(in srgb, #1a8fa0 16%, transparent),
       transparent 64%
     ),
     radial-gradient(
       1000px 520px at 92% 12%,
-      color-mix(in srgb, #4aa3ef 18%, transparent),
+      color-mix(in srgb, #2a7fd0 14%, transparent),
       transparent 58%
     ),
     radial-gradient(
       800px 500px at 50% 40%,
-      color-mix(in srgb, #1877f3 14%, transparent),
+      color-mix(in srgb, #1877f3 10%, transparent),
       transparent 70%
     ),
     var(--void);
@@ -95,8 +95,8 @@ body::before {
 body::after {
   background: radial-gradient(
     ellipse at center,
-    transparent 50%,
-    rgba(10, 70, 130, 0.22) 100%
+    transparent 48%,
+    rgba(6, 40, 78, 0.32) 100%
   );
 }
 
@@ -640,8 +640,8 @@ body::after {
   padding: 46px 20px 16px;
   background: linear-gradient(
     to top,
-    rgba(15, 95, 176, 0.94),
-    rgba(15, 95, 176, 0.55) 55%,
+    rgba(10, 63, 120, 0.94),
+    rgba(10, 63, 120, 0.55) 55%,
     transparent
   );
   pointer-events: none;
@@ -852,11 +852,11 @@ body::after {
   background:
     linear-gradient(
       105deg,
-      rgba(15, 95, 176, 0.72) 0%,
-      rgba(15, 95, 176, 0.35) 42%,
-      rgba(15, 95, 176, 0.15) 100%
+      rgba(10, 63, 120, 0.72) 0%,
+      rgba(10, 63, 120, 0.35) 42%,
+      rgba(10, 63, 120, 0.15) 100%
     ),
-    linear-gradient(to top, rgba(15, 95, 176, 0.55) 0%, transparent 45%);
+    linear-gradient(to top, rgba(10, 63, 120, 0.55) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -949,8 +949,8 @@ body::after {
 .gallery-teaser-mini .gallery-teaser-veil {
   background: linear-gradient(
     to top,
-    rgba(15, 95, 176, 0.82) 0%,
-    rgba(15, 95, 176, 0.2) 55%,
+    rgba(10, 63, 120, 0.82) 0%,
+    rgba(10, 63, 120, 0.2) 55%,
     transparent 100%
   );
 }
