@@ -430,22 +430,6 @@ body::after {
   width: min(40rem, 48%);
   transform: translateY(-50%);
   z-index: 0;
-  overflow: visible;
-}
-
-.hero-shadow img {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* Soft silhouette-shaped halo (follows alpha, not a box) + slight pop */
-  filter:
-    drop-shadow(0 0 1px rgba(0, 0, 0, 0.95))
-    drop-shadow(0 0 6px rgba(0, 0, 0, 0.7))
-    drop-shadow(0 0 16px rgba(0, 0, 0, 0.45))
-    drop-shadow(0 0 32px rgba(0, 0, 0, 0.28))
-    saturate(1.18)
-    contrast(1.08)
-    brightness(1.04);
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
@@ -460,14 +444,17 @@ body::after {
   );
 }
 
+.hero-shadow img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 900px) {
   .hero-shadow {
     left: auto;
     right: 0;
     width: min(34rem, 68%);
-  }
-
-  .hero-shadow img {
     -webkit-mask-image: linear-gradient(
       to right,
       transparent 0%,
@@ -490,17 +477,6 @@ body::after {
     width: min(28rem, 100%);
     top: 68%;
     transform: translateY(-42%);
-  }
-
-  .hero-shadow img {
-    filter:
-      drop-shadow(0 0 1px rgba(0, 0, 0, 0.95))
-      drop-shadow(0 0 5px rgba(0, 0, 0, 0.65))
-      drop-shadow(0 0 14px rgba(0, 0, 0, 0.4))
-      drop-shadow(0 0 26px rgba(0, 0, 0, 0.24))
-      saturate(1.15)
-      contrast(1.06)
-      brightness(1.03);
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 0%,
