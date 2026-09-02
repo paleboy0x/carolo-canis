@@ -5,8 +5,8 @@
   --turf: #0a385f;
   --bone: #f0eadc;
   --mute: #a6bbd4;
-  --brass: #f27a28;
-  --clay: #d45a18;
+  --brass: #f79042;
+  --clay: #e06a28;
   --line: #1f5088;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
@@ -39,12 +39,12 @@ body {
   margin: 0;
   background:
     /* subtle dot-grid — orange points on 40px raster */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23f27a28' fill-opacity='0.13'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23f79042' fill-opacity='0.13'/%3E%3C/svg%3E"),
     /* very light diagonal hair-lines for depth */
     repeating-linear-gradient(
       135deg,
       transparent 0 26px,
-      rgba(242, 122, 40, 0.022) 26px 27px
+      rgba(247, 144, 66, 0.022) 26px 27px
     ),
     radial-gradient(
       1200px 600px at 78% 0%,
