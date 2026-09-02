@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --void: #0c1522;
-  --turf: #132030;
-  --bone: #ebe4d6;
-  --mute: #8a97ab;
+  --void: #0f5fb0;
+  --turf: #1670c4;
+  --bone: #f4f0e6;
+  --mute: #d0e0f2;
   --brass: #f27a28;
   --clay: #d45a18;
-  --line: #263648;
+  --line: #3d8fd6;
   --maxw: 1200px;
   --pad: clamp(16px, 3vw, 40px);
 }
@@ -48,18 +48,23 @@ body {
     ),
     radial-gradient(
       1200px 600px at 78% 0%,
-      color-mix(in srgb, var(--brass) 7%, transparent),
+      color-mix(in srgb, var(--brass) 8%, transparent),
       transparent 60%
     ),
     radial-gradient(
-      1000px 560px at 12% 88%,
-      color-mix(in srgb, #5a82b0 16%, transparent),
-      transparent 62%
+      1100px 620px at 8% 92%,
+      color-mix(in srgb, #2eb8c8 22%, transparent),
+      transparent 64%
     ),
     radial-gradient(
-      900px 480px at 88% 18%,
-      color-mix(in srgb, #3d5f8a 12%, transparent),
+      1000px 520px at 92% 12%,
+      color-mix(in srgb, #4aa3ef 18%, transparent),
       transparent 58%
+    ),
+    radial-gradient(
+      800px 500px at 50% 40%,
+      color-mix(in srgb, #1877f3 14%, transparent),
+      transparent 70%
     ),
     var(--void);
   background-attachment: fixed;
@@ -90,8 +95,8 @@ body::before {
 body::after {
   background: radial-gradient(
     ellipse at center,
-    transparent 45%,
-    rgba(8, 14, 24, 0.38) 100%
+    transparent 50%,
+    rgba(10, 70, 130, 0.22) 100%
   );
 }
 
@@ -635,8 +640,8 @@ body::after {
   padding: 46px 20px 16px;
   background: linear-gradient(
     to top,
-    rgba(12, 21, 34, 0.94),
-    rgba(12, 21, 34, 0.55) 55%,
+    rgba(15, 95, 176, 0.94),
+    rgba(15, 95, 176, 0.55) 55%,
     transparent
   );
   pointer-events: none;
@@ -847,11 +852,11 @@ body::after {
   background:
     linear-gradient(
       105deg,
-      rgba(12, 21, 34, 0.72) 0%,
-      rgba(12, 21, 34, 0.35) 42%,
-      rgba(12, 21, 34, 0.15) 100%
+      rgba(15, 95, 176, 0.72) 0%,
+      rgba(15, 95, 176, 0.35) 42%,
+      rgba(15, 95, 176, 0.15) 100%
     ),
-    linear-gradient(to top, rgba(12, 21, 34, 0.55) 0%, transparent 45%);
+    linear-gradient(to top, rgba(15, 95, 176, 0.55) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -944,8 +949,8 @@ body::after {
 .gallery-teaser-mini .gallery-teaser-veil {
   background: linear-gradient(
     to top,
-    rgba(12, 21, 34, 0.82) 0%,
-    rgba(12, 21, 34, 0.2) 55%,
+    rgba(15, 95, 176, 0.82) 0%,
+    rgba(15, 95, 176, 0.2) 55%,
     transparent 100%
   );
 }
