@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { ownerImages, workImages } from "@/data/gallery";
+import { absoluteUrl, localePath, SITE_NAME, SITE_URL } from "@/lib/site";
 
 type GalleryPageProps = {
   params: Promise<{ locale: string }>;
@@ -13,9 +14,47 @@ export async function generateMetadata({
 }: GalleryPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "gallery" });
+  const title = t("metaTitle");
+  const description = t("metaDescription");
+  const canonical = absoluteUrl(localePath(locale, "galerija"));
+  const ogImage = absoluteUrl("/brand-mark.png");
+
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
+    metadataBase: new URL(SITE_URL),
+    title: {
+      absolute: title,
+    },
+    description,
+    alternates: {
+      canonical,
+      languages: {
+        hr: absoluteUrl(localePath("hr", "galerija")),
+        en: absoluteUrl(localePath("en", "galerija")),
+        "x-default": absoluteUrl(localePath("hr", "galerija")),
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: locale === "en" ? "en_GB" : "hr_HR",
+      url: canonical,
+      siteName: SITE_NAME,
+      title,
+      description,
+      images: [
+        {
+          url: ogImage,
+          width: 1774,
+          height: 887,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 

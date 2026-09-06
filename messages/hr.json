@@ -1,7 +1,9 @@
 {
   "meta": {
-    "title": "Carolo Canis d.o.o.",
-    "description": "„Carolo Canis“ d.o.o. mala je i usko profilirana tvrtka koja djeluje na području kinologije: školovanje pasa, trgovina opremom i hranom za pse te savjeti u kinologiji."
+    "title": "Carolo Canis d.o.o. | Školovanje pasa i kinologija",
+    "description": "Školovanje pasa, oprema i hrana te kinološki savjeti u Karlovcu, Zagrebu i Rijeci. 30 godina iskustva — individualni pristup vlasniku i psu.",
+    "ogTitle": "Carolo Canis d.o.o. — školovanje pasa i kinologija",
+    "keywords": "školovanje pasa, kinologija, dresura pasa, Karlovac, Zagreb, Rijeka, Carolo Canis, poslušnost, socijalizacija"
   },
   "nav": {
     "services": "Usluge",
@@ -77,8 +79,8 @@
   },
   "gallery": {
     "title": "Galerija",
-    "metaTitle": "Galerija — Carolo Canis",
-    "metaDescription": "Fotografije s tečajeva, ispita i povijesne snimke vlasnika Carolo Canis.",
+    "metaTitle": "Galerija — Carolo Canis | Tečajevi, ispiti i povijesne fotografije",
+    "metaDescription": "Fotografije s tečajeva i ispita školovanja pasa te povijesne snimke rada Carolo Canis — sudac, markirant i sudski vještak.",
     "teaser": "Treninzi, ispiti i trenuci s terena — album s našim psima i vlasnicima.",
     "cta": "Pogledajte galeriju",
     "ctaHint": "12 fotografija",

@@ -1,7 +1,9 @@
 {
   "meta": {
-    "title": "Carolo Canis Ltd.",
-    "description": "Carolo Canis Ltd. is a small, tightly focused company in cynology: dog training, equipment and food, and advice grounded in working-dog judging and court expertise."
+    "title": "Carolo Canis Ltd. | Dog Training & Cynology",
+    "description": "Dog training, equipment and food, and cynology advice in Karlovac, Zagreb and Rijeka. 30 years of experience — an individual approach for every dog and owner.",
+    "ogTitle": "Carolo Canis Ltd. — dog training and cynology",
+    "keywords": "dog training, cynology, obedience, Karlovac, Zagreb, Rijeka, Carolo Canis, puppy training, socialization"
   },
   "nav": {
     "services": "Services",
@@ -77,8 +79,8 @@
   },
   "gallery": {
     "title": "Gallery",
-    "metaTitle": "Gallery — Carolo Canis",
-    "metaDescription": "Photos from courses, exams and historical images of the Carolo Canis owner.",
+    "metaTitle": "Gallery — Carolo Canis | Courses, exams and historical photos",
+    "metaDescription": "Photos from dog training courses and exams, plus historical images from Carolo Canis work as judge, decoy and court expert.",
     "teaser": "Training, exams and moments from the field — an album with our dogs and owners.",
     "cta": "View the gallery",
     "ctaHint": "12 photos",
