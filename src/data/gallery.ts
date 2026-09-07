@@ -46,14 +46,19 @@ export const ownerImages = byId([
 
 export type GalleryVideo = {
   id: string;
-  embedUrl: string;
   titleKey?: string;
+  /** Local or own-CDN file (mp4/webm) — HTML5 player */
+  src?: string;
+  poster?: string;
+  /** iframe only for hosts that allow framing (YouTube, Vimeo, Facebook) */
+  embedUrl?: string;
+  /** External page when the host forbids iframe */
+  watchUrl?: string;
 };
 
-/** Video embedi (uvijek iframe) */
 export const galleryVideos: GalleryVideo[] = [
   {
     id: "video-01",
-    embedUrl: "https://anonmp4.art/embed/HhTLsc4OqjKQjU8",
+    embedUrl: "https://www.youtube.com/shorts/LosMRch2x4Y",
   },
 ];
