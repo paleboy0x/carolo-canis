@@ -1,4 +1,4 @@
-export const FACEBOOK_URL = "https://www.facebook.com/carolo.canis/";
+import { FACEBOOK_URL } from "@/lib/site";
 
 type FacebookLinkProps = {
   className?: string;

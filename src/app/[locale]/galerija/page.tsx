@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { GalleryGrid } from "@/components/GalleryGrid";
-import { ownerImages, workImages } from "@/data/gallery";
+import { GalleryVideos } from "@/components/GalleryVideos";
+import { galleryVideos, ownerImages, workImages } from "@/data/gallery";
 import { absoluteUrl, localePath, SITE_NAME, SITE_URL } from "@/lib/site";
 
 type GalleryPageProps = {
@@ -82,6 +83,16 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           </p>
           <div className="mt-8">
             <GalleryGrid images={workImages} />
+          </div>
+        </div>
+
+        <div id="video" className="mt-16 scroll-mt-28">
+          <h2 className="gallery-section-title reveal">{t("videoTitle")}</h2>
+          <p className="reveal mt-3 max-w-[40rem] text-[1.04rem] leading-[1.7] text-mute">
+            {t("videoLede")}
+          </p>
+          <div className="mt-8 reveal">
+            <GalleryVideos videos={galleryVideos} title={t("videoEmbedLabel")} />
           </div>
         </div>
 

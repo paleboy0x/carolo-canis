@@ -43,3 +43,17 @@ export const ownerImages = byId([
   "gallery-06",
   "gallery-07",
 ]);
+
+export type GalleryVideo = {
+  id: string;
+  embedUrl: string;
+  titleKey?: string;
+};
+
+/** Video embedi (uvijek iframe) */
+export const galleryVideos: GalleryVideo[] = [
+  {
+    id: "video-01",
+    embedUrl: "https://anonmp4.art/embed/HhTLsc4OqjKQjU8",
+  },
+];

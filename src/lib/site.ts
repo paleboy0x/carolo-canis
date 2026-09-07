@@ -2,7 +2,8 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
   "https://carolo-canis.hr";
 
-export const FACEBOOK_URL = "https://www.facebook.com/carolo.canis/";
+export const FACEBOOK_URL =
+  "https://www.facebook.com/people/Carolo-Canis/pfbid0pTVPjE2owL9fhGcDhu2EjsD3VLAvFn4UfCyKuWZHuqweS6dmqzjvq29ceyk8S5mhl/";
 
 export const SITE_NAME = "Carolo Canis d.o.o.";
 

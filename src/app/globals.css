@@ -904,6 +904,35 @@ body::after {
   color: var(--bone);
 }
 
+.gallery-video-list {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-video-item {
+  max-width: 52rem;
+}
+
+.gallery-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--brass) 30%, var(--line));
+  background: color-mix(in srgb, var(--turf) 70%, #000);
+}
+
+.gallery-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Mini historical-photos teaser */
 .gallery-teaser-mini {
   display: block;
