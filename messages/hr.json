@@ -11,6 +11,7 @@
     "method": "Način rada",
     "locations": "Lokacije",
     "gallery": "Galerija",
+    "priceList": "Cjenik",
     "contact": "Kontakt",
     "menu": "Izbornik",
     "close": "Zatvori"
@@ -70,7 +71,8 @@
       },
       "payment": {
         "title": "Fleksibilno plaćanje",
-        "body": "Naplata troškova tečaja prati razvoj i Vaš napredak po fazama školovanja. Uplate se vrše obročno, propušteni termini se ne naplaćuju, a cijena se odnosi na program do njegovog završetka."
+        "body": "Naplata troškova tečaja prati razvoj i Vaš napredak po fazama školovanja. Uplate se vrše obročno, propušteni termini se ne naplaćuju, a cijena se odnosi na program do njegovog završetka.",
+        "priceListCta": "Pogledajte cjenik usluga"
       }
     }
   },
@@ -107,6 +109,71 @@
     "phone": "+385 95 2244 355",
     "phoneHref": "tel:+385952244355",
     "email": "carolo_canis@net.hr"
+  },
+  "priceList": {
+    "title": "Cjenik",
+    "metaTitle": "Cjenik — Carolo Canis | Sidrena cijena 10.09.2026.",
+    "metaDescription": "Važeći cjenik usluga i hrane Carolo Canis d.o.o. s cijenom na dan 10.09.2026. te strojno čitljivim CSV i XML datotekama prema NN 101/2026.",
+    "backHome": "← Početna",
+    "lede": "Važeće cijene usluga školovanja i hrane za pse. Uz svaku cijenu navedena je i cijena na dan 10. rujna 2026. (sidrena cijena), u skladu s odlukama Vlade RH (NN 101/2026).",
+    "anchorNote": "Referentni dan sidrene cijene: {date}.",
+    "outletLine": "Sjedište: {address}.",
+    "servicesTitle": "Usluge s fiksnom cijenom",
+    "productsTitle": "Hrana za pse",
+    "productsLede": "Maloprodajne cijene hrane. Cjenik proizvoda objavljuje se svaki dan do 8:00 u strojno čitljivom obliku.",
+    "colService": "Usluga",
+    "colProduct": "Proizvod",
+    "colBrand": "Marka",
+    "colUnit": "Jedinica",
+    "colPrice": "Maloprodajna cijena",
+    "colAnchor": "Cijena na {date}",
+    "productUnit": "vreća",
+    "units": {
+      "sat": "sat",
+      "mjesec": "mjesec",
+      "tecaj": "tečaj"
+    },
+    "services": {
+      "u01": "Pojedinačni sat – po potrebi klijenta",
+      "u02": "Mjesečna naknada za klijenta u procesu edukacije",
+      "u03": "Mjesečna naknada za klijenta u treningu nakon procesa edukacije",
+      "u04": "Mjesečna naknada za klijenta u procesu priprema za uzgojne preglede",
+      "u05": "Mjesečna naknada za klijenta u procesu priprema za izložbe",
+      "u06": "Osnovni tečaj poslušnosti – obročno plaćanje"
+    },
+    "products": {
+      "p01": "Hrana za odrasle pse na bazi piletine Eukanuba vreća 18 kg",
+      "p02": "Hrana za pse na bazi janjetine i za štenad vreća 18 kg",
+      "p03": "Hrana za odrasle pse Eukanuba-veterinary vreća 12 kg"
+    },
+    "negotiatedTitle": "Usluge po dogovoru",
+    "negotiatedLede": "Ove stavke nemaju fiksnu cijenu — obračunavaju se individualno. Nisu dio strojno čitljivog CSV/XML cjenika.",
+    "byAgreement": "Po dogovoru",
+    "negotiated": {
+      "risk": {
+        "title": "Rad s povišenim rizikom",
+        "body": "Cijene u pojedinim slučajevima formiraju se po procjeni rizika od ozljede i složenosti radnih procesa, a predmet su izravnog dogovora s klijentom."
+      },
+      "opinions": {
+        "title": "Stručna mišljenja",
+        "body": "Cjenovno se iskazuju po procjeni utrošenog vremena i korištenja tehničkih i stručnih resursa: priprema teme, stručna analiza i usklađenje s pravilnicima i zakonskim okvirima, koncipiranje i izrada mišljenja te zavisni troškovi."
+      },
+      "events": {
+        "title": "Organizacija manifestacija",
+        "body": "Organizacija stručnih manifestacija obračunava se po zavisnim troškovima: vremenski okvir i trajanje, lokacija i prijevoz, uključivanje stručnog kadra te organizacija prostora."
+      }
+    },
+    "machineTitle": "Strojno čitljivi cjenik",
+    "machineLede": "Prema Odluci o objavi cjenika (NN 101/2026) objavljujemo zasebne datoteke za usluge i za proizvode (hranu) u CSV i XML obliku. Usluge se ažuriraju kod svake promjene cijene; proizvodi svaki dan do 8:00. Prethodne objave ostaju dostupne 30 dana.",
+    "downloadServicesCsv": "Usluge CSV",
+    "downloadServicesXml": "Usluge XML",
+    "downloadProductsCsv": "Proizvodi CSV",
+    "downloadProductsXml": "Proizvodi XML",
+    "archiveServicesTitle": "Arhiva — usluge",
+    "archiveServicesLede": "Nova datoteka samo kad se cijena usluge promijeni.",
+    "archiveProductsTitle": "Arhiva — proizvodi",
+    "archiveProductsLede": "Dnevne objave cjenika hrane (zadnjih 30 dana).",
+    "currentBadge": "Važeći"
   },
   "footer": {
     "legal": "Carolo Canis d.o.o."

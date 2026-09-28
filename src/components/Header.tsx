@@ -37,6 +37,9 @@ export function Header() {
           <Link href="/galerija" className="nav-link font-text text-[0.95rem]">
             {t("gallery")}
           </Link>
+          <Link href="/cjenik" className="nav-link font-text text-[0.95rem]">
+            {t("priceList")}
+          </Link>
           <FacebookLink />
           <span className="mx-1 h-5 w-px bg-line" aria-hidden />
           <LanguageSwitcher />
@@ -74,6 +77,13 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               {t("gallery")}
+            </Link>
+            <Link
+              href="/cjenik"
+              className="font-display text-3xl font-bold tracking-[-0.02em] text-bone no-underline"
+              onClick={() => setOpen(false)}
+            >
+              {t("priceList")}
             </Link>
           </div>
         </nav>

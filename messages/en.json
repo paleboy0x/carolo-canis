@@ -11,6 +11,7 @@
     "method": "How we work",
     "locations": "Locations",
     "gallery": "Gallery",
+    "priceList": "Price list",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Close"
@@ -70,7 +71,8 @@
       },
       "payment": {
         "title": "Flexible payment",
-        "body": "Course fees follow your progress through the phases of training. Payments are made in instalments; missed sessions are not charged — the price covers the full programme through to its completion."
+        "body": "Course fees follow your progress through the phases of training. Payments are made in instalments; missed sessions are not charged — the price covers the full programme through to its completion.",
+        "priceListCta": "View the service price list"
       }
     }
   },
@@ -107,6 +109,71 @@
     "phone": "+385 95 2244 355",
     "phoneHref": "tel:+385952244355",
     "email": "carolo_canis@net.hr"
+  },
+  "priceList": {
+    "title": "Price list",
+    "metaTitle": "Price list — Carolo Canis | Anchor price 10 Sep 2026",
+    "metaDescription": "Current Carolo Canis Ltd. service and dog-food prices with the 10 September 2026 anchor price and machine-readable CSV/XML files under NN 101/2026.",
+    "backHome": "← Home",
+    "lede": "Current prices for dog training services and dog food. Each price is shown together with the price on 10 September 2026 (anchor price), in line with Croatian Government decisions (NN 101/2026).",
+    "anchorNote": "Anchor price reference date: {date}.",
+    "outletLine": "Registered office: {address}.",
+    "servicesTitle": "Services with a fixed price",
+    "productsTitle": "Dog food",
+    "productsLede": "Retail prices for dog food. The product price list is published every day by 08:00 in a machine-readable format.",
+    "colService": "Service",
+    "colProduct": "Product",
+    "colBrand": "Brand",
+    "colUnit": "Unit",
+    "colPrice": "Retail price",
+    "colAnchor": "Price on {date}",
+    "productUnit": "bag",
+    "units": {
+      "sat": "hour",
+      "mjesec": "month",
+      "tecaj": "course"
+    },
+    "services": {
+      "u01": "Individual hour — as needed by the client",
+      "u02": "Monthly fee for a client in the education process",
+      "u03": "Monthly fee for a client in training after education",
+      "u04": "Monthly fee for a client preparing for breeding evaluations",
+      "u05": "Monthly fee for a client preparing for shows",
+      "u06": "Basic obedience course — instalment payment"
+    },
+    "products": {
+      "p01": "Adult dog food based on chicken — Eukanuba 18 kg bag",
+      "p02": "Dog food based on lamb and for puppies — 18 kg bag",
+      "p03": "Adult dog food Eukanuba-veterinary — 12 kg bag"
+    },
+    "negotiatedTitle": "Services by agreement",
+    "negotiatedLede": "These items have no fixed price — they are quoted individually. They are not included in the machine-readable CSV/XML price list.",
+    "byAgreement": "By agreement",
+    "negotiated": {
+      "risk": {
+        "title": "Higher-risk work",
+        "body": "In some cases prices are set according to injury risk and the complexity of the work processes, and are agreed directly with the client."
+      },
+      "opinions": {
+        "title": "Expert opinions",
+        "body": "Charged according to time spent and use of technical and professional resources: topic preparation, analysis and alignment with regulations and the legal framework, drafting the opinion, and dependent costs."
+      },
+      "events": {
+        "title": "Event organisation",
+        "body": "Organisation of professional events is charged according to dependent costs: time frame and duration, location and transport, professional staff, and venue organisation."
+      }
+    },
+    "machineTitle": "Machine-readable price list",
+    "machineLede": "Under the Decision on publishing price lists (NN 101/2026) we publish separate CSV and XML files for services and for products (dog food). Services are updated when a price changes; products every day by 08:00. Previous publications remain available for 30 days.",
+    "downloadServicesCsv": "Services CSV",
+    "downloadServicesXml": "Services XML",
+    "downloadProductsCsv": "Products CSV",
+    "downloadProductsXml": "Products XML",
+    "archiveServicesTitle": "Archive — services",
+    "archiveServicesLede": "A new file only when a service price changes.",
+    "archiveProductsTitle": "Archive — products",
+    "archiveProductsLede": "Daily dog-food price list publications (last 30 days).",
+    "currentBadge": "Current"
   },
   "footer": {
     "legal": "Carolo Canis d.o.o."

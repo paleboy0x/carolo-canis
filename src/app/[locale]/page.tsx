@@ -179,6 +179,9 @@ export default async function HomePage({ params }: HomePageProps) {
             <div className="payment-band-inner">
               <h4 className="payment-title">{method("steps.payment.title")}</h4>
               <p className="payment-body">{method("steps.payment.body")}</p>
+              <Link href="/cjenik" className="payment-price-link">
+                {method("steps.payment.priceListCta")}
+              </Link>
             </div>
           </div>
         </div>
