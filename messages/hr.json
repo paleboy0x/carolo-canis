@@ -11,7 +11,6 @@
     "method": "Način rada",
     "locations": "Lokacije",
     "gallery": "Galerija",
-    "priceList": "Cjenik",
     "contact": "Kontakt",
     "menu": "Izbornik",
     "close": "Zatvori"
@@ -71,8 +70,7 @@
       },
       "payment": {
         "title": "Fleksibilno plaćanje",
-        "body": "Naplata troškova tečaja prati razvoj i Vaš napredak po fazama školovanja. Uplate se vrše obročno, propušteni termini se ne naplaćuju, a cijena se odnosi na program do njegovog završetka.",
-        "priceListCta": "Pogledajte cjenik usluga"
+        "body": "Naplata troškova tečaja prati razvoj i Vaš napredak po fazama školovanja. Uplate se vrše obročno, propušteni termini se ne naplaćuju, a cijena se odnosi na program do njegovog završetka."
       }
     }
   },

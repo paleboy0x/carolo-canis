@@ -11,7 +11,6 @@
     "method": "How we work",
     "locations": "Locations",
     "gallery": "Gallery",
-    "priceList": "Price list",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Close"
@@ -71,8 +70,7 @@
       },
       "payment": {
         "title": "Flexible payment",
-        "body": "Course fees follow your progress through the phases of training. Payments are made in instalments; missed sessions are not charged — the price covers the full programme through to its completion.",
-        "priceListCta": "View the service price list"
+        "body": "Course fees follow your progress through the phases of training. Payments are made in instalments; missed sessions are not charged — the price covers the full programme through to its completion."
       }
     }
   },

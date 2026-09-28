@@ -34,9 +34,6 @@ export function Footer() {
             <Link href="/galerija" className="nav-link font-text text-sm">
               {nav("gallery")}
             </Link>
-            <Link href="/cjenik" className="nav-link font-text text-sm">
-              {nav("priceList")}
-            </Link>
             <FacebookLink />
           </nav>
         </div>

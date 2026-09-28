@@ -3,7 +3,7 @@ import { absoluteUrl, localePath } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  const routes = ["", "galerija", "cjenik"] as const;
+  const routes = ["", "galerija"] as const;
 
   return routes.flatMap((route) => {
     const hr = localePath("hr", route);

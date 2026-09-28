@@ -1547,19 +1547,3 @@ body::after {
   display: flex;
   gap: 1.1rem;
 }
-
-.payment-price-link {
-  display: inline-flex;
-  margin-top: 1.15rem;
-  font-family: var(--font-display), sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--brass);
-}
-
-.payment-price-link:hover {
-  color: var(--bone);
-}
